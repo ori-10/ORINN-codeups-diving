@@ -1,0 +1,107 @@
+@use "global" as *;
+
+.btn {
+  display: inline-flex;
+  // align-items: center;
+  // justify-content: center;
+  position: relative;
+  padding: rem(16);
+  border: 1px solid $green-accent;
+  background-color: $green-accent;
+  color: $white;
+  // text-transform: capitalize;
+  font-family: $second-font-family;
+  // letter-spacing: 1.57;
+  font-size: rem(14);
+  max-width: rem(202);
+  width: 100%;
+  z-index: 0;
+  box-shadow: 4px 4px $white, 4px 4px 0 1px $green-accent;
+}
+
+.btn:hover {
+  color: $green-accent;
+}
+
+.btn:hover::after {
+  transform: scale(1, 1);
+}
+
+.btn::after {
+  background: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.btn span {
+  display: flex;
+  justify-content: center;
+align-items: center;
+} 
+
+// .btn span::after {
+//   content: '';
+//   width: rem(40);
+//   height: rem(6);
+//   border-bottom: solid 1px;
+//   border-right: solid 1px;
+// transform: skew(45deg);
+// }
+
+.btn__arrow{
+  /*矢印と下線の基点とするためrelativeを指定*/
+position: relative;
+  /*形状*/
+  display: inline-block;
+padding: 0 20px;
+  // margin-left: rem(8);
+//   color: #333;
+  text-decoration: none;
+  outline: none;
+  // width: 100%;
+  // height: 100%;
+}
+/*矢印と下線の形状*/
+.btn__arrow::before{
+    content: '';
+    /*絶対配置で下線の位置を決める*/
+  position: absolute;
+    bottom:50%;
+    left:15%;
+    /*下線の形状*/    
+    width: 85%;
+    height: 1px;
+  background:$white;
+    /*アニメーションの指定*/
+    // transition: all .3s;
+    border-radius: 5px;
+  }
+  
+  .btn__arrow::after{
+  border-radius: 5px;
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+    bottom:14.5px;
+    right:-0.91px;
+    /*矢印の形状*/    
+    width: 15px;
+    height:1px;
+  background: $white;
+    transform: rotate(35deg);
+    /*アニメーションの指定*/
+    // transition: all .4s;
+}
+
+.btn:hover .btn__arrow::before,
+.btn:hover .btn__arrow::after  {
+  background-color: $green-accent;
+}
