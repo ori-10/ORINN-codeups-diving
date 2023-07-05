@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.pc-nav {
+  height: inherit;
+}
+
+.pc-nav__items {
+  display: flex;
+  height: inherit;
+}
+
+.pc-nav__item {
+  height: inherit;
+}
+
+.pc-nav__item a {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  padding: 0 rem(15);
+}
+
+////////////////
+// nav 下線
+////////////////
+.pc-nav__item a {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.pc-nav__item a::after {
+  @include mq("md") {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: rem(30); /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    content: "";
+    width: calc(100% - rem(30));
+    height: rem(1);
+    background: #ffea2e;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+}
+
+.pc-nav__item a:hover::after {
+  @include mq("md") {
+    visibility: visible;
+    bottom: rem(8); /*アニメーションが止まる位置*/
+    opacity: 1;
+  }
+}
+
+///////////
+// お問い合わせ　白背景
+///////////
+
+.pc-nav__item--highlight {
+  margin-left: rem(15);
+}
+
+.pc-nav__item--highlight a {
+  background-color: $white;
+  color: $black;
+  padding: 0 rem(31);
+  transition: 0.4s;
+}
+
+.pc-nav__item--highlight a::after {
+  width: calc(100% - rem(62));
+}

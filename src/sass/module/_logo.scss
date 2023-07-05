@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.logo {
+  width: rem(102);
+  @include mq("md") {
+    width: rem(133);
+  }
+}
+
+.logo__img {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
