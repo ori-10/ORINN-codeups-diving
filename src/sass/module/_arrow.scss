@@ -1,2 +1,46 @@
 @use "global" as *;
 
+.arrow {
+  display: inline-flex;
+  border: 1px solid $green-accent;
+  max-width: rem(80);
+  height: rem(80);
+  width: 100%;
+  border-radius: 50%;
+}
+
+.arrow span {
+  position: relative;
+  display: inline-block;
+  padding: 0 30px;
+  text-decoration: none;
+  outline: none;
+}
+
+.arrow span::before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 15%;
+  width: 85%;
+  height: 1px;
+  background: $green-accent;
+  border-radius: 5px;
+}
+
+.arrow span::after {
+  border-radius: 5px;
+  content: "";
+  position: absolute;
+  bottom: 36.5px;
+  right: -0.91px;
+  width: 15px;
+  height: 1px;
+  background: $green-accent;
+  transform: rotate(35deg);
+}
+
+.arrow--left span::after {
+  transform: rotate(135deg);
+  left: 6.5px;
+}
