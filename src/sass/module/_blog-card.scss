@@ -4,4 +4,45 @@
 .blog-card {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
   display: inline-block;
+  padding: rem(16) rem(16) rem(24);
 }
+
+.blog-card__img {
+  position: relative;
+  width: 100%;
+  }
+
+  .blog-card__img::before {
+  content:"";
+  display: block;
+  padding-top: 66.66%;
+  }
+
+  .blog-card__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+
+  .blog-card__body {
+    padding-top: rem(24);
+  }
+
+  .blog-card__day {
+    font-size: rem(12);
+    font-family: $second-font-family;
+  }
+
+  .blog-card__title {
+    font-weight: $medium;
+  }
+
+  .blog-card__text {
+    border-top: 1px solid $green-accent;
+    margin-top: rem(4);
+    padding-top: rem(16);
+  }
