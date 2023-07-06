@@ -1,25 +1,25 @@
 @use "global" as *;
 
-.section-header__en-title {
+.section-title__en {
   font-family: $second-font-family;
   text-align: center;
   font-size: rem(32);
+  line-height: 1;
   @include mq("md") {
     font-size: rem(40);
   }
 }
 
-.section-header__en-title span {
+.section-title__en span {
   color: $green-accent;
   text-transform: capitalize;
 }
 
-.section-header__ja-title {
-  margin-top: rem(4);
+.section-title__ja {
   text-align: center;
   color: $green-accent;
   font-size: rem(12);
   @include mq("md") {
-    margin-top: rem(8);
+    margin-top: rem(7);
   }
 }
