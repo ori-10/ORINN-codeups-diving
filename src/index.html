@@ -27,7 +27,11 @@
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+    ></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
@@ -49,40 +53,40 @@
           <div class="sp-nav__wrap">
             <ul class="sp-nav__items">
               <li class="sp-nav__item-title sp-nav__item--left">
-                <a href="#top-news">キャンペーン</a>
+                <a href="#">キャンペーン</a>
                 <ul>
                   <li class="sp-nav__item sp-nav__item--left">
-                    <a href="#top-content">ライセンス取得</a>
+                    <a href="#">ライセンス取得</a>
                   </li>
                   <li class="sp-nav__item sp-nav__item--left">
-                    <a href="#top-works">貸切体験ダイビング</a>
+                    <a href="#">貸切体験ダイビング</a>
                   </li>
                   <li class="sp-nav__item sp-nav__item--left">
-                    <a href="#top-overview">ナイトダイビング</a>
+                    <a href="#">ナイトダイビング</a>
                   </li>
                 </ul>
               </li>
             </ul>
             <ul class="sp-nav__items">
               <li class="sp-nav__item-title sp-nav__item--left sp-nav__item--left">
-                <a href="#top-blog">私たちについて</a>
+                <a href="#">私たちについて</a>
               </li>
               <li class="sp-nav__item-title sp-nav__item--left">
-                <a href="#contact">ダイビング情報</a>
+                <a href="#">ダイビング情報</a>
                 <ul>
                   <li class="sp-nav__item sp-nav__item--left">
-                    <a href="#contact">ライセンス講習</a>
+                    <a href="#">ライセンス講習</a>
                   </li>
                   <li class="sp-nav__item sp-nav__item--left">
-                    <a href="#contact">体験ダイビング</a>
+                    <a href="#">体験ダイビング</a>
                   </li>
                   <li class="sp-nav__item sp-nav__item--left">
-                    <a href="#contact">ファンダイビング</a>
+                    <a href="#">ファンダイビング</a>
                   </li>
                 </ul>
               </li>
               <li class="sp-nav__item-title sp-nav__item--left">
-                <a href="#contact">ブログ</a>
+                <a href="#">ブログ</a>
               </li>
             </ul>
           </div>
@@ -90,36 +94,36 @@
           <div class="sp-nav__wrap">
             <ul class="sp-nav__items">
               <li class="sp-nav__item-title">
-                <a href="#contact">お客様の声</a>
+                <a href="#">お客様の声</a>
               </li>
               <li class="sp-nav__item-title">
-                <a href="#contact">料金一覧</a>
+                <a href="#">料金一覧</a>
                 <ul>
                   <li class="sp-nav__item">
-                    <a href="#contact">ライセンス講習</a>
+                    <a href="#">ライセンス講習</a>
                   </li>
                   <li class="sp-nav__item">
-                    <a href="#contact">体験ダイビング</a>
+                    <a href="#">体験ダイビング</a>
                   </li>
                   <li class="sp-nav__item">
-                    <a href="#contact">ファンダイビング</a>
+                    <a href="#">ファンダイビング</a>
                   </li>
                 </ul>
               </li>
             </ul>
             <ul class="sp-nav__items">
               <li class="sp-nav__item-title">
-                <a href="#contact">よくある質問</a>
+                <a href="#">よくある質問</a>
               </li>
               <li class="sp-nav__item-title">
-                <a href="#contact">プライバシー<br>
+                <a href="#">プライバシー<br>
                   ポリシー</a>
               </li>
               <li class="sp-nav__item-title">
-                <a href="#contact">利用規約</a>
+                <a href="#">利用規約</a>
               </li>
               <li class="sp-nav__item-title">
-                <a href="#contact">おい問わ合せ</a>
+                <a href="#">おい問わ合せ</a>
               </li>
             </ul>
           </div>
@@ -134,33 +138,90 @@
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#top-news">
+              <a href="#">
                 <span>About us</span>
                 <span>私たちについて</span>
                 </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#top-content">
+              <a href="#">
                 <span>Information</span>
                 <span>ダイビング情報</span>
               </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#top-works">制作実績</a>
+              <a href="#">
+                <span>Blog</span>
+                <span>ブログ</span>
+              </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#top-overview">企業概要</a>
+              <a href="#">
+                <span>Voice</span>
+                <span>お客様の声</span>
+              </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#top-blog">ブログ</a>
+              <a href="#">
+                <span>Price</span>
+                <span>料金一覧</span>
+              </a>
             </li>
             <li class="pc-nav__item">
-              <a href="#contact">お問い合わせ</a>
+              <a href="#">
+                <span>FAQ</span>
+                <span>よくある質問</span>
+              </a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#">
+                <span>Contact</span>
+                <span>お問合せ</span>
+              </a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
+    <div class="top-mv js-mv-height">
+      <div class="top-mv__inner">
+        <div class="top-mv__img">
+          <div class="top-mv__swiper swiper">
+            <div class="swiper-wrap">
+              <div class="swiper-container js-top-mv-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="top-mv__slide-img">
+                      <img src="./assets/images/common/mv1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="top-mv__slide-img">
+                      <img src="./assets/images/common/mv2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="top-mv__slide-img">
+                      <img src="./assets/images/common/mv3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="top-mv__slide-img">
+                      <img src="./assets/images/common/mv4.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="top-mv__title-block">
+            <h2 class="top-mv__title">diving</h2>
+            <p class="top-mv__sub-title">into the ocean</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.top-mv-->
     <main>
       <div class="section-header__title">
         <h2 class="section-header__en-title"><span>c</span>ampaign</h2>

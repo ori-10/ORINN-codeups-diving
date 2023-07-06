@@ -7,6 +7,8 @@
 .pc-nav__items {
   display: flex;
   height: inherit;
+  align-items: center;
+  justify-content: center;
 }
 
 .pc-nav__item {
@@ -15,15 +17,33 @@
 
 .pc-nav__item a {
   display: flex;
-  height: inherit;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 rem(15);
+  // display: inline-block;
+  height: inherit;
+  padding: 0 rem(20);
+  color: $white;
+}
+
+.pc-nav__item span {
+  display: block;
+  text-align: center;
+}
+
+.pc-nav__item span:nth-child(1) {
+  font-family: $second-font-family;
+  font-size: rem(18);
+}
+
+.pc-nav__item span:nth-child(2) {
+  font-size: rem(10);
 }
 
 ////////////////
 // nav 下線
 ////////////////
+
 .pc-nav__item a {
   @include mq("md") {
     position: relative;
@@ -32,43 +52,21 @@
 
 .pc-nav__item a::after {
   @include mq("md") {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: rem(30); /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
-    content: "";
-    width: calc(100% - rem(30));
-    height: rem(1);
-    background: #ffea2e;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
+    content: '';
+  position: absolute;
+  bottom: rem(20);
+  left: 15%;
+  width: 70%;
+  height: rem(1);
+  background: $white;
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
   }
 }
 
 .pc-nav__item a:hover::after {
   @include mq("md") {
-    visibility: visible;
-    bottom: rem(8); /*アニメーションが止まる位置*/
-    opacity: 1;
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+    // visibility: visible;
   }
-}
-
-///////////
-// お問い合わせ　白背景
-///////////
-
-.pc-nav__item--highlight {
-  margin-left: rem(15);
-}
-
-.pc-nav__item--highlight a {
-  background-color: $white;
-  color: $black;
-  padding: 0 rem(31);
-  transition: 0.4s;
-}
-
-.pc-nav__item--highlight a::after {
-  width: calc(100% - rem(62));
 }
