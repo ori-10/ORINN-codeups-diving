@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .sp-nav {
-  display: block;
+  // display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  background-color: #111;
+  // background-color: #111;
   transition: opacity 0.3s linear;
   opacity: 0;
   pointer-events: none;
@@ -20,9 +20,17 @@
   }
 }
 
+.sp-nav__wrap {
+  width: 50%;
+  // width: 46%;
+  @include mq("md") {
+    display: flex;
+  }
+  // padding-top: rem(104);
+  // padding-bottom: rem(100);
+}
+
 .sp-nav__items {
-  padding-bottom: rem(100);
-  padding-top: rem(143);
   height: inherit;
   overflow: scroll;
 }
@@ -30,12 +38,43 @@
 .sp-nav__item a {
   display: block;
   width: 100%;
-  line-height: 1;
-  padding: rem(19.5) 0;
-  letter-spacing: 0.125em;
-  text-align: center;
+  line-height: 1.125;
+  padding: rem(12) 0;
+  color: $white;
+  // letter-spacing: 0.125em;
+  // text-align: center;
+  padding-left: rem(37);
+  padding-left: rem(22);
+
 }
 
 .sp-nav__item a:hover {
   opacity: 0.7;
+}
+
+.sp-nav__item-title > a {
+  color: $white;
+  // padding: rem(20) 0;
+  padding: rem(12) 0;
+  padding-left: rem(37);
+  padding-left: rem(22);
+  background-image: url(../images/common/menu-star.png);
+  background-size: rem(18);
+  background-repeat: no-repeat;
+  background-position: rem(15) rem(12);
+  background-position: 0 rem(12);
+  display: block;
+  width: 100%;
+  line-height: 1.125;
+  font-weight: $bold;
+}
+
+.sp-nav__item-title {
+
+  padding: rem(8) 0;
+}
+
+.sp-nav__item--left > a {
+  padding-left: rem(37);
+  background-position: rem(15) rem(12);
 }

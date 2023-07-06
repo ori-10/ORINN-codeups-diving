@@ -47,12 +47,13 @@
 ////////////////
 
 .panelactive.header__sp-nav {
-  display: block;
-  background-color: #111;
+  display: flex;
+  background-color: $green-accent;
   width: 100%;
   opacity: 1;
   pointer-events: auto;
   z-index: 1;
+  padding: 85px 0 50px;
 }
 
 .header__pc-nav {
@@ -68,7 +69,7 @@
 /////////////////
 
 .header.is-color {
-  background-color: #111;
+  background-color: #9A9A9A;
 }
 
 ////////////////
