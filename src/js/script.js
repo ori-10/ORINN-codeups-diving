@@ -58,22 +58,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   ////////////////
-  //   メインビュー
-  ////////////////
-
-  let swipeOption = {
-    loop: true,
-    effect: "fade",
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    speed: 2000,
-  };
-  new Swiper(".js-top-mv-swiper", swipeOption);
-
-  ////////////////
-  //   ヘッダー　mv過ぎたら黒
+  //   ヘッダー　mv過ぎたら変色
   ////////////////
 
   let header = $('.header');
@@ -89,6 +74,25 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       header.removeClass("is-color");
     }
   });
+
+  ////////////////
+  //   メインビュー
+  ////////////////
+
+  let swipeOption = {
+    loop: true,
+    effect: "fade",
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    speed: 2000,
+  };
+  new Swiper(".js-top-mv-swiper", swipeOption);
+
+
+
+
 
 
 });

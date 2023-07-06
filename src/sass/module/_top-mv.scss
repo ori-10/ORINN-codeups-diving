@@ -21,17 +21,17 @@
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
-  letter-spacing: 0.031em;
   z-index: 1;
   color: $white;
 }
 
 .top-mv__title {
   font-size: rem(40);
-  // font-weight: $bold;
-  font-family: $second-font-family;
   text-transform: uppercase;
-  letter-spacing: .54em;
+  font-family: $third-font-family;
+  letter-spacing: .525em;
+  line-height: 1;
+  text-indent: .5em;
   @include mq("md") {
     font-size: rem(80);
   }
@@ -39,11 +39,10 @@
 
 .top-mv__sub-title {
   font-size: rem(20);
-  margin-top: rem(13);
-  // font-weight: $bold;
-  font-family: $third-font-family;
+  margin-top: rem(6);
+  font-family: $second-font-family;
   @include mq("md") {
-    margin-top: rem(5);
+    margin-top: rem(10);
   }
 }
 
