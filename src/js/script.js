@@ -1,5 +1,8 @@
+// const { compile } = require("sass");
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+
+
 //////////////
   // topへ戻るボタン
   //////////////
@@ -90,9 +93,55 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   };
   new Swiper(".js-top-mv-swiper", swipeOption);
 
+////////////
+// campaignスライダー
+////////////
+  
+let mySwiper = new Swiper ('.top-campaign__swiper', {
+  // オプション設定
+
+  // PC時のみページネーション表示
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // autoplay: { // スライドの自動再生
+  //   delay: 3000,
+  // },
+
+  // width: 334,
+  // height: 445,
+  loop: true, // スライドの無限ループ
+
+  // スライドの表示枚数：768px未満の場合
+  slidesPerView: 1.2,
+  spaceBetween: 14,
 
 
-
-
-
+  breakpoints: {
+    // スライドの表示枚数：500px以上の場合
+    768: {
+      slidesPerView: 3.7,
+  spaceBetween: 30,
+    }
+  }
 });
+  
+
+let prevButton = document.querySelector('.swiper-button-prev');
+let nextButton = document.querySelector('.swiper-button-next');
+
+// prevボタンのクリックイベントを監視します
+prevButton.addEventListener('click', function() {
+  // 自動再生を再開します
+  mySwiper.autoplay.start();
+});
+// nextボタンのクリックイベントを監視します
+nextButton.addEventListener('click', function() {
+  // 自動再生を再開します
+  mySwiper.autoplay.start();
+});
+
+}); // 消さない
+

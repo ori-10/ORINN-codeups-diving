@@ -6,3 +6,20 @@
     margin-top: rem(40);
   }
 }
+
+// .top-campaign__inner {
+//   padding-left: 5px;
+// }
+
+.top-campaign__btn {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(110);
+  }
+}
+
+.top-campaign__swiper {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}

@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.arrow-prev {
+  display: none;
+  @include mq("md") {
+  display: inline-block;
+  width: rem(80);
+  height: rem(80);
+  border-radius: 50%;
+  background-image: url(../images/common/prev-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid $green-accent;
+  }
+}

@@ -19,7 +19,7 @@
   text-align: center;
   color: $green-accent;
   font-size: rem(12);
-  @include mq("md") {
+  // @include mq("md") {
     margin-top: rem(7);
-  }
+  // }
 }
