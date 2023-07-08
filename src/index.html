@@ -548,12 +548,12 @@
           </div>
 
           <article class="top-voice__cards voice-cards">
-            <a href="#" class="voice-cards__item voice--card">
+            <a href="#" class="voice-cards__item voice-card">
               <div class="voice-card__head">
                 <div>
                   <div class="voice-card__info">
                     <span class="voice-card__age">20代(女性)</span>
-                    <span class="voice-card__category"> ライセンス講習 </span>
+                    <span class="voice-card__category">ライセンス講習</span>
                   </div>
                   <h3 class="voice-card__title">
                     ここにタイトルが入ります。ここにタイトル
@@ -571,7 +571,7 @@
                 ここにテキストが入ります。ここにテキストが入ります。
               </p>
             </a>
-            <a href="#" class="voice-cards__item voice--card">
+            <a href="#" class="voice-cards__item voice-card">
               <div class="voice-card__head">
                 <div>
                   <div class="voice-card__info">
@@ -605,16 +605,24 @@
         </div>
       </section>
 
-      <section id="tio-price" class="top-price section-top-price">
+      <section id="top-price" class="top-price section-top-price">
         <div class="top-price__section-title section-title">
           <h2 class="section-title__en"><span>p</span>rice</h2>
-          <p class="section-title__ja">ブログ</p>
+          <p class="section-title__ja">料金一覧</p>
         </div>
         <div class="inner top-price__inner">
+
+          <picture class="top-price__img">
+            <source media="(min-width: 768px)" srcset="./assets/images/common/price2.jpg">
+
+  <source media="(min-width: 450px)" srcset="images/common/price1.jpg">
+            <img src="./assets/images/common/price1.jpg" alt="海">
+          </picture>
+
           <div class="top-price__text-block">
             <ul class="top-price__list-items">
               <li class="top-price__list-item">
-                <span>ライセンス講習</span>
+                <h3>ライセンス講習</h3>
                 <dl>
                   <div>
                     <dt>オープンウォーターダイバーコース</dt>
@@ -631,7 +639,7 @@
                 </dl>
               </li>
               <li class="top-price__list-item">
-                <span>体験ダイビング</span>
+                <h3>体験ダイビング</h3>
                 <dl>
                   <div>
                     <dt>ビーチ体験ダイビング(半日)</dt>
@@ -652,7 +660,7 @@
                 </dl>
               </li>
               <li class="top-price__list-item">
-                <span>ファンダイビング</span>
+                <h3>ファンダイビング</h3>
                 <dl>
                   <div>
                     <dt>ビーチダイビング(2ダイブ)</dt>
@@ -673,7 +681,7 @@
                 </dl>
               </li>
               <li class="top-price__list-item">
-                <span>スペシャルダイビング</span>
+                <h3>スペシャルダイビング</h3>
                 <dl>
                   <div>
                     <dt>貸切ダイビング(2ダイブ)</dt>
@@ -688,18 +696,13 @@
             </ul>
           </div>
 
-          <picture>
-            <source media="(min-width: )" srcset="" />
-            <img src="" alt="" />
-          </picture>
-
+        </div>
           <div class="top-price__btn">
             <a class="btn">
               View more
               <span class="btn__arrow"></span>
             </a>
           </div>
-        </div>
       </section>
 
       <section id="top-contact" class="top-contact section-top-contact">

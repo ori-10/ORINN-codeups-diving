@@ -1,2 +1,16 @@
 @use "global" as *;
 
+.top-voice__cards {
+  margin-top: rem(45);
+  @include mq("md") {
+    margin-top: rem(30);
+  }
+}
+
+.top-voice__btn {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
