@@ -11,5 +11,50 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid $green-accent;
+
+    background-color: $white;
+    position: relative;
+    transition: 0.4s;
+  }
+}
+
+// .arrow-next {
+//   display: none;
+
+//   @include mq("md") {
+//     display: inline-block;
+//     width: rem(80);
+//     height: rem(80);
+//     border-radius: 50%;
+//     border: 1px solid $green-accent;
+//   }
+// }
+
+.arrow-prev::before {
+  @include mq("md") {
+    content: "";
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    background-image: url(../images/common/prev-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.4s all;
+    mask-position: center;
+  }
+}
+
+.arrow-prev:hover {
+  @include mq("md") {
+    background-color: $green-accent;
+  }
+}
+
+.arrow-prev:hover::before {
+  @include mq("md") {
+    filter: brightness(300%);
   }
 }
