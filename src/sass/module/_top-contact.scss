@@ -1,0 +1,136 @@
+@use "global" as *;
+
+.top-contact__inner {
+  margin-top: rem(82);
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.top-contact__box {
+  @include mq("md") {
+    padding: rem(80) rem(50);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+  }
+}
+
+.top-contact__body {
+  padding: 0 rem(25);
+  @include mq("md") {
+    padding: 0;
+    padding-right: rem(82);
+    border-right: 1px solid $green-accent;
+    width: 53.93%;
+  }
+}
+
+.top-contact__logo {
+  border-bottom: 1px solid $green-accent;
+  text-align: center;
+  @include mq("md") {
+    padding-bottom: rem(3);
+  }
+}
+
+.top-contact__img {
+  display: inline-block;
+  width: 100%;
+  max-width: rem(174);
+  @include mq("md") {
+    max-width: rem(200);
+  }
+}
+
+.top-contact__info {
+  margin-top: rem(16);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(24);
+    display: flex;
+    gap: 4.78%;
+  }
+}
+
+.top-contact__address {
+  @include mq("md") {
+    width: 33.18%;
+    text-align: left;
+  }
+}
+
+.top-contact__address li {
+  margin-top: rem(4);
+  line-height: 1.5;
+}
+
+.top-contact__address li:first-child {
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.top-contact__map {
+  margin-top: rem(16);
+  @include mq("md") {
+    margin-top: rem(24);
+    margin-top: 0;
+    width: 62.04%;
+  }
+}
+
+.top-contact__map {
+  position: relative;
+  width: 100%;
+}
+
+.top-contact__map::before {
+  content: "";
+  display: block;
+  padding-top: 54.23%;
+  @include mq("md") {
+    padding-top: 53.93%;
+  }
+}
+
+.top-contact__map img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-contact__link {
+  margin-top: rem(48);
+  @include mq("md") {
+    margin-top: rem(30);
+    padding-left: rem(81);
+    padding-left: 20px;
+    width: 47.2%;
+  }
+}
+
+.top-contact__section-title--l h2 {
+  font-size: rem(80);
+  line-height: 0.8;
+}
+
+.top-contact__section-title--l p {
+  font-size: rem(12);
+  margin-top: 0;
+}
+
+.top-contact__text {
+  color: $green-accent;
+  font-size: rem(14);
+  margin-top: rem(7);
+  text-align: center;
+}
+
+.top-contact__btn {
+  margin-top: rem(40);
+  text-align: center;
+}
