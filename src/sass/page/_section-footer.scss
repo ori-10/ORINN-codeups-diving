@@ -1,5 +1,8 @@
 @use "global" as *;
 
 .section-footer {
-  margin-top: rem(80);
+  margin-top: rem(100);
+  @include mq("md") {
+    margin-top: rem(160);
+  }
 }

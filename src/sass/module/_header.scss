@@ -46,6 +46,23 @@
 //   メニュー
 ////////////////
 
+.header__sp-nav {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  // @include mq("md") {
+    display: none;
+  // }
+  
+  transition: opacity 0.4s linear;
+}
+
 .panelactive.header__sp-nav {
   display: flex;
   background-color: $green-accent;
