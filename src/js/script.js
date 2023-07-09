@@ -115,14 +115,14 @@ let mySwiper = new Swiper ('.top-campaign__swiper', {
   loop: true, // スライドの無限ループ
 
   // スライドの表示枚数：768px未満の場合
-  slidesPerView: 1.2,
-  spaceBetween: 14,
+  slidesPerView: 1.24,
+  spaceBetween: 15,
 
 
   breakpoints: {
     // スライドの表示枚数：500px以上の場合
     768: {
-      slidesPerView: 3.7,
+      slidesPerView: 3.46,
   spaceBetween: 30,
     }
   }

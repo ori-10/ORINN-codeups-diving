@@ -41,15 +41,15 @@ top: rem(-105);
   // left: 0;
   // left: initial;
   left: auto;
-  right: var(--swiper-navigation-sides-offset,160px);}
+  right: var(--swiper-navigation-sides-offset,175px);}
 
 .swiper-button-next, .swiper-rtl .swiper-button-prev { 
     // right: var(--swiper-navigation-sides-offset, rem(50));
-  top: rem(-107);
+  top: rem(-105);
 // left: initial;
 left: 0;
 left: initial;
-  right: var(--swiper-navigation-sides-offset,0);
+  right: var(--swiper-navigation-sides-offset,15px);
   
 }
 
