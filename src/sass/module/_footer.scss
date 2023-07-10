@@ -84,6 +84,10 @@
 .footer__sp-nav .sp-nav__wrap {
   width: initial;
   margin-right: auto;
+  @include mq("md") {
+    margin-right: initial;
+    
+  }
 }
 
 .footer__sp-nav .sp-nav__items + .sp-nav__items {

@@ -5,8 +5,10 @@
     padding-top: rem(100);
     background-image: url(../images/common/blog-bg.jpg);
     background-repeat: no-repeat;
+    // background-repeat: repeat-x;
     background-position: top center;
     background-size: contain;
+    background-size: rem(1440) 60.16%;
   }
 }
 

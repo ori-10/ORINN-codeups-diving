@@ -163,21 +163,6 @@ jQuery(function ($) {
 // voice 画像出現アニメーション
 ////////////
 
-// $(window).on('scroll', function () {
-    
-//   let windowScroll = $(window).scrollTop();
-//   let windowHeight = $(window).height();
-//   let windowPosition = windowScroll + windowHeight;
-
-// let voicePosition = $('.voice-card').offset().top;
-
-// if (windowPosition >= voicePosition) {
-//   $('.voice-card').addClass('is-active');
-// }
-// })
-
-
-
 $(window).on('scroll', function() {
   let windowPosition = $(window).scrollTop() + $(window).height();
   
