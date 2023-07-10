@@ -1,9 +1,9 @@
 // const { compile } = require("sass");
 
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+jQuery(function ($) {
+  // この中であればWordpressでも「$」が使用可能になる
 
-
-//////////////
+  //////////////
   // topへ戻るボタン
   //////////////
   var topBtn = $(".js-page-top");
@@ -64,16 +64,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   //   ヘッダー　mv過ぎたら変色
   ////////////////
 
-  let header = $('.header');
-  let headerHeight = $('.header').height();
-  let height = $('.js-mv-height').height();
+  let header = $(".header");
+  let headerHeight = $(".header").height();
+  let height = $(".js-mv-height").height();
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > height - headerHeight) {
-       // 指定px以上のスクロールでヘッダーを表示
+      // 指定px以上のスクロールでヘッダーを表示
       header.addClass("is-color");
     } else {
-       // 画面が指定pxより上ならヘッダーを非表示
+      // 画面が指定pxより上ならヘッダーを非表示
       header.removeClass("is-color");
     }
   });
@@ -93,55 +93,51 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   };
   new Swiper(".js-top-mv-swiper", swipeOption);
 
-////////////
-// campaignスライダー
-////////////
-  
-let mySwiper = new Swiper ('.top-campaign__swiper', {
-  // オプション設定
+  ////////////
+  // campaignスライダー
+  ////////////
 
-  // PC時のみページネーション表示
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  let mySwiper = new Swiper(".top-campaign__swiper", {
+    // オプション設定
 
-  // autoplay: { // スライドの自動再生
-  //   delay: 3000,
-  // },
+    // PC時のみページネーション表示
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
 
-  // width: 334,
-  // height: 445,
-  loop: true, // スライドの無限ループ
+    // autoplay: { // スライドの自動再生
+    //   delay: 3000,
+    // },
 
-  // スライドの表示枚数：768px未満の場合
-  slidesPerView: 1.24,
-  spaceBetween: 15,
+    // width: 334,
+    // height: 445,
+    loop: true, // スライドの無限ループ
 
+    // スライドの表示枚数：768px未満の場合
+    slidesPerView: 1.27,
+    spaceBetween: 25,
 
-  breakpoints: {
-    // スライドの表示枚数：500px以上の場合
-    768: {
-      slidesPerView: 3.46,
-  spaceBetween: 30,
-    }
-  }
-});
-  
+    breakpoints: {
+      // スライドの表示枚数：768px以上の場合
+      768: {
+        slidesPerView: 3.46,
+        spaceBetween: 30,
+      },
+    },
+  });
 
-let prevButton = document.querySelector('.swiper-button-prev');
-let nextButton = document.querySelector('.swiper-button-next');
+  let prevButton = document.querySelector(".swiper-button-prev");
+  let nextButton = document.querySelector(".swiper-button-next");
 
-// prevボタンのクリックイベントを監視します
-prevButton.addEventListener('click', function() {
-  // 自動再生を再開します
-  mySwiper.autoplay.start();
-});
-// nextボタンのクリックイベントを監視します
-nextButton.addEventListener('click', function() {
-  // 自動再生を再開します
-  mySwiper.autoplay.start();
-});
-
+  // prevボタンのクリックイベントを監視します
+  prevButton.addEventListener("click", function () {
+    // 自動再生を再開します
+    mySwiper.autoplay.start();
+  });
+  // nextボタンのクリックイベントを監視します
+  nextButton.addEventListener("click", function () {
+    // 自動再生を再開します
+    mySwiper.autoplay.start();
+  });
 }); // 消さない
-

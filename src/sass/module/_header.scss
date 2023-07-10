@@ -61,6 +61,7 @@
   // }
   
   transition: opacity 0.4s linear;
+  // transition: opacity 0.4s;
 }
 
 .panelactive.header__sp-nav {
@@ -80,6 +81,12 @@
     height: inherit;
   }
 }
+
+.header__sp-nav ul:nth-of-type(2) {
+  padding-bottom: 100px;
+}
+
+.header__sp-nav
 
 /////////////////
 // mv過ぎたら黒
