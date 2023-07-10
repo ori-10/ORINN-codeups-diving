@@ -6,6 +6,7 @@
   display: inline-block;
   padding: rem(15) rem(16) rem(24);
   transition: .3s all;
+  position: relative;
   @include mq("md") {
     padding: rem(24);
   }
@@ -28,8 +29,6 @@
   flex-direction: column;
   width: 47.6%;
   @include mq("md") {
-    // display: flex;
-    // flex-direction: column;
     width: 58.47%;
   }
 }
@@ -123,4 +122,55 @@
       margin-top: rem(40);
     }
   }
+
+
+////////////////
+//   出現アニメーション
+////////////////
+
+.voice-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: $green-accent;
+}
+
+.voice-card.is-active {
+  animation-name: boxAnimation;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes boxAnimation {
+  0% {
+    // 最初の状態
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    // 最後の状態
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.is-active.voice-card::after {
+  animation-name: colorAnimation;
+  animation-delay: 0.7s;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes colorAnimation {
+  0% {
+    // 最初の状態
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    // 最後の状態
+    clip-path: inset(0 100% 0 0);
+  }
+}
   

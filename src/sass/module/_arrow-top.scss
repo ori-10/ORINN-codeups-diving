@@ -1,58 +1,48 @@
 @use "global" as *;
 
 .arrow-top {
-    width: rem(48);
-    height: rem(48);
-
-    display: inline-block;
-    border-radius: 50%;
-    border: 1px solid $green-accent;
-    transition: 0.4s;
-    position: relative;
-    background-color: $white;
+  width: rem(48);
+  height: rem(48);
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid $green-accent;
+  transition: 0.3s;
+  position: relative;
+  background-color: $white;
 
   @include mq("md") {
     width: rem(80);
     height: rem(80);
-    
   }
 }
 
 .arrow-top::before {
-  // @include mq("md") {
-    content: "";
-    width: 50%;
-    height: 70%;
-    position: absolute;
-    background-image: url(../images/common/arrow-top-sp.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    // background-size: 50%;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    // transition: 0.4s all;
-    mask-position: center;
-    @include mq("md") {
-      width: 70%;
-      height: 50%;
-      left: 50%;
-      background-size: initial;
-      transform: translate(-50%, -50%) rotate(-90deg);
+  content: "";
+  width: 50%;
+  height: 70%;
+  position: absolute;
+  background-image: url(../images/common/arrow-top-sp.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  mask-position: center;
+  @include mq("md") {
+    width: 70%;
+    height: 50%;
+    left: 50%;
+    background-size: initial;
+    transform: translate(-50%, -50%) rotate(-90deg);
     background-image: url(../images/common/next-arrow.svg);
-      
-    }
-  // }
+  }
 }
 
 .arrow-top:hover {
-  // @include mq("md") {
-    background-color: $green-accent;
-  // }
+  background-color: $green-accent;
+  border: 1px solid $white;
 }
 
 .arrow-top:hover::before {
-  // @include mq("md") {
-    filter: brightness(300%);
-  // }
+  filter: brightness(300%);
 }

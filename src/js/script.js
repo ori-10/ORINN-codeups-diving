@@ -140,4 +140,63 @@ jQuery(function ($) {
     // 自動再生を再開します
     mySwiper.autoplay.start();
   });
+
+/////////////
+// 画像出現アニメーション
+////////////
+
+  // $(window).on('scroll', function () {
+    
+  //   let windowScroll = $(window).scrollTop();
+  //   let windowHeight = $(window).height();
+  //   let windowPosition = windowScroll + windowHeight;
+
+  //   let boxPosition = $('.top-information__img').offset().top;
+
+  //   if (windowPosition >= boxPosition) {
+  //     $('.top-information__img').addClass('is-active');
+  //   }
+
+  // })
+
+/////////////
+// voice 画像出現アニメーション
+////////////
+
+// $(window).on('scroll', function () {
+    
+//   let windowScroll = $(window).scrollTop();
+//   let windowHeight = $(window).height();
+//   let windowPosition = windowScroll + windowHeight;
+
+// let voicePosition = $('.voice-card').offset().top;
+
+// if (windowPosition >= voicePosition) {
+//   $('.voice-card').addClass('is-active');
+// }
+// })
+
+
+
+$(window).on('scroll', function() {
+  let windowPosition = $(window).scrollTop() + $(window).height();
+  
+  let boxPosition = $('.top-information__img').offset().top;
+  if (windowPosition >= boxPosition) {
+    $('.top-information__img').addClass('is-active');
+  }
+
+  let voicePosition = $('.voice-card').offset().top;
+  if (windowPosition >= voicePosition) {
+    $('.voice-card').addClass('is-active');
+  }
+
+  let pricePosition = $('.top-price__img').offset().top;
+  if (windowPosition >= pricePosition) {
+    $('.top-price__img').addClass('is-active');
+  }
+});
+  
 }); // 消さない
+
+// 
