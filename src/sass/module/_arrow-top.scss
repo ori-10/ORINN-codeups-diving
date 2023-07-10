@@ -21,19 +21,22 @@
 .arrow-top::before {
   // @include mq("md") {
     content: "";
-    width: 70%;
-    height: 50%;
+    width: 50%;
+    height: 70%;
     position: absolute;
     background-image: url(../images/common/arrow-top-sp.svg);
     background-repeat: no-repeat;
     background-position: center;
     // background-size: 50%;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    transition: 0.4s all;
+    // transition: 0.4s all;
     mask-position: center;
     @include mq("md") {
+      width: 70%;
+      height: 50%;
+      left: 50%;
       background-size: initial;
       transform: translate(-50%, -50%) rotate(-90deg);
     background-image: url(../images/common/next-arrow.svg);
