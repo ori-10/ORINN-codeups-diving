@@ -181,19 +181,24 @@ jQuery(function ($) {
 $(window).on('scroll', function() {
   let windowPosition = $(window).scrollTop() + $(window).height();
   
-  let boxPosition = $('.top-information__img').offset().top;
+  let boxPosition = $('.js-top-information').offset().top;
   if (windowPosition >= boxPosition) {
-    $('.top-information__img').addClass('is-active');
+    $('.js-top-information').addClass('is-active');
   }
 
-  let voicePosition = $('.voice-card').offset().top;
+  let voicePosition = $('.js-voice-card1').offset().top;
   if (windowPosition >= voicePosition) {
-    $('.voice-card').addClass('is-active');
+    $('.js-voice-card1').addClass('is-active');
   }
 
-  let pricePosition = $('.top-price__img').offset().top;
+  let voicePosition2 = $('.js-voice-card2').offset().top;
+  if (windowPosition >= voicePosition2) {
+    $('.js-voice-card2').addClass('is-active');
+  }
+
+  let pricePosition = $('.js-top-price').offset().top;
   if (windowPosition >= pricePosition) {
-    $('.top-price__img').addClass('is-active');
+    $('.js-top-price').addClass('is-active');
   }
 });
   

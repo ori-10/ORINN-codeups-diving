@@ -439,6 +439,9 @@
               </div>
             </div>
           </div>
+          <div class="top-about__decoration u-desktop">
+            <img src="./assets/images/common/about-deco.png" alt="">
+          </div>
         </div>
       </section>
 
@@ -451,7 +454,7 @@
           <p class="section-title__ja">ダイビング情報</p>
         </div>
         <div class="inner top-information__inner">
-          <div class="top-information__img">
+          <div class="top-information__img js-top-information">
             <img src="./assets/images/common/info.jpg" alt="" />
           </div>
           <div class="top-information__body">
@@ -542,7 +545,7 @@
           </div>
 
           <article class="top-voice__cards voice-cards">
-            <a href="#" class="voice-cards__item voice-card">
+            <a href="#" class="voice-cards__item voice-card js-voice-card1">
               <div class="voice-card__head">
                 <div class="voice-card__info-wrap">
                   <div class="voice-card__info">
@@ -551,7 +554,6 @@
                   </div>
                   <h3 class="voice-card__title">
                     ここにタイトルが入ります。ここにタイトル
-                    ここにタイトルが入ります。ここにタイトルここにタイトルが入ります。ここにタイトルここにタイトルが入ります。ここにタイトル
                   </h3>
                 </div>
 
@@ -566,7 +568,7 @@
                 ここにテキストが入ります。ここにテキストが入ります。
               </p>
             </a>
-            <a href="#" class="voice-cards__item voice-card">
+            <a href="#" class="voice-cards__item voice-card js-voice-card2">
               <div class="voice-card__head">
                 <div class="voice-card__info-wrap">
                   <div class="voice-card__info">
@@ -606,18 +608,11 @@
           <p class="section-title__ja">料金一覧</p>
         </div>
         <div class="inner top-price__inner">
-          <picture class="top-price__img">
-            <source
-              media="(min-width: 768px)"
-              srcset="./assets/images/common/price2.jpg"
-            />
 
-            <source
-              media="(min-width: 450px)"
-              srcset="./assets/images/common/price1.jpg"
-            />
-            <img src="./assets/images/common/price1.jpg" alt="海" />
-          </picture>
+          <div class="top-price__img js-top-price">
+            <img class="u-mobile" src="./assets/images/common/price1.jpg" alt="かめ">
+            <img class="u-desktop" src="./assets/images/common/price2.jpg" alt="サンゴ">
+          </div>
 
           <div class="top-price__text-block">
             <ul class="top-price__list-items">

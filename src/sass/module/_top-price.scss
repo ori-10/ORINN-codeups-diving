@@ -112,14 +112,12 @@
   z-index: 0;
   background-color: $green-accent;
 }
-// ,.top-price__img img::after
 
 .top-price__img.is-active {
   animation-name: boxAnimation;
   animation-duration: .7s;
   animation-fill-mode: forwards;
 }
-//.top-price__img img.is-active
 
 @keyframes boxAnimation {
   0% {
@@ -138,7 +136,6 @@
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
 }
-// .is-active.top-price__img img::after
 
 @keyframes colorAnimation {
   0% {

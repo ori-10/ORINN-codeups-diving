@@ -15,13 +15,8 @@
 .top-about__img {
   position: relative;
   width: 100%;
-  // max-width: rem(281);
-  // margin-top: rem(24);
   right: 0;
   margin-left: auto;
-  @include mq("md") {
-    // max-width: rem(880);
-  }
 }
 
 .top-about__img::before {
@@ -81,4 +76,13 @@
 .top-about__btn {
   margin-top: rem(40);
   text-align: center;
+}
+
+.top-about__decoration {
+  max-width: rem(194);
+  position: absolute;
+  bottom: -90px;
+  right: -72px;
+  // margin-left: calc(50% + 700px);
+  // transform: translateX(-50%);
 }
