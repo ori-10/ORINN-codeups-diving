@@ -51,7 +51,7 @@ transition: .3 all;
     display: inline-block;
     text-align: center;
     @include mq("md") {
-    padding: rem(6) rem(12);
+    padding: rem(7) rem(15);
     }
   }
 
@@ -79,14 +79,22 @@ transition: .3 all;
     font-weight: $bold;
     margin-top: rem(3);
     display: flex;
+    gap: 6.5%;
     justify-content: center;
-    justify-content: space-between;
+    // justify-content: space-between;
 align-items: baseline;
+// max-width: rem(211);
+// width: 100%;
+// width: 75.3%;
+@include mq("md") {
+  gap: 8.5%;
+}
   }
 
   .campaign-card__before-price {
     font-size: rem(20);
 position: relative;
+
 @include mq("md") {
   font-size: rem(24);
 }
@@ -108,9 +116,9 @@ position: relative;
   .campaign-card__after-price {
     font-size: rem(32);
     color: $green-accent;
-    margin-left: rem(16);
+    // margin-left: rem(16);
     @include mq("md") {
       font-size: rem(40);
-      margin-left: rem(26);
+      // margin-left: rem(26);
     }
   }
