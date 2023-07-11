@@ -115,7 +115,7 @@ jQuery(function ($) {
     // スライドの表示枚数：768px未満の場合
     slidesPerView: 1.27,
     spaceBetween: 25,
-
+    
     breakpoints: {
       // スライドの表示枚数：768px以上の場合
       768: {
