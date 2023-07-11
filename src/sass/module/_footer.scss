@@ -40,7 +40,7 @@
   width: 100%;
   @include mq("md") {
     max-width: rem(28);
-  margin-top: rem(3);
+    margin-top: rem(3);
   }
 }
 
@@ -55,7 +55,7 @@
   }
 }
 
-.footer__sp-nav {
+.footer__footer-nav {
   display: flex;
   margin-top: rem(14);
   margin-left: calc(50% - 50vw);
@@ -67,34 +67,88 @@
   }
 }
 
-.footer__sp-nav .sp-nav__item--left > a {
-  @include mq("md") {
-    background-position: 0;
-    padding-left: rem(22);
-  }
-}
+////////////////
+// 　footer-nav
+////////////////
 
-
-.footer__sp-nav .sp-nav__wrap + .sp-nav__wrap {
-  @include mq("md") {
-    margin-left: rem(120);
-  }
-}
-
-.footer__sp-nav .sp-nav__wrap {
+.footer-nav__wrap {
   width: initial;
   margin-right: auto;
   @include mq("md") {
     margin-right: initial;
-    
+    display: flex;
   }
 }
 
-.footer__sp-nav .sp-nav__items + .sp-nav__items {
+.footer-nav__wrap + .footer-nav__wrap {
+  @include mq("md") {
+    margin-left: rem(120);
+  }
+}
+.footer-nav__items {
+  height: inherit;
+}
+
+.footer-nav__items + .footer-nav__items {
   @include mq("md") {
     margin-left: 120px;
   }
 }
+
+.footer-nav__item a {
+  display: block;
+  width: 100%;
+  line-height: 1.125;
+  padding: rem(12) 0;
+  color: $white;
+  padding-left: rem(22);
+}
+
+.footer-nav__item a:hover,
+.footer-nav__item-title > a:hover {
+  opacity: 0.7;
+}
+
+.footer-nav__item-title {
+  padding: rem(8) 0;
+}
+
+.footer-nav__item-title > a {
+  color: $white;
+  padding: rem(12) 0;
+  padding-left: rem(22);
+  background-image: url(../images/common/menu-star.png);
+  background-size: rem(18);
+  background-repeat: no-repeat;
+  background-position: rem(15) rem(12);
+  background-position: 0 rem(12);
+  display: block;
+  width: 100%;
+  line-height: 1.125;
+  font-weight: $bold;
+}
+
+.footer-nav__item--left > a {
+  padding-left: rem(37);
+  background-position: rem(15) rem(12);
+  @include mq("md") {
+    padding-left: rem(22);
+    background-position: 0;
+  }
+}
+
+// br
+.footer-nav__item-title--br {
+  font-size: 0;
+}
+
+.footer-nav__item-title--br span {
+  font-size: rem(16);
+}
+
+////////////////
+//   コピーライト
+////////////////
 
 .footer__copy {
   font-size: rem(12);
@@ -111,13 +165,3 @@
     margin-right: auto;
   }
 }
-
-// .sp-nav__item-title span {
-//   @include mq("md") {
-//     text-indent: 0.5em;
-//   }
-// }
-// .u-mobile {
-  
-//   display: initial;
-// }

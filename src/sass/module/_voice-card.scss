@@ -68,7 +68,7 @@
   width: 100%;
   width: 48.24%;
   @include mq("md") {
-    margin-left: rem(13);
+    // margin-left: rem(13);
     margin-top: 0;
     width: 38.1%;
   }
