@@ -64,7 +64,7 @@ jQuery(function ($) {
   //   ヘッダー　mv過ぎたら変色
   ////////////////
 
-  let header = $(".header");
+  let header = $(".ja-header");
   let headerHeight = $(".header").height();
   let height = $(".js-mv-height").height();
 
@@ -110,8 +110,6 @@ jQuery(function ($) {
     //   delay: 3000,
     // },
 
-    // width: 334,
-    // height: 445,
     loop: true, // スライドの無限ループ
 
     // スライドの表示枚数：768px未満の場合
@@ -145,24 +143,6 @@ jQuery(function ($) {
   // 画像出現アニメーション
   ////////////
 
-  // $(window).on('scroll', function () {
-
-  //   let windowScroll = $(window).scrollTop();
-  //   let windowHeight = $(window).height();
-  //   let windowPosition = windowScroll + windowHeight;
-
-  //   let boxPosition = $('.top-information__img').offset().top;
-
-  //   if (windowPosition >= boxPosition) {
-  //     $('.top-information__img').addClass('is-active');
-  //   }
-
-  // })
-
-  /////////////
-  // voice 画像出現アニメーション
-  ////////////
-
   $(window).on("scroll", function () {
     let windowPosition = $(window).scrollTop() + $(window).height();
 
@@ -186,6 +166,8 @@ jQuery(function ($) {
       $(".js-top-price").addClass("is-active");
     }
   });
+
+  
 }); // 消さない
 
 //

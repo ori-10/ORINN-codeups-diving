@@ -12,6 +12,23 @@
     padding: rem(80) rem(50);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     display: flex;
+    position: relative;
+  }
+}
+
+.top-contact__box::after {
+  @include mq("md") {
+    position: absolute;
+    top: rem(-40);
+    right: calc(50% - min(49vw, 41.9rem));
+    content: "";
+    background-image: url(../images/common/fish-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: rem(301);
+    width: 100%;
+    height: rem(138);
   }
 }
 

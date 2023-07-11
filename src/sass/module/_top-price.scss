@@ -7,6 +7,23 @@
   @include mq("md") {
     padding-top: rem(100);
     padding-bottom: rem(100);
+    position: relative;
+  }
+}
+
+.top-price::after {
+  @include mq("md") {
+    position: absolute;
+    bottom: rem(57.6);
+    left: calc(50% - min(49vw, 38.7rem));
+    content: "";
+    background-image: url(../images/common/fish-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: rem(437);
+    width: 100%;
+    height: rem(201);
   }
 }
 
@@ -49,7 +66,6 @@
   }
 
 .top-price__text-block {
-  // order: 0;
   margin-top: rem(40);
   @include mq("md") {
     width: 45.68%;

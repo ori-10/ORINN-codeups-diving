@@ -8,6 +8,22 @@
   }
 }
 
+.top-about__inner::after {
+  @include mq("md") {
+    position: absolute;
+    bottom: rem(-91);
+    right: calc(50% - min(49vw, 39.87rem));
+    content: "";
+    background-image: url(../images/common/coral.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: rem(194);
+    width: 100%;
+    height: rem(181);
+  }
+}
+
 .top-about__img-block {
   position: relative;
 }
@@ -78,18 +94,3 @@
   text-align: center;
 }
 
-.top-about__inner::after {
-  @include mq("md") {
-    position: absolute;
-    bottom: -91px;
-    right: calc(50% - min(49vw, 39.87rem));
-    content: "";
-    background-image: url(../images/common/coral.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    max-width: rem(194);
-    width: 100%;
-    height: rem(181);
-  }
-}
