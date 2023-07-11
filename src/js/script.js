@@ -122,7 +122,7 @@ jQuery(function ($) {
       // スライドの表示枚数：768px以上の場合
       768: {
         slidesPerView: 3.46,
-        spaceBetween: 30,
+        spaceBetween: 40,
       },
     },
   });
@@ -141,12 +141,12 @@ jQuery(function ($) {
     mySwiper.autoplay.start();
   });
 
-/////////////
-// 画像出現アニメーション
-////////////
+  /////////////
+  // 画像出現アニメーション
+  ////////////
 
   // $(window).on('scroll', function () {
-    
+
   //   let windowScroll = $(window).scrollTop();
   //   let windowHeight = $(window).height();
   //   let windowPosition = windowScroll + windowHeight;
@@ -159,34 +159,33 @@ jQuery(function ($) {
 
   // })
 
-/////////////
-// voice 画像出現アニメーション
-////////////
+  /////////////
+  // voice 画像出現アニメーション
+  ////////////
 
-$(window).on('scroll', function() {
-  let windowPosition = $(window).scrollTop() + $(window).height();
-  
-  let boxPosition = $('.js-top-information').offset().top;
-  if (windowPosition >= boxPosition) {
-    $('.js-top-information').addClass('is-active');
-  }
+  $(window).on("scroll", function () {
+    let windowPosition = $(window).scrollTop() + $(window).height();
 
-  let voicePosition = $('.js-voice-card1').offset().top;
-  if (windowPosition >= voicePosition) {
-    $('.js-voice-card1').addClass('is-active');
-  }
+    let boxPosition = $(".js-top-information").offset().top;
+    if (windowPosition >= boxPosition) {
+      $(".js-top-information").addClass("is-active");
+    }
 
-  let voicePosition2 = $('.js-voice-card2').offset().top;
-  if (windowPosition >= voicePosition2) {
-    $('.js-voice-card2').addClass('is-active');
-  }
+    let voicePosition = $(".js-voice-card1").offset().top;
+    if (windowPosition >= voicePosition) {
+      $(".js-voice-card1").addClass("is-active");
+    }
 
-  let pricePosition = $('.js-top-price').offset().top;
-  if (windowPosition >= pricePosition) {
-    $('.js-top-price').addClass('is-active');
-  }
-});
-  
+    let voicePosition2 = $(".js-voice-card2").offset().top;
+    if (windowPosition >= voicePosition2) {
+      $(".js-voice-card2").addClass("is-active");
+    }
+
+    let pricePosition = $(".js-top-price").offset().top;
+    if (windowPosition >= pricePosition) {
+      $(".js-top-price").addClass("is-active");
+    }
+  });
 }); // 消さない
 
-// 
+//

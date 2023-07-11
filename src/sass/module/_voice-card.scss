@@ -128,7 +128,7 @@
 //   出現アニメーション
 ////////////////
 
-.voice-card::after {
+.voice-card__img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -139,7 +139,7 @@
   background-color: $green-accent;
 }
 
-.voice-card.is-active {
+.voice-card__img.is-active {
   animation-name: boxAnimation;
   animation-duration: .7s;
   animation-fill-mode: forwards;
@@ -156,7 +156,7 @@
   }
 }
 
-.is-active.voice-card::after {
+.is-active.voice-card__img::after {
   animation-name: colorAnimation;
   animation-delay: 0.7s;
   animation-duration: 0.7s;

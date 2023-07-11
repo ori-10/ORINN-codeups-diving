@@ -56,22 +56,18 @@
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  // @include mq("md") {
-    display: none;
-  // }
-  
-  transition: opacity 0.4s linear;
-  // transition: opacity 0.4s;
+  display: flex;
+  background-color: $green-accent;
+  padding: rem(85) 0 rem(50);
+  transition: opacity 0.4s,visibility 0.4s linear;
+  visibility:hidden;
+  z-index: 1;
 }
 
 .panelactive.header__sp-nav {
-  display: flex;
-  background-color: $green-accent;
-  width: 100%;
-  opacity: 1;
   pointer-events: auto;
-  z-index: 1;
-  padding: rem(85) 0 rem(50);
+  opacity: 1;
+  visibility:visible;
 }
 
 .header__pc-nav {

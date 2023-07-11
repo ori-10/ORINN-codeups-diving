@@ -1,14 +1,12 @@
 @use "global" as *;
 
 .sp-nav {
-  // transition: opacity 0.3s linear;
   z-index: 1;
   overflow: scroll;
 }
 
 .sp-nav__wrap {
   width: 50%;
-  // padding-bottom: rem(100);
   @include mq("md") {
     display: flex;
   }
@@ -55,3 +53,11 @@
   padding-left: rem(37);
   background-position: rem(15) rem(12);
 }
+
+.sp-nav__item-title--br {
+  font-size: 0;
+}
+
+.sp-nav__item-title--br span {
+  font-size: rem(16);
+  }
