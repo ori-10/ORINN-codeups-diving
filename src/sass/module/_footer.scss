@@ -55,6 +55,10 @@
   }
 }
 
+////////////////
+// 　footer-nav
+////////////////
+
 .footer__footer-nav {
   display: flex;
   margin-top: rem(14);
@@ -66,10 +70,6 @@
     margin-top: rem(5);
   }
 }
-
-////////////////
-// 　footer-nav
-////////////////
 
 .footer-nav__wrap {
   width: initial;
@@ -87,6 +87,7 @@
 }
 .footer-nav__items {
   height: inherit;
+  width: inherit;
 }
 
 .footer-nav__items + .footer-nav__items {

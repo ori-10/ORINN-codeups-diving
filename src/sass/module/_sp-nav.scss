@@ -3,61 +3,56 @@
 .sp-nav {
   z-index: 1;
   overflow: scroll;
+  @include mq("md") {
+    display: none;
+  }
 }
 
 .sp-nav__wrap {
   width: 50%;
-  @include mq("md") {
-    display: flex;
-  }
 }
 
 .sp-nav__items {
   height: inherit;
 }
 
-.sp-nav__item a {
+.sp-nav__item {
   display: block;
   width: 100%;
   line-height: 1.125;
   padding: rem(12) 0;
   color: $white;
-  padding-left: rem(22);
-}
-
-.sp-nav__item a:hover,
-.sp-nav__item-title > a:hover {
-  opacity: 0.7;
-}
-
-.sp-nav__item-title > a {
-  color: $white;
-  padding: rem(12) 0;
-  padding-left: rem(22);
-  background-image: url(../images/common/menu-star.png);
-  background-size: rem(18);
-  background-repeat: no-repeat;
-  background-position: rem(15) rem(12);
-  background-position: 0 rem(12);
-  display: block;
-  width: 100%;
-  line-height: 1.125;
-  font-weight: $bold;
+  padding-left: rem(37);
 }
 
 .sp-nav__item-title {
   padding: rem(8) 0;
 }
 
-.sp-nav__item--left > a {
+.sp-nav__item-title a {
+  color: $white;
+  padding: rem(12) 0;
   padding-left: rem(37);
+  background-image: url(../images/common/menu-star.png);
+  background-size: rem(18);
+  background-repeat: no-repeat;
   background-position: rem(15) rem(12);
+  display: block;
+  width: 100%;
+  line-height: 1.125;
+  font-weight: $bold;
+  transition: opacity .4s;
 }
 
-.sp-nav__item-title--br {
-  font-size: 0;
+.sp-nav__item-title a:hover {
+  opacity: 0.7;
 }
 
-.sp-nav__item-title--br span {
-  font-size: rem(16);
-  }
+.sp-nav__wrap--space a {
+  padding-left: rem(22);
+  background-position: 0 rem(12);
+}
+
+.sp-nav__wrap--space .sp-nav__item {
+  padding-left: rem(22);
+}
