@@ -64,7 +64,7 @@ jQuery(function ($) {
   //   ヘッダー　mv過ぎたら変色
   ////////////////
 
-  let header = $(".ja-header");
+  let header = $(".header");
   let headerHeight = $(".header").height();
   let height = $(".js-mv-height").height();
 
@@ -167,7 +167,7 @@ jQuery(function ($) {
     }
   });
 
-  
+
 }); // 消さない
 
 //
