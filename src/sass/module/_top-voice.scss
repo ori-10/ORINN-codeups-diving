@@ -1,8 +1,44 @@
 @use "global" as *;
 
+.top-voice {
+  position: relative;
+}
+
+.top-voice::before {
+  @include mq("md") {
+    position: absolute;
+    top: rem(-120);
+    left: calc(50% - min(49vw, 38.7rem));
+    content: "";
+    background-image: url(../images/common/fish-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: rem(301);
+    width: 100%;
+    height: rem(138);
+  }
+}
+
+.top-voice::after {
+  @include mq("md") {
+    position: absolute;
+    bottom: rem(-70);
+    right: calc(50% - min(49vw, 33.7rem));
+    content: "";
+    background-image: url(../images/common/tatsu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: rem(71);
+    width: 100%;
+    height: rem(162);
+  }
+}
+
 .top-voice__inner {
   max-width: rem(600);
-  
+
 }
 
 .top-voice__cards {
