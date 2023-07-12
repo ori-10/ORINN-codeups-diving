@@ -1,23 +1,22 @@
 @use "global" as *;
 
-
-.voice-cards {
+.blog-cards {
   @include mq("md") {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.voice-cards__item {
+.blog-cards__item {
   width: 100%;
-
+  background-color: $white;
   @include mq("md") {
-    width: calc(50% - rem(40) * 1 / 2);
+    width: calc(33.3333% - rem(40) * 2 / 3);
   }
 }
 
-.voice-cards__item + .voice-cards__item {
-  margin-top: rem(40);
+.blog-cards__item + .blog-cards__item {
+  margin-top: rem(38);
 
   @include mq("md") {
     margin-top: 0;
@@ -25,14 +24,14 @@
   }
 }
 
-.voice-cards__item:nth-child(2n + 1) {
+.blog-cards__item:nth-child(3n + 1) {
   @include mq("md") {
     margin-left: 0;
   }
 }
 
-.voice-cards__item:nth-child(n + 3) {
+.blog-cards__item:nth-child(n + 4) {
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(38);
   }
 }

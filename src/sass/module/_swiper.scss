@@ -37,20 +37,14 @@
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
 
 top: rem(-105);
-  // left: initial;
-  // left: 0;
-  // left: initial;
   left: auto;
-  right: var(--swiper-navigation-sides-offset,175px);}
+  right: var(--swiper-navigation-sides-offset,rem(175));}
 
 .swiper-button-next, .swiper-rtl .swiper-button-prev { 
-    // right: var(--swiper-navigation-sides-offset, rem(50));
   top: rem(-105);
-// left: initial;
 left: 0;
 left: initial;
-  right: var(--swiper-navigation-sides-offset,15px);
-  
+  right: var(--swiper-navigation-sides-offset,rem(15));
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -58,6 +52,5 @@ left: initial;
 }
 
 :root {
-  // --swiper-navigation-size: 44px;
   --swiper-navigation-size: initial;
 }

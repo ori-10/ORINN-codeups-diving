@@ -34,29 +34,37 @@
   }
 }
 
-.footer__icon1 {
+.footer__link-item1 a {
   display: inline-block;
   max-width: rem(21);
   width: 100%;
+  cursor: pointer;
+  transition: opacity .3s;
   @include mq("md") {
     max-width: rem(28);
     margin-top: rem(3);
   }
 }
 
-.footer__icon2 {
+.footer__link-item2 a {
   display: inline-block;
   max-width: rem(24);
   width: 100%;
   margin-left: rem(20);
+  cursor:pointer;
+  transition: opacity .3s;
   @include mq("md") {
     max-width: rem(32);
     margin-left: rem(18);
   }
 }
 
+.footer__link-item1 a:hover, .footer__link-item2 a:hover {
+  opacity: .7;
+}
+
 ////////////////
-// 　footer-nav
+// 　footer　ナビ
 ////////////////
 
 .footer__nav-block {
@@ -70,80 +78,6 @@
     margin-right: auto;
     margin-top: rem(3);
   }
-}
-
-.footer-nav__wrap {
-  width: initial;
-  margin-right: auto;
-  @include mq("md") {
-    margin-right: initial;
-    display: flex;
-  }
-}
-
-.footer-nav__items {
-  height: inherit;
-  width: inherit;
-}
-
-.footer-nav__item-title {
-  padding: rem(8) 0;
-}
-
-.footer-nav__item-title a {
-  display: block;
-  width: 100%;
-  width: initial;
-  color: $white;
-  font-weight: $bold;
-  padding: rem(12) 0;
-  padding-left: rem(37);
-  background-image: url(../images/common/menu-star.png);
-  background-size: rem(18);
-  background-repeat: no-repeat;
-  background-position: rem(15) rem(12);
-  line-height: 1.125;
-  transition: opacity 0.4s;
-  @include mq("md") {
-    padding-left: rem(22);
-    background-position: rem(0) rem(12);
-  }
-}
-
-.footer-nav__item-title a:hover {
-  opacity: 0.7;
-}
-
-.footer-nav__item {
-  display: block;
-  width: 100%;
-  width: initial;
-  color: $white;
-  padding: rem(12) 0;
-  padding-left: rem(37);
-  line-height: 1.125;
-  @include mq("md") {
-    padding-left: rem(22);
-    padding-right: rem(120);
-  }
-}
-
-.footer-nav__wrap--space a {
-  padding-left: rem(22);
-  background-position: 0 rem(12);
-}
-
-.footer-nav__wrap--space .footer-nav__item {
-  padding-left: rem(22);
-}
-
-// br
-.footer-nav__item-title--br {
-  font-size: 0;
-}
-
-.footer-nav__item-title--br span {
-  font-size: rem(16);
 }
 
 ////////////////

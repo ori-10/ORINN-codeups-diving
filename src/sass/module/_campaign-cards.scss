@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.top-campaign__swiper {
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  @include mq("md") {
-    margin-left: auto;
-  }
-}
-
 .campaign-cards {
   position: relative;
 }

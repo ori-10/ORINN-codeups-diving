@@ -80,9 +80,10 @@
 
 .top-price__list-item {
   margin-top: rem(40);
+  letter-spacing: 0;
 }
 
-.top-price__list-item h3 {
+.top-price__item-title {
   display: block;
   border-bottom: 1px solid $green-accent;
   padding-bottom: rem(4);
@@ -100,10 +101,6 @@
     font-size: rem(16);
     line-height: 1.5;
   }
-}
-
-.top-price__list-item dt {
-  letter-spacing: 0;
 }
 
 .top-price__btn {

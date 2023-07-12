@@ -2,8 +2,7 @@
 
 .top-blog {
   @include mq("md") {
-    height: rem(830);
-  position: relative;
+    position: relative;
   }
 }
 
@@ -23,14 +22,17 @@
   }
 }
 
-.top-blog__bg {
+.top-blog::before {
   @include mq("md") {
-    padding-top: rem(100);
+    content: "";
+    position: absolute;
     height: rem(500);
+    width: 100%;
     background-image: url(../images/common/blog-bg.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -1;
   }
 }
 
@@ -38,6 +40,9 @@
   padding-left: rem(21);
   padding-right: rem(21);
   max-width: rem(600);
+  @include mq("md") {
+    padding-top: rem(100);
+  }
 }
 
 .top-blog__cards {
@@ -52,13 +57,5 @@
   text-align: center;
   @include mq("md") {
     margin-top: rem(80);
-  }
-}
-
-.top-blog__section-title h2,
-.top-blog__section-title span,
-.top-blog__section-title p {
-  @include mq("md") {
-    color: $white;
   }
 }

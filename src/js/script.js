@@ -66,7 +66,7 @@ jQuery(function ($) {
 
   let header = $(".header");
   let headerHeight = $(".header").height();
-  let height = $(".js-mv-height").height();
+  let height = $(".js-mv").height();
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > height - headerHeight) {
@@ -91,7 +91,7 @@ jQuery(function ($) {
     },
     speed: 2000,
   };
-  new Swiper(".js-top-mv-swiper", swipeOption);
+  new Swiper(".js-mv-swiper", swipeOption);
 
   ////////////
   // campaignスライダー
@@ -106,9 +106,9 @@ jQuery(function ($) {
       prevEl: ".swiper-button-prev",
     },
 
-    // autoplay: { // スライドの自動再生
-    //   delay: 3000,
-    // },
+    autoplay: { // スライドの自動再生
+      delay: 3000,
+    },
 
     loop: true, // スライドの無限ループ
 
@@ -146,9 +146,9 @@ jQuery(function ($) {
   $(window).on("scroll", function () {
     let windowPosition = $(window).scrollTop() + $(window).height();
 
-    let boxPosition = $(".js-top-information").offset().top;
+    let boxPosition = $(".js-information").offset().top;
     if (windowPosition >= boxPosition) {
-      $(".js-top-information").addClass("is-active");
+      $(".js-information").addClass("is-active");
     }
 
     let voicePosition = $(".js-voice-card1").offset().top;
@@ -161,9 +161,9 @@ jQuery(function ($) {
       $(".js-voice-card2").addClass("is-active");
     }
 
-    let pricePosition = $(".js-top-price").offset().top;
+    let pricePosition = $(".js-price").offset().top;
     if (windowPosition >= pricePosition) {
-      $(".js-top-price").addClass("is-active");
+      $(".js-price").addClass("is-active");
     }
   });
 

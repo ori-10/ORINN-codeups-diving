@@ -14,7 +14,7 @@
   z-index: 0;
   cursor: pointer;
   justify-content: center;
-  transition: .2s;
+  transition: color .2s;
 }
 
 .btn::before {
@@ -25,7 +25,7 @@
   bottom: 0;
   right: 0;
   border: 1px solid $green-accent;
-  transform: translate(5px, 5px);
+  transform: translate(rem(5), rem(5));
   z-index: -1;
 }
 
@@ -47,7 +47,7 @@
   height: 100%;
   transform: scale(0, 1);
   transform-origin: left top;
-  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  transition: all 0.2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
 }
 
@@ -65,7 +65,7 @@
 .btn__arrow {
   position: relative;
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 rem(20);
   text-decoration: none;
   outline: none;
 }
@@ -79,7 +79,7 @@
   background-image: url(../images/common/btn-arrow--white.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  transition: 0.2s;
+  transition: all 0.2s;
 }
 
 .btn:hover .btn__arrow::before,
@@ -87,7 +87,3 @@
   background-color: transparent;
 }
 
-// .btn:hover .btn__arrow::before,
-// .btn:hover .btn__arrow::after {
-//   background-color: transparent;
-// }

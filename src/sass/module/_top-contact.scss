@@ -10,7 +10,7 @@
 .top-contact__box {
   @include mq("md") {
     padding: rem(80) rem(50);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: rem(4) rem(4) rem(10) rgba(0, 0, 0, 0.25);
     display: flex;
     position: relative;
   }
@@ -51,11 +51,29 @@
 }
 
 .top-contact__img {
+  position: relative;
   display: inline-block;
   width: 100%;
   max-width: rem(174);
   @include mq("md") {
     max-width: rem(200);
+  }
+}
+
+.top-contact__img::after {
+    position: absolute;
+    top: rem(-25);
+    right: rem(-85);
+    content: "";
+    background-image: url(../images/common/fish-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: rem(109);
+    width: 100%;
+    height: rem(50);
+  @include mq("md") {
+    content: initial;
   }
 }
 
@@ -127,16 +145,6 @@
     padding-left: rem(20);
     width: 47.2%;
   }
-}
-
-.top-contact__section-title--l h2 {
-  font-size: rem(80);
-  line-height: 0.8;
-}
-
-.top-contact__section-title--l p {
-  font-size: rem(12);
-  margin-top: rem(2);
 }
 
 .top-contact__text {
