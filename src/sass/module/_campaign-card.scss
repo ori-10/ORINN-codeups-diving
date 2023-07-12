@@ -83,6 +83,7 @@
   justify-content: center;
   align-items: baseline;
   @include mq("md") {
+    margin-top: rem(1);
     gap: 8.5%;
   }
 }
@@ -90,7 +91,6 @@
 .campaign-card__before-price {
   font-size: rem(20);
   position: relative;
-
   @include mq("md") {
     font-size: rem(24);
   }
@@ -113,6 +113,6 @@
   font-size: rem(32);
   color: $green-accent;
   @include mq("md") {
-    font-size: clamp(rem(32), 50%, rem(40));
+    font-size: min(3vw, rem(40));
   }
 }
