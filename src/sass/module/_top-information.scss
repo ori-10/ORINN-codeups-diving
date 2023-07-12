@@ -16,6 +16,7 @@
     display: flex;
     margin-top: rem(40);
     gap: 4.5%;
+    align-items: flex-start;
   }
 }
 
@@ -79,6 +80,7 @@
 ////////////////
 //   出現アニメーション
 ////////////////
+
 
 .top-information__img::after {
   content: "";
