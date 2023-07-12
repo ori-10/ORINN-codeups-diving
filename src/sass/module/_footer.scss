@@ -34,7 +34,7 @@
   }
 }
 
-.footer__icon-face {
+.footer__icon1 {
   display: inline-block;
   max-width: rem(21);
   width: 100%;
@@ -44,7 +44,7 @@
   }
 }
 
-.footer__icon-insta {
+.footer__icon2 {
   display: inline-block;
   max-width: rem(24);
   width: 100%;
@@ -59,15 +59,16 @@
 // 　footer-nav
 ////////////////
 
-.footer__footer-nav {
+.footer__nav-block {
   display: flex;
   margin-top: rem(14);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   @include mq("md") {
     margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
-    margin-top: rem(5);
+    margin-top: rem(3);
   }
 }
 
@@ -80,62 +81,60 @@
   }
 }
 
-.footer-nav__wrap + .footer-nav__wrap {
-  @include mq("md") {
-    margin-left: rem(120);
-  }
-}
 .footer-nav__items {
   height: inherit;
   width: inherit;
-}
-
-.footer-nav__items + .footer-nav__items {
-  @include mq("md") {
-    margin-left: 120px;
-  }
-}
-
-.footer-nav__item a {
-  display: block;
-  width: 100%;
-  line-height: 1.125;
-  padding: rem(12) 0;
-  color: $white;
-  padding-left: rem(22);
-}
-
-.footer-nav__item a:hover,
-.footer-nav__item-title > a:hover {
-  opacity: 0.7;
 }
 
 .footer-nav__item-title {
   padding: rem(8) 0;
 }
 
-.footer-nav__item-title > a {
+.footer-nav__item-title a {
+  display: block;
+  width: 100%;
+  width: initial;
   color: $white;
+  font-weight: $bold;
   padding: rem(12) 0;
-  padding-left: rem(22);
+  padding-left: rem(37);
   background-image: url(../images/common/menu-star.png);
   background-size: rem(18);
   background-repeat: no-repeat;
   background-position: rem(15) rem(12);
-  background-position: 0 rem(12);
-  display: block;
-  width: 100%;
   line-height: 1.125;
-  font-weight: $bold;
-}
-
-.footer-nav__item--left > a {
-  padding-left: rem(37);
-  background-position: rem(15) rem(12);
+  transition: opacity 0.4s;
   @include mq("md") {
     padding-left: rem(22);
-    background-position: 0;
+    background-position: rem(0) rem(12);
   }
+}
+
+.footer-nav__item-title a:hover {
+  opacity: 0.7;
+}
+
+.footer-nav__item {
+  display: block;
+  width: 100%;
+  width: initial;
+  color: $white;
+  padding: rem(12) 0;
+  padding-left: rem(37);
+  line-height: 1.125;
+  @include mq("md") {
+    padding-left: rem(22);
+    padding-right: rem(120);
+  }
+}
+
+.footer-nav__wrap--space a {
+  padding-left: rem(22);
+  background-position: 0 rem(12);
+}
+
+.footer-nav__wrap--space .footer-nav__item {
+  padding-left: rem(22);
 }
 
 // br
