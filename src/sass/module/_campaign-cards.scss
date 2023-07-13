@@ -2,4 +2,9 @@
 
 .campaign-cards {
   position: relative;
+  // width: 100%;
+  // overflow-x: hidden;
+  // @include mq("md") {
+  //   overflow-x: initial;
+  // }
 }
