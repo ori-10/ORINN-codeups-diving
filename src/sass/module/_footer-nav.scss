@@ -26,11 +26,11 @@
   color: $white;
   font-weight: $bold;
   padding: rem(12) 0;
-  padding-left: rem(37);
+  padding-left: rem(22);
   background-image: url(../images/common/menu-star.png);
   background-size: rem(18);
   background-repeat: no-repeat;
-  background-position: rem(15) rem(12);
+  background-position: 0 rem(12);
   line-height: 1.125;
   transition: opacity 0.4s;
   @include mq("md") {
@@ -49,7 +49,7 @@
   width: initial;
   color: $white;
   padding: rem(12) 0;
-  padding-left: rem(37);
+  padding-left: rem(22);
   line-height: 1.125;
   @include mq("md") {
     padding-left: rem(22);

@@ -69,11 +69,12 @@
 
 .footer__nav-block {
   display: flex;
-  margin-top: rem(17);
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  margin-top: rem(15);
+  
+
+  width: 100%;
+margin-right: calc(50% - 50vw);
   @include mq("md") {
-    margin-left: auto;
     margin-left: 0;
     margin-right: auto;
     margin-top: rem(5);
@@ -90,8 +91,7 @@
   color: $white;
   text-align: center;
   margin-top: rem(20);
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+
   @include mq("md") {
     font-size: rem(14);
     margin-top: rem(58);
