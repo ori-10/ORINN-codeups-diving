@@ -39,7 +39,7 @@ jQuery(function ($) {
       // アクティブクラスつけ外し
       $(this).toggleClass("active");
       // ナビ表示
-      $(".js-nav").toggleClass("panelactive");
+      $(".sp-nav").toggleClass("active");
 
       // ヘッダーの色黒にする
       $(".header").toggleClass("active");
@@ -48,16 +48,17 @@ jQuery(function ($) {
     });
 
     // リンククリックしたら
-    $(".js-nav a").click(function () {
+    $(".js-header a").click(function () {
       // アクティブクラス外す
       $(".js-hamburger").removeClass("active");
       // ナビ表示
-      $(".js-nav").removeClass("panelactive");
+      $(".sp-nav").removeClass("active");
       // ヘッダーの色透明にする
       $(".header").removeClass("active");
       // bodyに「.active」class付け外し　背景固定解除
       $("body").removeClass("active");
     });
+    
   });
 
   ////////////////

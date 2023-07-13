@@ -39,10 +39,10 @@
   max-width: rem(21);
   width: 100%;
   cursor: pointer;
-  transition: opacity .3s;
+  transition: opacity .4s;
+    margin-top: rem(3);
   @include mq("md") {
     max-width: rem(28);
-    margin-top: rem(3);
   }
 }
 
@@ -52,7 +52,7 @@
   width: 100%;
   margin-left: rem(20);
   cursor:pointer;
-  transition: opacity .3s;
+  transition: opacity .4s;
   @include mq("md") {
     max-width: rem(32);
     margin-left: rem(18);
@@ -76,7 +76,7 @@
     margin-left: auto;
     margin-left: 0;
     margin-right: auto;
-    margin-top: rem(3);
+    margin-top: rem(5);
   }
 }
 

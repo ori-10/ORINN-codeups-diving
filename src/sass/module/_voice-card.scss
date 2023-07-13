@@ -57,7 +57,7 @@
   display: inline-block;
   text-align: center;
   @include mq("md") {
-  padding: rem(6) rem(16);
+  padding: rem(5) rem(16);
     
   }
 }

@@ -3,7 +3,7 @@
 .btn {
   display: inline-flex;
   position: relative;
-  padding: rem(16);
+  padding: rem(16) 0;
   border: 1px solid $green-accent;
   background-color: $green-accent;
   color: $white;
@@ -78,8 +78,7 @@
   height: 100%;
   background-image: url(../images/common/btn-arrow--white.svg);
   background-repeat: no-repeat;
-  background-position: center center;
-  transition: all 0.2s;
+  background-position: center center;background-size: contain;
 }
 
 .btn:hover .btn__arrow::before,

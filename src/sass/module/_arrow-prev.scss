@@ -3,15 +3,11 @@
 .arrow-prev {
   display: none;
   @include mq("md") {
-  display: inline-block;
-  width: rem(80);
-  height: rem(80);
-  border-radius: 50%;
-  background-image: url(../images/common/prev-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid $green-accent;
-
+    display: inline-block;
+    width: rem(80);
+    height: rem(80);
+    border-radius: 50%;
+    border: 1px solid $green-accent;
     background-color: $white;
     position: relative;
     transition: background-color 0.4s;
@@ -27,6 +23,7 @@
     background-image: url(../images/common/prev-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

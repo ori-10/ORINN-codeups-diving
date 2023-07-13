@@ -8,6 +8,13 @@
   }
 }
 
+.sp-nav__addClass {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  padding: rem(84) 0 rem(50);
+}
+
 .sp-nav__wrap {
   width: 50%;
 }

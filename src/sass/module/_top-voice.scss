@@ -55,3 +55,7 @@
     margin-top: rem(80);
   }
 }
+
+.top-voice article > * + * {
+  margin-top: 0; 
+}
