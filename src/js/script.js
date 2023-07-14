@@ -58,7 +58,6 @@ jQuery(function ($) {
       // bodyに「.active」class付け外し　背景固定解除
       $("body").removeClass("active");
     });
-    
   });
 
   ////////////////
@@ -107,8 +106,11 @@ jQuery(function ($) {
       prevEl: ".swiper-button-prev",
     },
 
-    autoplay: { // スライドの自動再生
+    autoplay: {
+      // スライドの自動再生
       delay: 3000,
+      disableOnInteraction: false,
+      reverseDirection: true, // 逆方向有効化
     },
 
     loop: true, // スライドの無限ループ
@@ -116,7 +118,7 @@ jQuery(function ($) {
     // スライドの表示枚数：768px未満の場合
     slidesPerView: 1.27,
     spaceBetween: 25,
-    
+
     breakpoints: {
       // スライドの表示枚数：768px以上の場合
       768: {
@@ -167,8 +169,6 @@ jQuery(function ($) {
       $(".js-price").addClass("is-active");
     }
   });
-
-
 }); // 消さない
 
 //

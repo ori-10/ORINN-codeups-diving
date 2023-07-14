@@ -2,7 +2,6 @@
 
 .arrow-next {
   display: none;
-
   @include mq("md") {
     display: inline-block;
     width: rem(80);

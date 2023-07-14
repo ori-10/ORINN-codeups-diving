@@ -31,9 +31,9 @@
   font-size: rem(40);
   text-transform: uppercase;
   font-family: $third-font-family;
-  letter-spacing: .525em;
+  letter-spacing: 0.525em;
   line-height: 1;
-  text-indent: .5em;
+  text-indent: 0.5em;
   @include mq("md") {
     font-size: rem(80);
   }
@@ -48,8 +48,7 @@
   }
 }
 
-.top-mv__slide-img picture {
+.top-mv__slide-img img {
   object-fit: cover;
   height: 100dvh;
-  width: 100%;
 }

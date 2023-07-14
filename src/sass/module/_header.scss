@@ -10,7 +10,7 @@
   height: rem(80);
   width: 100%;
   background-color: rgba(13, 41, 54, 0.68);
-  transition: all 0.4s;
+  transition: 0.4s all;
   @include mq("md") {
     height: rem(90);
   }
@@ -21,6 +21,7 @@
 /////////////////
 
 .header.is-color {
+  transition: .4s all;
   background-color: #9A9A9A;
 }
 
@@ -41,6 +42,7 @@
 
 .active .header__inner {
   background-color: $green-accent;
+  transition: .4s all;
 }
 
 .header__logo {

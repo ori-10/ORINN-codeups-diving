@@ -52,8 +52,8 @@
   padding-left: rem(22);
   line-height: 1.125;
   @include mq("md") {
+    padding-right: min(rem(120), 8.3vw);
     padding-left: rem(22);
-    padding-right: rem(120);
   }
 }
 
