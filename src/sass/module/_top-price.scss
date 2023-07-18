@@ -83,6 +83,13 @@
   letter-spacing: 0;
 }
 
+.top-price__list-item dt {
+  margin-right: rem(24);
+  @include mq("md") {
+    margin-right: rem(48);
+  }
+}
+
 .top-price__item-title {
   display: block;
   border-bottom: 1px solid $green-accent;

@@ -30,11 +30,15 @@
 }
 
 .btn:hover {
-  color: $green-accent;
+  @include mq("md") {
+    color: $green-accent;
+  }
 }
 
 .btn:hover::after {
-  transform: scale(1, 1);
+  @include mq("md") {
+    transform: scale(1, 1);
+  }
 }
 
 .btn::after {
@@ -52,7 +56,9 @@
 }
 
 .btn:hover .btn__arrow::before {
-  background-image: url(../images/common/next-arrow.svg);
+  @include mq("md") {
+    background-image: url(../images/common/next-arrow.svg);
+  }
 }
 
 .btn span {

@@ -4,13 +4,6 @@
 //   top-mv swiper
 ////////////////
 
-.swiper-wrap {
-  margin-right: calc(50% - 50vw);
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
 @keyframes zoom-in {
   0% {
     transform: scale(1);
@@ -34,6 +27,10 @@
 ////////////////
 //   campaignのswiper
 ////////////////
+
+.swiper-slide {
+  height: auto;
+}
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
@@ -62,4 +59,8 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: transparent;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: default;
 }

@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.loading__animation {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: $white;
+}
+
+.loading__inner {
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.loading__no-scroll {
+  overflow: hidden;
+}
+
+////////////////
+//   タイトル
+////////////////
+
+.loading__title {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background: $white;
+  z-index: 0;
+}
+
+.loading__title h2,
+.loading__title p {
+  color: $green-accent;
+}
+
+////////////////
+//   イメージ
+////////////////
+
+.loading__image-container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+}
+
+.loading__left-image,
+.loading__right-image {
+  height: inherit;
+  width: 50%;
+
+  clip-path: inset(100% 15% 0 15%);
+}
+
+.loading__left-image img,
+.loading__right-image img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+.loading__left-image img {
+  object-position: 100% 100%;
+}
+
+.loading__right-image img {
+  object-position: 0 100%;
+}
+
+.is-active.loading__left-image {
+  animation-name: loadingAnimation;
+  animation-delay: 0.2s;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-direction: normal;
+}
+
+.is-active.loading__right-image {
+  animation-name: loadingAnimation;
+  animation-delay: 0.4s;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-direction: normal;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    // 最初の状態
+    clip-path: inset(100% 15% 0 15%);
+  }
+  100% {
+    // 最後の状態
+    clip-path: inset(0 0 0 0);
+  }
+}
+

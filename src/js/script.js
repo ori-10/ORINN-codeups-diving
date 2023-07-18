@@ -3,6 +3,28 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
+  ///////////
+  // ローディング
+  ///////////
+
+  $(document).ready(function() {
+    // ローディング画面を表示
+    $(".loading__left-image").addClass("is-active");
+    $(".loading__right-image").addClass("is-active");
+
+    // ローディング画面のフェードアウト後にスクロール禁止を解除
+    $("#loading__animation").delay(1700).fadeOut("slow", function() {
+        // フェードアウトが完了した後に実行されるコールバック関数
+        // スクロール禁止を解除
+        $("body").removeClass("loading__no-scroll");
+        $(".loading__left-image").removeClass("is-active");
+        $(".loading__right-image").removeClass("is-active");
+    });
+
+    // ローディング中はスクロール禁止
+    $("body").addClass("loading__no-scroll");
+});
+
   //////////////
   // topへ戻るボタン
   //////////////
@@ -66,7 +88,7 @@ jQuery(function ($) {
 
   let header = $(".header");
   let headerHeight = $(".header").height();
-  let height = $(".js-mv").height();
+  let height = $(".top-mv").height();
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > height - headerHeight) {
@@ -97,7 +119,7 @@ jQuery(function ($) {
   // campaignスライダー
   ////////////
 
-  let mySwiper = new Swiper(".top-campaign__swiper", {
+  let mySwiper = new Swiper(".js-top-campaign__swiper", {
     // オプション設定
 
     // PC時のみページネーション表示
@@ -149,26 +171,24 @@ jQuery(function ($) {
   $(window).on("scroll", function () {
     let windowPosition = $(window).scrollTop() + $(window).height();
 
-    let boxPosition = $(".js-information").offset().top;
+    let boxPosition = $(".top-information__img").offset().top;
     if (windowPosition >= boxPosition) {
-      $(".js-information").addClass("is-active");
+      $(".top-information__img").addClass("is-active");
     }
 
-    let voicePosition = $(".js-voice-card1").offset().top;
+    let voicePosition = $(".voice-card__img--1").offset().top;
     if (windowPosition >= voicePosition) {
-      $(".js-voice-card1").addClass("is-active");
+      $(".voice-card__img--1").addClass("is-active");
     }
 
-    let voicePosition2 = $(".js-voice-card2").offset().top;
+    let voicePosition2 = $(".voice-card__img--2").offset().top;
     if (windowPosition >= voicePosition2) {
-      $(".js-voice-card2").addClass("is-active");
+      $(".voice-card__img--2").addClass("is-active");
     }
 
-    let pricePosition = $(".js-price").offset().top;
+    let pricePosition = $(".top-price__img").offset().top;
     if (windowPosition >= pricePosition) {
-      $(".js-price").addClass("is-active");
+      $(".top-price__img").addClass("is-active");
     }
   });
 }); // 消さない
-
-//
