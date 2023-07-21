@@ -1,18 +1,21 @@
 @use "global" as *;
 
-
 .footer-nav__wrap {
   width: initial;
   margin-right: auto;
   @include mq("md") {
     margin-right: initial;
     display: flex;
+    width: 50%;
   }
 }
 
 .footer-nav__items {
   height: inherit;
   width: inherit;
+  @include mq("md") {
+    width: 50%;
+  }
 }
 
 .footer-nav__item-title {
@@ -52,7 +55,6 @@
   padding-left: rem(22);
   line-height: 1.125;
   @include mq("md") {
-    padding-right: min(rem(120), 8.3vw);
     padding-left: rem(22);
   }
 }
