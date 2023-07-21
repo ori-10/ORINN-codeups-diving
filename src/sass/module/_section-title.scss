@@ -10,7 +10,7 @@
   }
 }
 
-.section-title__en span {
+.section-title__en::first-letter {
   color: $green-accent;
   text-transform: capitalize;
 }
@@ -33,9 +33,10 @@
 }
 
 .section-title--white h2,
-.section-title--white span,
-.section-title--white p {
+.section-title--white p,
+.section-title--white .section-title__en::first-letter {
   @include mq("md") {
     color: $white;
   }
 }
+

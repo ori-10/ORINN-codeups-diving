@@ -2,6 +2,7 @@
 
 .top-blog {
   @include mq("md") {
+    padding-top: rem(103);
     position: relative;
   }
 }
@@ -28,6 +29,9 @@
     position: absolute;
     height: rem(500);
     width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
     background-image: url(../images/common/blog-bg.jpg);
     background-position: top center;
     background-repeat: no-repeat;
@@ -37,12 +41,9 @@
 }
 
 .top-blog__inner {
+  max-width: rem(600);
   padding-left: rem(21);
   padding-right: rem(21);
-  max-width: rem(600);
-  @include mq("md") {
-    padding-top: rem(103);
-  }
 }
 
 .top-blog__cards {

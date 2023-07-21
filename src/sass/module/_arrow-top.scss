@@ -9,6 +9,7 @@
   transition: background-color 0.4s, border 0.4s;
   position: relative;
   background-color: $white;
+  z-index: 1;
 
   @include mq("md") {
     width: rem(80);
@@ -31,7 +32,7 @@
   @include mq("md") {
     width: 70%;
     height: 50%;
-    left: 50%;
+    left: 49%;
     transform: translate(-50%, -50%) rotate(-90deg);
     background-image: url(../images/common/next-arrow.svg);
   }

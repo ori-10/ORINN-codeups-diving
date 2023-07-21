@@ -14,7 +14,10 @@
   z-index: 0;
   cursor: pointer;
   justify-content: center;
-  transition: color .2s;
+  transition: opacity .4s;
+  @include mq("md") {
+    transition: color .2s opacity none;
+  }
 }
 
 .btn::before {
@@ -30,8 +33,10 @@
 }
 
 .btn:hover {
+  opacity: .7;
   @include mq("md") {
     color: $green-accent;
+    opacity: 1;
   }
 }
 

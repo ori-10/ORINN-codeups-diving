@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <div id="loading__animation" class="loading__animation">
+    <!-- <div id="loading__animation" class="loading__animation">
       <div class="loading__inner">
         <div class="loading__title">
           <div class="top-mv__title-block fadeUp">
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <header id="header" class="header js-header">
       <div class="header__inner">
@@ -256,7 +256,7 @@
       <section id="top-campaign" class="top-campaign section-top-campaign">
         <div class="top-campaign__inner inner">
           <div class="top-campaign__section-title section-title">
-            <p class="section-title__en"><span>c</span>ampaign</p>
+            <p class="section-title__en">campaign</p>
             <h2 class="section-title__ja">キャンペーン</h2>
           </div>
 
@@ -448,15 +448,20 @@
       </section>
 
       <section id="top-about" class="top-about section-top-about">
-        <div class="top-about__section-title section-title">
-          <p class="section-title__en"><span>a</span>bout us</p>
-          <h2 class="section-title__ja">私たちについて</h2>
-        </div>
-
         <div class="top-about__inner inner">
+          <div class="top-about__section-title section-title">
+            <p class="section-title__en">about us</p>
+            <h2 class="section-title__ja">私たちについて</h2>
+          </div>
+
           <div class="top-about__img-block">
-            <div class="top-about__img">
-              <img src="./assets/images/common/aboutus1.png" alt="" />
+            <div class="top-about__right-img">
+              <img src="./assets/images/common/about1.jpg" alt="" />
+            </div>
+            <div class="top-about__left-block">
+              <div class="top-about__left-img">
+                <img src="./assets/images/common/about2.jpg" alt="" />
+              </div>
             </div>
           </div>
 
@@ -486,27 +491,29 @@
         id="top-information"
         class="top-information section-top-information"
       >
-        <div class="top-information__section-title section-title">
-          <p class="section-title__en"><span>i</span>nformation</p>
-          <h2 class="section-title__ja">ダイビング情報</h2>
-        </div>
-        <div class="inner top-information__inner">
-          <div class="top-information__img">
-            <div>
-              <img src="./assets/images/common/info.jpg" alt="" />
-            </div>
+        <div class="top-information__inner inner">
+          <div class="top-information__section-title section-title">
+            <p class="section-title__en">information</p>
+            <h2 class="section-title__ja">ダイビング情報</h2>
           </div>
-          <div class="top-information__body">
-            <h3 class="top-information__title">ライセンス講習</h3>
-            <p class="top-information__text">
-              当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />
-              正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
-            </p>
-            <div class="top-information__btn">
-              <a href="#" class="btn">
-                View more
-                <span class="btn__arrow"></span>
-              </a>
+          <div class="top-information__box">
+            <div class="top-information__img">
+              <div>
+                <img src="./assets/images/common/info.jpg" alt="" />
+              </div>
+            </div>
+            <div class="top-information__body">
+              <h3 class="top-information__title">ライセンス講習</h3>
+              <p class="top-information__text">
+                当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />
+                正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+              </p>
+              <div class="top-information__btn">
+                <a href="#" class="btn">
+                  View more
+                  <span class="btn__arrow"></span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -517,7 +524,7 @@
           <div
             class="top-blog__section-title section-title section-title--white"
           >
-            <p class="section-title__en"><span>b</span>log</p>
+            <p class="section-title__en">blog</p>
             <h2 class="section-title__ja">ブログ</h2>
           </div>
 
@@ -580,7 +587,7 @@
       <section id="top-voice" class="top-voice section-top-voice">
         <div class="inner top-voice__inner">
           <div class="top-voice__section-title section-title">
-            <p class="section-title__en"><span>v</span>oice</p>
+            <p class="section-title__en">voice</p>
             <h2 class="section-title__ja">お客様の声</h2>
           </div>
 
@@ -643,98 +650,100 @@
       </section>
 
       <section id="top-price" class="top-price section-top-price">
-        <div class="top-price__section-title section-title">
-          <p class="section-title__en"><span>p</span>rice</p>
-          <h2 class="section-title__ja">料金一覧</h2>
-        </div>
         <div class="inner top-price__inner">
-          <div class="top-price__img">
-            <img
-              class="u-mobile"
-              src="./assets/images/common/price1.jpg"
-              alt="かめ"
-            />
-            <img
-              class="u-desktop"
-              src="./assets/images/common/price2.jpg"
-              alt="サンゴ"
-            />
+          <div class="top-price__section-title section-title">
+            <p class="section-title__en">price</p>
+            <h2 class="section-title__ja">料金一覧</h2>
           </div>
-          <div class="top-price__text-block">
-            <ul class="top-price__list-items">
-              <li class="top-price__list-item">
-                <h3 class="top-price__item-title">ライセンス講習</h3>
-                <dl>
-                  <div>
-                    <dt>オープンウォーターダイバーコース</dt>
-                    <dd>¥50,000</dd>
-                  </div>
-                  <div>
-                    <dt>アドバンスドオープンウォーターコース</dt>
-                    <dd>¥60,000</dd>
-                  </div>
-                  <div>
-                    <dt>レスキュー＋EFRコース</dt>
-                    <dd>¥70,000</dd>
-                  </div>
-                </dl>
-              </li>
-              <li class="top-price__list-item">
-                <h3 class="top-price__item-title">体験ダイビング</h3>
-                <dl>
-                  <div>
-                    <dt>ビーチ体験ダイビング(半日)</dt>
-                    <dd>¥7,000</dd>
-                  </div>
-                  <div>
-                    <dt>ビーチ体験ダイビング(1日)</dt>
-                    <dd>¥14,000</dd>
-                  </div>
-                  <div>
-                    <dt>ボート体験ダイビング(半日)</dt>
-                    <dd>¥10,000</dd>
-                  </div>
-                  <div>
-                    <dt>ボート体験ダイビング(1日)</dt>
-                    <dd>¥18,000</dd>
-                  </div>
-                </dl>
-              </li>
-              <li class="top-price__list-item">
-                <h3 class="top-price__item-title">ファンダイビング</h3>
-                <dl>
-                  <div>
-                    <dt>ビーチダイビング(2ダイブ)</dt>
-                    <dd>¥14,000</dd>
-                  </div>
-                  <div>
-                    <dt>ボートダイビング(2ダイブ)</dt>
-                    <dd>¥18,000</dd>
-                  </div>
-                  <div>
-                    <dt>スペシャルダイビング(2ダイブ)</dt>
-                    <dd>¥24,000</dd>
-                  </div>
-                  <div>
-                    <dt>ナイトダイビング(1ダイブ)</dt>
-                    <dd>¥10,000</dd>
-                  </div>
-                </dl>
-              </li>
-              <li class="top-price__list-item">
-                <h3 class="top-price__item-title">スペシャルダイビング</h3>
-                <dl>
-                  <div>
-                    <dt>貸切ダイビング(2ダイブ)</dt>
-                    <dd>¥24,000</dd>
-                  </div>
-                  <div>
-                    <dt>1日ダイビング(3ダイブ)</dt>
-                    <dd>¥32,000</dd>
-                  </div>
-                </dl>
-              </li>
-            </ul>
+          <div class="top-price__box">
+            <div class="top-price__img">
+              <img
+                class="u-mobile"
+                src="./assets/images/common/price1.jpg"
+                alt="かめ"
+              />
+              <img
+                class="u-desktop"
+                src="./assets/images/common/price2.jpg"
+                alt="サンゴ"
+              />
+            </div>
+            <div class="top-price__text-block">
+              <ul class="top-price__list-items">
+                <li class="top-price__list-item">
+                  <h3 class="top-price__item-title">ライセンス講習</h3>
+                  <dl>
+                    <div>
+                      <dt>オープンウォーターダイバーコース</dt>
+                      <dd>¥50,000</dd>
+                    </div>
+                    <div>
+                      <dt>アドバンスドオープンウォーターコース</dt>
+                      <dd>¥60,000</dd>
+                    </div>
+                    <div>
+                      <dt>レスキュー＋EFRコース</dt>
+                      <dd>¥70,000</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="top-price__list-item">
+                  <h3 class="top-price__item-title">体験ダイビング</h3>
+                  <dl>
+                    <div>
+                      <dt>ビーチ体験ダイビング(半日)</dt>
+                      <dd>¥7,000</dd>
+                    </div>
+                    <div>
+                      <dt>ビーチ体験ダイビング(1日)</dt>
+                      <dd>¥14,000</dd>
+                    </div>
+                    <div>
+                      <dt>ボート体験ダイビング(半日)</dt>
+                      <dd>¥10,000</dd>
+                    </div>
+                    <div>
+                      <dt>ボート体験ダイビング(1日)</dt>
+                      <dd>¥18,000</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="top-price__list-item">
+                  <h3 class="top-price__item-title">ファンダイビング</h3>
+                  <dl>
+                    <div>
+                      <dt>ビーチダイビング(2ダイブ)</dt>
+                      <dd>¥14,000</dd>
+                    </div>
+                    <div>
+                      <dt>ボートダイビング(2ダイブ)</dt>
+                      <dd>¥18,000</dd>
+                    </div>
+                    <div>
+                      <dt>スペシャルダイビング(2ダイブ)</dt>
+                      <dd>¥24,000</dd>
+                    </div>
+                    <div>
+                      <dt>ナイトダイビング(1ダイブ)</dt>
+                      <dd>¥10,000</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="top-price__list-item">
+                  <h3 class="top-price__item-title">スペシャルダイビング</h3>
+                  <dl>
+                    <div>
+                      <dt>貸切ダイビング(2ダイブ)</dt>
+                      <dd>¥24,000</dd>
+                    </div>
+                    <div>
+                      <dt>1日ダイビング(3ダイブ)</dt>
+                      <dd>¥32,000</dd>
+                    </div>
+                  </dl>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="top-price__btn">
@@ -777,7 +786,7 @@
               <div
                 class="top-contact__section-title section-title section-title--l"
               >
-                <p class="section-title__en"><span>c</span>ontact</p>
+                <p class="section-title__en">contact</p>
                 <h2 class="section-title__ja">お問い合わせ</h2>
               </div>
 

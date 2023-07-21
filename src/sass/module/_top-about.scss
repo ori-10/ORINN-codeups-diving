@@ -1,9 +1,7 @@
 @use "global" as *;
 
 .top-about__inner {
-  margin-top: rem(28);
   @include mq("md") {
-    margin-top: rem(40);
     position: relative;
   }
 }
@@ -21,27 +19,37 @@
     max-width: rem(194);
     width: 100%;
     height: rem(181);
+    z-index: 1;
   }
 }
 
 .top-about__img-block {
   position: relative;
+  margin-top: rem(28);
+  padding-top: rem(26);
+  @include mq("md") {
+    margin-top: rem(40);
+    padding-top: rem(80);
+  }
 }
 
-.top-about__img {
+// 魚
+.top-about__right-img {
   position: relative;
-  width: 100%;
+  width: 81.44%;
   right: 0;
-  margin-left: auto;
+  bottom: 0;
+    z-index: 1;
+    margin-left: auto;
 }
 
-.top-about__img::before {
+.top-about__right-img::before {
   content: "";
   display: block;
-  padding-top: 61.44%;
+  padding-top: 66.192%;
 }
 
-.top-about__img img {
+.top-about__right-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -51,12 +59,48 @@
   object-fit: cover;
 }
 
+// シーサー
+.top-about__left-block {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+    z-index: 1;
+    height: 100%;
+}
+
+.top-about__left-img {
+  position: relative;
+  width: 37.1%;
+  top: 0;
+  left: 0;
+  margin-right: auto;
+}
+
+.top-about__left-img::before {
+  content: "";
+  display: block;
+  padding-top: 151.6%;
+}
+
+.top-about__left-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// テキスト
 .top-about__text-block {
   @include mq("md") {
     display: flex;
     position: absolute;
-    top: rem(200);
+    top: rem(307);
     right: rem(65);
+    z-index: 1;
     max-width: rem(840);
   }
 }
