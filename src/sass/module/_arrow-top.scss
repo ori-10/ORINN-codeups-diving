@@ -9,7 +9,6 @@
   transition: background-color 0.4s, border 0.4s;
   position: relative;
   background-color: $white;
-  z-index: 1;
 
   @include mq("md") {
     width: rem(80);
