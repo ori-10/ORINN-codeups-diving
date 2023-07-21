@@ -7,23 +7,23 @@ jQuery(function ($) {
   // ローディング
   ///////////
 
-//   $(document).ready(function() {
-//     // ローディング画面を表示
-//     $(".loading__left-image").addClass("is-active");
-//     $(".loading__right-image").addClass("is-active");
+  $(document).ready(function() {
+    // ローディング画面を表示
+    $(".loading__left-image").addClass("is-active");
+    $(".loading__right-image").addClass("is-active");
 
-//     // ローディング画面のフェードアウト後にスクロール禁止を解除
-//     $("#loading__animation").delay(1700).fadeOut("slow", function() {
-//         // フェードアウトが完了した後に実行されるコールバック関数
-//         // スクロール禁止を解除
-//         $("body").removeClass("loading__no-scroll");
-//         $(".loading__left-image").removeClass("is-active");
-//         $(".loading__right-image").removeClass("is-active");
-//     });
+    // ローディング画面のフェードアウト後にスクロール禁止を解除
+    $("#loading__animation").delay(1700).fadeOut("slow", function() {
+        // フェードアウトが完了した後に実行されるコールバック関数
+        // スクロール禁止を解除
+        $("body").removeClass("loading__no-scroll");
+        $(".loading__left-image").removeClass("is-active");
+        $(".loading__right-image").removeClass("is-active");
+    });
 
-//     // ローディング中はスクロール禁止
-//     $("body").addClass("loading__no-scroll");
-// });
+    // ローディング中はスクロール禁止
+    $("body").addClass("loading__no-scroll");
+});
 
   //////////////
   // topへ戻るボタン

@@ -2,7 +2,7 @@
 
 .footer-nav__wrap {
   width: initial;
-  margin-right: auto;
+  width: 100%;
   @include mq("md") {
     margin-right: initial;
     display: flex;

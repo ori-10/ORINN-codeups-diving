@@ -39,8 +39,8 @@
   width: 81.44%;
   right: 0;
   bottom: 0;
-    z-index: 1;
-    margin-left: auto;
+  z-index: 1;
+  margin-left: auto;
 }
 
 .top-about__right-img::before {
@@ -61,12 +61,12 @@
 
 // シーサー
 .top-about__left-block {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-    z-index: 1;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
 }
 
 .top-about__left-img {
@@ -138,4 +138,3 @@ width: 100%;
   margin-top: rem(40);
   text-align: center;
 }
-
