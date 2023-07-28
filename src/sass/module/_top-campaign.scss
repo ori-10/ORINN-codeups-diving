@@ -33,3 +33,10 @@
   width: initial;
   }
 }
+
+.top-campaign__swiper-slide {
+  max-width: rem(280);
+  @include mq("md") {
+    max-width: rem(333);
+  }
+}

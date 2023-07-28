@@ -9,7 +9,6 @@
   transition: background-color 0.4s, border 0.4s;
   position: relative;
   background-color: $white;
-
   @include mq("md") {
     width: rem(80);
     height: rem(80);
@@ -23,11 +22,11 @@
   position: absolute;
   background-image: url(../images/common/arrow-top-sp.svg);
   background-repeat: no-repeat;
-  background-position: center;background-size: auto;
+  background-position: center;
+  background-size: auto;
   top: 50%;
   left: 45%;
   transform: translate(-50%, -50%);
-  mask-position: center;
   @include mq("md") {
     width: 70%;
     height: 50%;
@@ -43,5 +42,5 @@
 }
 
 .arrow-top:hover::before {
-  filter: brightness(300%);
+  filter: brightness(1000%);
 }

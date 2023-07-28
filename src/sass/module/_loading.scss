@@ -8,6 +8,12 @@
   background: $white;
 }
 
+.loading__animation.is-active {
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
 .loading__inner {
   position: relative;
   width: inherit;
@@ -28,7 +34,6 @@
   height: inherit;
   top: 0;
   left: 0;
-  background: $white;
   z-index: 0;
 }
 

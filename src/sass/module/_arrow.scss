@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.arrow-prev {
+.arrow {
   display: none;
   @include mq("md") {
     display: inline-block;
@@ -10,11 +10,11 @@
     border: 1px solid $green-accent;
     background-color: $white;
     position: relative;
-    transition: background-color 0.4s;
+    transition: 0.4s background-color, .4s filter;
   }
 }
 
-.arrow-prev::before {
+.arrow::before {
   @include mq("md") {
     content: "";
     width: 70%;
@@ -27,19 +27,23 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: 0.4s all;
-    mask-position: center;
   }
 }
 
-.arrow-prev:hover {
+.arrow:hover {
   @include mq("md") {
     background-color: $green-accent;
   }
 }
 
-.arrow-prev:hover::before {
+.arrow:hover::before {
   @include mq("md") {
-    filter: brightness(300%);
+    filter: brightness(1000%);
+  }
+}
+
+.arrow--next::before {
+  @include mq("md") {
+    background-image: url(../images/common/next-arrow.svg);
   }
 }

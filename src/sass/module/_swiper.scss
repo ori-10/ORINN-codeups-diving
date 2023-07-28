@@ -47,11 +47,6 @@
   right: var(--swiper-navigation-sides-offset, rem(15));
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  z-index: 0;
-}
-
 :root {
   --swiper-navigation-size: initial;
 }
@@ -62,5 +57,6 @@
   background: none;
   border: none;
   outline: none;
-  cursor: default;
+  z-index: 0;
+  cursor: pointer;
 }

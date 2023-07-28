@@ -7,23 +7,40 @@ jQuery(function ($) {
   // ローディング
   ///////////
 
-  $(document).ready(function() {
-    // ローディング画面を表示
-    $(".loading__left-image").addClass("is-active");
-    $(".loading__right-image").addClass("is-active");
+  $('body').css('display','block');
 
-    // ローディング画面のフェードアウト後にスクロール禁止を解除
-    $("#loading__animation").delay(1700).fadeOut("slow", function() {
-        // フェードアウトが完了した後に実行されるコールバック関数
-        // スクロール禁止を解除
-        $("body").removeClass("loading__no-scroll");
-        $(".loading__left-image").removeClass("is-active");
-        $(".loading__right-image").removeClass("is-active");
-    });
+  var webStorage = function () {
+    if (sessionStorage.getItem("access")) {
+      $(".loading__animation").addClass("is-active");
+    } else {
+      //初回アクセス時の処理
+      sessionStorage.setItem("access", 0);
+      //ここにローディングの処理
 
-    // ローディング中はスクロール禁止
-    $("body").addClass("loading__no-scroll");
-});
+      $(document).ready(function () {
+        // ローディング画面を表示
+
+        $(".loading__left-image").addClass("is-active");
+        $(".loading__right-image").addClass("is-active");
+
+        // ローディング画面のフェードアウト後にスクロール禁止を解除
+        $("#loading__animation")
+          .delay(1700)
+          .fadeOut("slow", function () {
+            // フェードアウトが完了した後に実行されるコールバック関数
+            // スクロール禁止を解除
+            $("body").removeClass("loading__no-scroll");
+            $(".loading__left-image").removeClass("is-active");
+            $(".loading__right-image").removeClass("is-active");
+          });
+
+        // ローディング中はスクロール禁止
+        $("body").addClass("loading__no-scroll");
+      });
+    }
+  };
+
+  webStorage();
 
   //////////////
   // topへ戻るボタン
@@ -132,19 +149,17 @@ jQuery(function ($) {
       // スライドの自動再生
       delay: 3000,
       disableOnInteraction: false,
-      reverseDirection: true, // 逆方向有効化
     },
 
     loop: true, // スライドの無限ループ
 
     // スライドの表示枚数：768px未満の場合
-    slidesPerView: 1.27,
     spaceBetween: 25,
+    slidesPerView: "auto",
 
     breakpoints: {
       // スライドの表示枚数：768px以上の場合
       768: {
-        slidesPerView: 3.49,
         spaceBetween: 40,
       },
     },
