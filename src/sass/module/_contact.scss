@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.top-contact__inner {
+.contact__inner {
   margin-top: rem(82);
   max-width: rem(650);
   @include mq("md") {
@@ -8,7 +8,7 @@
   }
 }
 
-.top-contact__box {
+.contact__box {
   background: $white;
   @include mq("md") {
     padding: rem(80) rem(50);
@@ -18,7 +18,7 @@
   }
 }
 
-.top-contact__box::after {
+.contact__box::after {
   @include mq("md") {
     position: absolute;
     top: rem(-40);
@@ -34,7 +34,7 @@
   }
 }
 
-.top-contact__body {
+.contact__body {
   padding: 0 rem(25);
   @include mq("md") {
     padding: 0;
@@ -44,7 +44,7 @@
   }
 }
 
-.top-contact__logo {
+.contact__logo {
   border-bottom: 1px solid $green-accent;
   text-align: center;
   @include mq("md") {
@@ -52,7 +52,7 @@
   }
 }
 
-.top-contact__img {
+.contact__img {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -62,7 +62,7 @@
   }
 }
 
-.top-contact__img::after {
+.contact__img::after {
     position: absolute;
     top: rem(-25);
     right: rem(-85);
@@ -79,7 +79,7 @@
   }
 }
 
-.top-contact__info {
+.contact__info {
   margin-top: rem(16);
   text-align: center;
   @include mq("md") {
@@ -89,25 +89,25 @@
   }
 }
 
-.top-contact__address {
+.contact__address {
   @include mq("md") {
     width: 33.18%;
     text-align: left;
   }
 }
 
-.top-contact__address li {
+.contact__address li {
   margin-top: rem(4);
   line-height: 1.5;
 }
 
-.top-contact__address li:first-child {
+.contact__address li:first-child {
   @include mq("md") {
     margin-top: 0;
   }
 }
 
-.top-contact__map {
+.contact__map {
   margin-top: rem(16);
   @include mq("md") {
     margin-top: rem(24);
@@ -116,12 +116,12 @@
   }
 }
 
-.top-contact__map {
+.contact__map {
   position: relative;
   width: 100%;
 }
 
-.top-contact__map::before {
+.contact__map::before {
   content: "";
   display: block;
   padding-top: 54.23%;
@@ -130,7 +130,7 @@
   }
 }
 
-.top-contact__map iframe {
+.contact__map iframe {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -140,7 +140,7 @@
   object-fit: cover;
 }
 
-.top-contact__link {
+.contact__link {
   margin-top: rem(48);
   @include mq("md") {
     margin-top: rem(30);
@@ -149,14 +149,14 @@
   }
 }
 
-.top-contact__text {
+.contact__text {
   color: $green-accent;
   font-size: rem(14);
   margin-top: rem(7);
   text-align: center;
 }
 
-.top-contact__btn {
+.contact__btn {
   margin-top: rem(40);
   text-align: center;
 }

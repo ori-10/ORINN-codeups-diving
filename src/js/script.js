@@ -11,7 +11,7 @@ jQuery(function ($) {
 
   var webStorage = function () {
     if (sessionStorage.getItem("access")) {
-      $(".loading__animation").addClass("is-active");
+      $(".loading").addClass("is-none");
     } else {
       //初回アクセス時の処理
       sessionStorage.setItem("access", 0);
@@ -24,7 +24,7 @@ jQuery(function ($) {
         $(".loading__right-image").addClass("is-active");
 
         // ローディング画面のフェードアウト後にスクロール禁止を解除
-        $("#loading__animation")
+        $("#loading")
           .delay(1700)
           .fadeOut("slow", function () {
             // フェードアウトが完了した後に実行されるコールバック関数
@@ -105,7 +105,7 @@ jQuery(function ($) {
 
   let header = $(".header");
   let headerHeight = $(".header").height();
-  let height = $(".top-mv").height();
+  let height = $(".mv").height();
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > height - headerHeight) {
@@ -136,7 +136,7 @@ jQuery(function ($) {
   // campaignスライダー
   ////////////
 
-  let mySwiper = new Swiper(".js-top-campaign__swiper", {
+  let mySwiper = new Swiper(".js-campaign__swiper", {
     // オプション設定
 
     // PC時のみページネーション表示
@@ -186,9 +186,9 @@ jQuery(function ($) {
   $(window).on("scroll", function () {
     let windowPosition = $(window).scrollTop() + $(window).height();
 
-    let boxPosition = $(".top-information__img").offset().top;
+    let boxPosition = $(".information__img").offset().top;
     if (windowPosition >= boxPosition) {
-      $(".top-information__img").addClass("is-active");
+      $(".information__img").addClass("is-active");
     }
 
     let voicePosition = $(".voice-card__img--1").offset().top;
@@ -201,9 +201,9 @@ jQuery(function ($) {
       $(".voice-card__img--2").addClass("is-active");
     }
 
-    let pricePosition = $(".top-price__img").offset().top;
+    let pricePosition = $(".price__img").offset().top;
     if (windowPosition >= pricePosition) {
-      $(".top-price__img").addClass("is-active");
+      $(".price__img").addClass("is-active");
     }
   });
 }); // 消さない

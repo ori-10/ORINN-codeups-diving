@@ -1,13 +1,13 @@
 @use "global" as *;
 
-.top-blog {
+.blog {
   @include mq("md") {
     padding-top: rem(103);
     position: relative;
   }
 }
 
-.top-blog::after {
+.blog::after {
   @include mq("md") {
     position: absolute;
     top: rem(24);
@@ -23,7 +23,7 @@
   }
 }
 
-.top-blog::before {
+.blog::before {
   @include mq("md") {
     content: "";
     position: absolute;
@@ -40,20 +40,20 @@
   }
 }
 
-.top-blog__inner {
+.blog__inner {
   max-width: rem(600);
   padding-left: rem(21);
   padding-right: rem(21);
 }
 
-.top-blog__cards {
+.blog__cards {
   margin-top: rem(28);
   @include mq("md") {
     margin-top: rem(80);
   }
 }
 
-.top-blog__btn {
+.blog__btn {
   margin-top: rem(40);
   text-align: center;
   @include mq("md") {

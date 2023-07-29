@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.top-price {
+.price {
   padding-top: rem(85);
   padding-bottom: rem(80);
   background-color: $back-green;
@@ -11,7 +11,7 @@
   }
 }
 
-.top-price::after {
+.price::after {
   @include mq("md") {
     position: absolute;
     bottom: rem(57.6);
@@ -27,11 +27,11 @@
   }
 }
 
-.top-price__inner {
+.price__inner {
   max-width: rem(600);
 }
 
-.top-price__box {
+.price__box {
   margin-top: rem(28);
   @include mq("md") {
   display: flex;
@@ -41,7 +41,7 @@
   }
 }
 
-.top-price__img {
+.price__img {
   position: relative;
   width: 100%;
   @include mq("md") {
@@ -49,7 +49,7 @@
   }
   }
 
-  .top-price__img::before {
+  .price__img::before {
   content:"";
   display: block;
   padding-top: 65.79%;
@@ -58,7 +58,7 @@
   }
   }
 
-  .top-price__img img {
+  .price__img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -68,7 +68,7 @@
   object-fit: cover;
   }
 
-.top-price__text-block {
+.price__text-block {
   margin-top: rem(40);
   @include mq("md") {
     width: 45.68%;
@@ -77,23 +77,23 @@
   }
 }
 
-.top-price__list-items li:first-of-type {
+.price__list-items li:first-of-type {
   margin-top: 0;
 }
 
-.top-price__list-item {
+.price__list-item {
   margin-top: rem(40);
   letter-spacing: 0;
 }
 
-.top-price__list-item dt {
+.price__list-item dt {
   margin-right: rem(24);
   @include mq("md") {
     margin-right: rem(48);
   }
 }
 
-.top-price__item-title {
+.price__item-title {
   display: block;
   border-bottom: 1px solid $green-accent;
   padding-bottom: rem(4);
@@ -101,7 +101,7 @@
   font-size: rem(16);
 }
 
-.top-price__list-item div {
+.price__list-item div {
   display: flex;
   justify-content: space-between;
   margin-top: rem(7.8);
@@ -113,7 +113,7 @@
   }
 }
 
-.top-price__btn {
+.price__btn {
   margin-top: rem(40);
   text-align: center;
   @include mq("md") {
@@ -125,7 +125,7 @@
 //   出現アニメーション
 ////////////////
 
-.top-price__img::after {
+.price__img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -136,7 +136,7 @@
   background-color: $green-accent;
 }
 
-.top-price__img.is-active {
+.price__img.is-active {
   animation-name: boxAnimation;
   animation-duration: .7s;
   animation-fill-mode: forwards;
@@ -153,7 +153,7 @@
   }
 }
 
-.is-active.top-price__img::after {
+.is-active.price__img::after {
   animation-name: colorAnimation;
   animation-delay: 0.7s;
   animation-duration: 0.7s;

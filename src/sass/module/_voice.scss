@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.top-voice {
+.voice {
   position: relative;
 }
 
-.top-voice::before {
+.voice::before {
   @include mq("md") {
     position: absolute;
     top: rem(-120);
@@ -20,7 +20,7 @@
   }
 }
 
-.top-voice::after {
+.voice::after {
   @include mq("md") {
     position: absolute;
     bottom: rem(-70);
@@ -36,19 +36,19 @@
   }
 }
 
-.top-voice__inner {
+.voice__inner {
   max-width: rem(600);
 
 }
 
-.top-voice__cards {
+.voice__cards {
   margin-top: rem(45);
   @include mq("md") {
     margin-top: rem(30);
   }
 }
 
-.top-voice__btn {
+.voice__btn {
   text-align: center;
   margin-top: rem(40);
   @include mq("md") {
@@ -56,6 +56,6 @@
   }
 }
 
-.top-voice article > * + * {
+.voice article > * + * {
   margin-top: 0; 
 }

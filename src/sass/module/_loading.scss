@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.loading__animation {
+.loading {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -8,7 +8,7 @@
   background: $white;
 }
 
-.loading__animation.is-active {
+.loading.is-none {
   opacity: 0;
   z-index: -1;
   visibility: hidden;
@@ -74,7 +74,7 @@
   object-position: 0 100%;
 }
 
-.is-active.loading__left-image {
+.loading__left-image.is-active {
   animation-name: loadingAnimation;
   animation-delay: 0.2s;
   animation-duration: 1.3s;
@@ -83,7 +83,7 @@
   animation-direction: normal;
 }
 
-.is-active.loading__right-image {
+.loading__right-image.is-active {
   animation-name: loadingAnimation;
   animation-delay: 0.4s;
   animation-duration: 1.3s;

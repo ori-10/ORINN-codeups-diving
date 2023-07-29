@@ -1,12 +1,12 @@
 @use "global" as *;
 
-.top-about__inner {
+.about__inner {
   @include mq("md") {
     position: relative;
   }
 }
 
-.top-about__inner::after {
+.about__inner::after {
   @include mq("md") {
     position: absolute;
     bottom: rem(-87);
@@ -23,7 +23,7 @@
   }
 }
 
-.top-about__img-block {
+.about__img-block {
   position: relative;
   margin-top: rem(28);
   padding-top: rem(26);
@@ -34,7 +34,7 @@
 }
 
 // 魚
-.top-about__right-img {
+.about__right-img {
   position: relative;
   width: 81.44%;
   right: 0;
@@ -42,13 +42,13 @@
   margin-left: auto;
 }
 
-.top-about__right-img::before {
+.about__right-img::before {
   content: "";
   display: block;
   padding-top: 66.192%;
 }
 
-.top-about__right-img img {
+.about__right-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -60,7 +60,7 @@
 }
 
 // シーサー
-.top-about__left-block {
+.about__left-block {
   position: absolute;
   top: 0;
   left: 0;
@@ -68,7 +68,7 @@
   height: 100%;
 }
 
-.top-about__left-img {
+.about__left-img {
   position: relative;
   width: 37.1%;
   top: 0;
@@ -76,13 +76,13 @@
   margin-right: auto;
 }
 
-.top-about__left-img::before {
+.about__left-img::before {
   content: "";
   display: block;
   padding-top: 151.6%;
 }
 
-.top-about__left-img img {
+.about__left-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -94,7 +94,7 @@
 }
 
 // テキスト
-.top-about__text-block {
+.about__text-block {
   @include mq("md") {
     display: flex;
     position: absolute;
@@ -105,7 +105,7 @@
   }
 }
 
-.top-about__title {
+.about__title {
   font-family: $second-font-family;
   font-size: rem(40);
   color: $green-accent;
@@ -120,7 +120,7 @@
   }
 }
 
-.top-about__text-wrap {
+.about__text-wrap {
   margin-top: rem(16);
   @include mq("md") {
     margin-top: 0;
@@ -130,11 +130,11 @@
   }
 }
 
-.top-about__text {
+.about__text {
   line-height: 1.5;
 }
 
-.top-about__btn {
+.about__btn {
   margin-top: rem(40);
   text-align: center;
 }

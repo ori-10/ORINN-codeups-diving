@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.top-information {
+.information {
   background-color: $back-green;
   padding-top: rem(84);
   padding-bottom: rem(83);
@@ -10,11 +10,11 @@
   }
 }
 
-.top-information__inner {
+.information__inner {
   max-width: rem(600);
 }
 
-.top-information__box {
+.information__box {
   margin-top: rem(27);
   @include mq("md") {
     display: flex;
@@ -24,20 +24,20 @@
   }
 }
 
-.top-information__img {
+.information__img {
   position: relative;
   @include mq("md") {
     width: 50%;
   }
 }
 
-.top-information__img::before {
+.information__img::before {
   content: "";
   display: block;
   padding-top: 65.79%;
 }
 
-.top-information__img img {
+.information__img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,7 +47,7 @@
   object-fit: cover;
 }
 
-.top-information__body {
+.information__body {
   margin-top: rem(22);
   @include mq("md") {
     width: 45.5%;
@@ -55,7 +55,7 @@
   }
 }
 
-.top-information__title {
+.information__title {
   font-size: rem(20);
   font-weight: $bold;
   border-bottom: 1px solid $green-accent;
@@ -65,19 +65,19 @@
   }
 }
 
-.top-information__text {
+.information__text {
   margin-top: rem(8);
   @include mq("md") {
     line-height: 1.5;
   }
 }
 
-.top-information__btn {
+.information__btn {
   text-align: center;
   margin-top: rem(40);
 }
 
-.top-information__img {
+.information__img {
   position: relative;
 }
 
@@ -86,7 +86,7 @@
 ////////////////
 
 
-.top-information__img::after {
+.information__img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -97,7 +97,7 @@
   background-color: $green-accent;
 }
 
-.top-information__img.is-active {
+.information__img.is-active {
   animation-name: boxAnimation;
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
@@ -114,7 +114,7 @@
   }
 }
 
-.is-active.top-information__img::after {
+.is-active.information__img::after {
   animation-name: colorAnimation;
   animation-delay: 0.7s;
   animation-duration: 0.7s;
