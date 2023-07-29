@@ -30,11 +30,15 @@
 
 .loading__title {
   position: absolute;
-  width: inherit;
-  height: inherit;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
   z-index: 0;
+  @include mq("md") {
+    top: 56%;
+  }
 }
 
 .loading__title h2,

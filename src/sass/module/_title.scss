@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.title {
+  color: $white;
+}
+
+.title__main {
+  font-size: rem(40);
+  text-transform: uppercase;
+  font-family: $third-font-family;
+  letter-spacing: 0.525em;
+  line-height: 1;
+  text-indent: 0.5em;
+  @include mq("md") {
+    font-size: rem(80);
+  }
+}
+
+.title__sub {
+  font-size: rem(20);
+  margin-top: rem(6);
+  font-family: $second-font-family;
+  @include mq("md") {
+    margin-top: rem(10);
+  }
+}

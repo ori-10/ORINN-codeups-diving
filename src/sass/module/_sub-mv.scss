@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.sub-mv {
+  height: rem(460);
+  background-image: url(../images/common/sub-about-mv.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include mq("md") {
+    height: rem(548);
+  }
+}
+
+.sub-mv__title {
+  display: flex;
+justify-content: center;
+align-items: center;
+padding-top: rem(206);
+}
+
+.sub-mv__title h2 {
+  font-weight: $regular;
+  font-size: rem(40);
+  font-family: $second-font-family;
+  color: $white;
+}

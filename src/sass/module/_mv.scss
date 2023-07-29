@@ -21,30 +21,8 @@
   width: 100%;
   text-align: center;
   z-index: 1;
-  color: $white;
   @include mq("md") {
     top: 56%;
-  }
-}
-
-.mv__title {
-  font-size: rem(40);
-  text-transform: uppercase;
-  font-family: $third-font-family;
-  letter-spacing: 0.525em;
-  line-height: 1;
-  text-indent: 0.5em;
-  @include mq("md") {
-    font-size: rem(80);
-  }
-}
-
-.mv__sub-title {
-  font-size: rem(20);
-  margin-top: rem(6);
-  font-family: $second-font-family;
-  @include mq("md") {
-    margin-top: rem(10);
   }
 }
 
