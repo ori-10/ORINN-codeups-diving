@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.title {
+.mv-title {
   color: $white;
 }
 
-.title__main {
+.mv-title__main {
   font-size: rem(40);
   text-transform: uppercase;
   font-family: $third-font-family;
@@ -16,7 +16,7 @@
   }
 }
 
-.title__sub {
+.mv-title__sub {
   font-size: rem(20);
   margin-top: rem(6);
   font-family: $second-font-family;

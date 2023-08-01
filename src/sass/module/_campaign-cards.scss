@@ -3,3 +3,21 @@
 .campaign-cards {
   position: relative;
 }
+
+.campaign-cards__swiper {
+  width: 100%;
+  margin-right: calc(50% - 50vw);
+  padding-top: rem(5);
+  padding-left: rem(15);
+  padding-bottom: rem(10);
+  @include mq("md") {
+  width: initial;
+  }
+}
+
+.campaign-cards__swiper-slide {
+  max-width: rem(280);
+  @include mq("md") {
+    max-width: rem(333);
+  }
+}

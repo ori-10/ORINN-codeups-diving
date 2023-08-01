@@ -2,7 +2,6 @@
 
 .sub-mv {
   height: rem(460);
-  background-image: url(../images/common/sub-about-mv.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -11,16 +10,31 @@
   }
 }
 
+.sub-mv--about {
+  background-image: url(../images/common/sub-about-mv.jpg);
+}
+
+.sub-mv--information {
+  background-image: url(../images/common/sub-info-mv.jpg);
+}
+
 .sub-mv__title {
   display: flex;
-justify-content: center;
-align-items: center;
-padding-top: rem(206);
+  justify-content: center;
+  align-items: center;
+  padding-top: rem(200);
+  letter-spacing: .03em;
+  @include mq("md") {
+    padding-top: rem(265);
+  }
 }
 
 .sub-mv__title h2 {
   font-weight: $regular;
   font-size: rem(40);
-  font-family: $second-font-family;
+  font-family: $third-font-family;
   color: $white;
+  @include mq("md") {
+    font-size: rem(80);
+  }
 }

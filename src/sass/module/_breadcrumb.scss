@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.breadcrumb__items {
+  display: flex;
+  font-size: rem(14);
+}
+
+.breadcrumb__item {
+  margin-left: rem(10);
+}
+
+.breadcrumb__item:first-child {
+  margin-left: 0;
+}
+
+.breadcrumb__item:after {
+  content: "";
+  width: rem(8);
+  height: rem(8);
+  border-right: 1px solid $black;
+  border-top: 1px solid $black;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.breadcrumb__item:last-child:after {
+  display: none;
+}
+
+.breadcrumb__item a {
+  text-decoration: none;
+}
+
+.breadcrumb__item a:hover {
+  text-decoration: underline;
+}

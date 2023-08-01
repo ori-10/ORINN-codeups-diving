@@ -22,7 +22,7 @@
   padding: rem(8) 0;
 }
 
-.footer-nav__item-title a {
+.footer-nav__item-title > a {
   display: block;
   width: 100%;
   width: initial;
@@ -46,7 +46,7 @@
   opacity: 0.7;
 }
 
-.footer-nav__item {
+.footer-nav__item li {
   display: block;
   width: 100%;
   width: initial;
@@ -59,13 +59,13 @@
   }
 }
 
-.footer-nav__wrap--space a {
+.footer-nav__wrap--space > a {
   padding-left: rem(22);
   background-position: 0 rem(12);
 }
 
 .footer-nav__wrap--space .footer-nav__item {
-  padding-left: rem(22);
+  // padding-left: rem(22);
 }
 
 // br

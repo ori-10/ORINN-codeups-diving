@@ -35,9 +35,9 @@
   <body>
     <div id="loading" class="loading">
       <div class="loading__inner">
-        <div class="loading__title title fadeUp">
-            <h2 class="title__main">diving</h2>
-            <p class="title__sub">into the ocean</p>
+        <div class="loading__title mv-title fadeUp">
+            <h2 class="mv-title__main">diving</h2>
+            <p class="mv-title__sub">into the ocean</p>
         </div>
 
         <div class="loading__image-container">
@@ -75,10 +75,10 @@
               <ul class="sp-nav__items">
                 <li class="sp-nav__item-title">
                   <a href="#campaign">キャンペーン</a>
-                  <ul>
-                    <li class="sp-nav__item">ライセンス取得</li>
-                    <li class="sp-nav__item">貸切体験ダイビング</li>
-                    <li class="sp-nav__item">ナイトダイビング</li>
+                  <ul class="sp-nav__item">
+                    <li><a href="#campaign">ライセンス取得</a></li>
+                    <li><a href="#campaign">貸切体験ダイビング</a></li>
+                    <li><a href="#campaign">ナイトダイビング</a></li>
                   </ul>
                 </li>
               </ul>
@@ -88,10 +88,10 @@
                 </li>
                 <li class="sp-nav__item-title">
                   <a href="#information">ダイビング情報</a>
-                  <ul>
-                    <li class="sp-nav__item">ライセンス講習</li>
-                    <li class="sp-nav__item">体験ダイビング</li>
-                    <li class="sp-nav__item">ファンダイビング</li>
+                  <ul class="sp-nav__item">
+                    <li><a href="#information">ライセンス講習</a></li>
+                    <li><a href="#information">体験ダイビング</a></li>
+                    <li><a href="#information">ファンダイビング</a></li>
                   </ul>
                 </li>
                 <li class="sp-nav__item-title">
@@ -107,10 +107,10 @@
                 </li>
                 <li class="sp-nav__item-title">
                   <a href="#price">料金一覧</a>
-                  <ul>
-                    <li class="sp-nav__item">ライセンス講習</li>
-                    <li class="sp-nav__item">体験ダイビング</li>
-                    <li class="sp-nav__item">ファンダイビング</li>
+                  <ul class="sp-nav__item">
+                    <li><a href="#price">ライセンス講習</a></li>
+                    <li><a href="#price">体験ダイビング</a></li>
+                    <li><a href="#price">ファンダイビング</a></li>
                   </ul>
                 </li>
               </ul>
@@ -190,7 +190,7 @@
       </div>
     </header>
 
-    <div class="mv">
+    <div class="mv js-mv-height">
       <div class="mv__inner">
         <div class="mv__img">
           <div class="mv__swiper swiper">
@@ -243,16 +243,15 @@
               </div>
             </div>
           </div>
-          <div class="mv__title-block title">
-            <h2 class="title__main">diving</h2>
-            <p class="title__sub">into the ocean</p>
+          <div class="mv__title-block mv-title"><h2 class="mv-title__main">diving</h2>
+            <p class="mv-title__sub">into the ocean</p>
           </div>
         </div>
       </div>
     </div>
     <!-- /.top-mv-->
     <main>
-      <section id="campaign" class="campaign section-top-campaign">
+      <section id="campaign" class="campaign top-campaign">
         <div class="campaign__inner inner">
           <div class="campaign__section-title section-title">
             <p class="section-title__en">campaign</p>
@@ -260,9 +259,9 @@
           </div>
 
           <article class="campaign__cards campaign-cards">
-            <div class="swiper js-campaign__swiper campaign__swiper">
+            <div class="js-campaign-swiper campaign-cards__swiper swiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide campaign__swiper-slide">
+                <div class="campaign-cards__swiper-slide swiper-slide">
                   <div class="campaign-cards__item campaign-card">
                     <figure class="campaign-card__img">
                       <img src="./assets/images/common/campaign1.jpg" alt="" />
@@ -282,7 +281,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign__swiper-slide">
+                <div class="campaign-cards__swiper-slide swiper-slide">
                   <div class="campaign-cards__item campaign-card">
                     <figure class="campaign-card__img">
                       <img src="./assets/images/common/campaign2.jpg" alt="" />
@@ -302,7 +301,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign__swiper-slide">
+                <div class="campaign-cards__swiper-slide swiper-slide">
                   <div class="campaign-cards__item campaign-card">
                     <figure class="campaign-card__img">
                       <img src="./assets/images/common/campaign3.jpg" alt="" />
@@ -322,7 +321,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign__swiper-slide">
+                <div class="campaign-cards__swiper-slide swiper-slide">
                   <div class="campaign-cards__item campaign-card">
                     <figure class="campaign-card__img">
                       <img src="./assets/images/common/campaign4.jpg" alt="" />
@@ -344,7 +343,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign__swiper-slide">
+                <div class="campaign-cards__swiper-slide swiper-slide">
                   <div class="campaign-cards__item campaign-card">
                     <figure class="campaign-card__img">
                       <img src="./assets/images/common/campaign1.jpg" alt="" />
@@ -364,7 +363,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign__swiper-slide">
+                <div class="campaign-cards__swiper-slide swiper-slide">
                   <div class="campaign-cards__item campaign-card">
                     <figure class="campaign-card__img">
                       <img src="./assets/images/common/campaign2.jpg" alt="" />
@@ -384,7 +383,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign__swiper-slide">
+                <div class="campaign-cards__swiper-slide swiper-slide">
                   <div class="campaign-cards__item campaign-card">
                     <figure class="campaign-card__img">
                       <img src="./assets/images/common/campaign3.jpg" alt="" />
@@ -404,7 +403,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign__swiper-slide">
+                <div class="campaign-cards__swiper-slide swiper-slide">
                   <div class="campaign-cards__item campaign-card">
                     <figure class="campaign-card__img">
                       <img src="./assets/images/common/campaign4.jpg" alt="" />
@@ -428,10 +427,10 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-next campaign__arrow-btn">
+            <div class="campaign__arrow-btn swiper-button-next">
               <span class="arrow arrow--next"></span>
             </div>
-            <div class="swiper-button-prev campaign__arrow-btn">
+            <div class="campaign__arrow-btn swiper-button-prev">
               <div class="arrow">
                 <span></span>
               </div>
@@ -446,7 +445,7 @@
         </div>
       </section>
 
-      <section id="about" class="about section-top-about">
+      <section id="about" class="about top-about">
         <div class="about__inner inner">
           <div class="about__section-title section-title">
             <p class="section-title__en">about us</p>
@@ -488,7 +487,7 @@
 
       <section
         id="information"
-        class="information section-top-information"
+        class="information top-information"
       >
         <div class="information__inner inner">
           <div class="information__section-title section-title">
@@ -497,9 +496,7 @@
           </div>
           <div class="information__box">
             <div class="information__img">
-              <div>
                 <img src="./assets/images/common/info.jpg" alt="" />
-              </div>
             </div>
             <div class="information__body">
               <h3 class="information__title">ライセンス講習</h3>
@@ -518,7 +515,7 @@
         </div>
       </section>
 
-      <section id="blog" class="blog section-top-blog">
+      <section id="blog" class="blog top-blog">
         <div class="inner blog__inner">
           <div
             class="blog__section-title section-title section-title--white"
@@ -583,8 +580,8 @@
         </div>
       </section>
 
-      <section id="voice" class="voice section-top-voice">
-        <div class="inner voice__inner">
+      <section id="voice" class="top-voice voice">
+        <div class="voice__inner inner">
           <div class="voice__section-title section-title">
             <p class="section-title__en">voice</p>
             <h2 class="section-title__ja">お客様の声</h2>
@@ -648,8 +645,8 @@
         </div>
       </section>
 
-      <section id="price" class="price section-top-price">
-        <div class="inner price__inner">
+      <section id="price" class="top-price price">
+        <div class="price__inner inner">
           <div class="price__section-title section-title">
             <p class="section-title__en">price</p>
             <h2 class="section-title__ja">料金一覧</h2>
@@ -668,10 +665,10 @@
               />
             </div>
             <div class="price__text-block">
-              <ul class="price__list-items">
-                <li class="price__list-item">
+              <ul class="price__list">
+                <li class="price__list-items">
                   <h3 class="price__item-title">ライセンス講習</h3>
-                  <dl>
+                  <dl class="price__list-item">
                     <div>
                       <dt>オープンウォーターダイバーコース</dt>
                       <dd>¥50,000</dd>
@@ -686,9 +683,9 @@
                     </div>
                   </dl>
                 </li>
-                <li class="price__list-item">
+                <li class="price__list-items">
                   <h3 class="price__item-title">体験ダイビング</h3>
-                  <dl>
+                  <dl class="price__list-item">
                     <div>
                       <dt>ビーチ体験ダイビング(半日)</dt>
                       <dd>¥7,000</dd>
@@ -707,9 +704,9 @@
                     </div>
                   </dl>
                 </li>
-                <li class="price__list-item">
+                <li class="price__list-items">
                   <h3 class="price__item-title">ファンダイビング</h3>
-                  <dl>
+                  <dl class="price__list-item">
                     <div>
                       <dt>ビーチダイビング(2ダイブ)</dt>
                       <dd>¥14,000</dd>
@@ -728,9 +725,9 @@
                     </div>
                   </dl>
                 </li>
-                <li class="price__list-item">
+                <li class="price__list-items">
                   <h3 class="price__item-title">スペシャルダイビング</h3>
-                  <dl>
+                  <dl class="price__list-item">
                     <div>
                       <dt>貸切ダイビング(2ダイブ)</dt>
                       <dd>¥24,000</dd>
@@ -753,8 +750,8 @@
         </div>
       </section>
 
-      <section id="contact" class="contact section-top-contact">
-        <div class="inner contact__inner">
+      <section id="contact" class="contact top-contact">
+        <div class="contact__inner inner">
           <div class="contact__box">
             <div class="contact__body">
               <div class="contact__logo">
@@ -828,10 +825,10 @@
             <ul class="footer-nav__items">
               <li class="footer-nav__item-title">
                 <a href="#campaign">キャンペーン</a>
-                <ul>
-                  <li class="footer-nav__item">ライセンス取得</li>
-                  <li class="footer-nav__item">貸切体験ダイビング</li>
-                  <li class="footer-nav__item">ナイトダイビング</li>
+                <ul class="footer-nav__item">
+                  <li><a href="#campaign">ライセンス取得</a></li>
+                  <li><a href="#campaign">貸切体験ダイビング</a></li>
+                  <li><a href="#campaign">ナイトダイビング</a></li>
                 </ul>
               </li>
 
@@ -841,11 +838,11 @@
             </ul>
             <ul class="footer-nav__items">
               <li class="footer-nav__item-title">
-                <a href="#information"> ダイビング情報</a>
-                <ul>
-                  <li class="footer-nav__item">ライセンス講習</li>
-                  <li class="footer-nav__item">体験ダイビング</li>
-                  <li class="footer-nav__item">ファンダイビング</li>
+                <a href="#information">ダイビング情報</a>
+                <ul class="footer-nav__item">
+                  <li><a href="#information">ライセンス講習</a></li>
+                  <li><a href="#information">体験ダイビング</a></li>
+                  <li><a href="#information">ファンダイビング</a></li>
                 </ul>
               </li>
               <li class="footer-nav__item-title">
@@ -861,10 +858,10 @@
               </li>
               <li class="footer-nav__item-title">
                 <a href="#price">料金一覧</a>
-                <ul>
-                  <li class="footer-nav__item">ライセンス講習</li>
-                  <li class="footer-nav__item">体験ダイビング</li>
-                  <li class="footer-nav__item">ファンダイビング</li>
+                <ul class="footer-nav__item">
+                  <li><a href="#price">ライセンス講習</a></li>
+                  <li><a href="#price">体験ダイビング</a></li>
+                  <li><a href="#price">ファンダイビング</a></li>
                 </ul>
               </li>
             </ul>

@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.section-top-blog {
+.top-blog {
   margin-top: rem(85);
   @include mq("md") {
     margin-top: 0;

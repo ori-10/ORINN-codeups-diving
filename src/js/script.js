@@ -105,7 +105,7 @@ jQuery(function ($) {
 
   let header = $(".header");
   let headerHeight = $(".header").height();
-  let height = $(".mv").height();
+  let height = $(".js-mv-height").height();
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > height - headerHeight) {
@@ -136,7 +136,7 @@ jQuery(function ($) {
   // campaignスライダー
   ////////////
 
-  let mySwiper = new Swiper(".js-campaign__swiper", {
+  let mySwiper = new Swiper(".js-campaign-swiper", {
     // オプション設定
 
     // PC時のみページネーション表示
