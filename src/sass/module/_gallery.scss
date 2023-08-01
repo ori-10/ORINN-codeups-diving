@@ -1,41 +1,42 @@
 @use "global" as *;
 
-.gallery__items {
+.gallery__box {
   margin-top: rem(40);
   @include mq("md") {
     margin-top: rem(80);
   }
 }
-// grid-auto-columns: 1fr 1fr;
 
-.gallery__item {
+.gallery__items {
   display: grid;
   grid-template-columns: 1fr;
   gap: rem(8);
-@include mq("md") {
-grid-auto-flow: dense;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, rem(369));
-}
-}
-
-
-.gallery__img img {
   @include mq("md") {
-  height: 100%;
+    grid-auto-flow: dense;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, rem(369));
+    // grid-auto-columns: 1fr 1fr;
+  }
+}
+
+.gallery__item img {
+  @include mq("md") {
+    height: 100%;
   }
 }
 
 /* 1個目と6個目、7個目と12個目、18個目に適用するスタイルを指定 */
-.gallery__img:nth-child(6n - 1),
-.gallery__img:nth-child(6n + 1) {
+.gallery__item:nth-child(6n - 1),
+.gallery__item:nth-child(6n + 1) {
   @include mq("md") {
     grid-row: span 2;
   }
 }
 
-// .gallery__img--big {
-//     @include mq("md") {
-//       grid-row: span 2;
-//     }
+// 並び
+// .gallery__item:nth-child(6n - 1) {
+//   order: 6;
+//   @include mq("md") {
+//     order: 4;
 //   }
+// }
