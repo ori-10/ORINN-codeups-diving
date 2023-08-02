@@ -32,6 +32,7 @@
 }
 
 /* 1個目と6個目、7個目と12個目、18個目に適用するスタイルを指定 */
+// .gallery__item:nth-child(6n - 1),
 .gallery__item:nth-child(6n),
 .gallery__item:nth-child(6n + 1) {
   @include mq("md") {
