@@ -1,45 +1,86 @@
 @use "global" as *;
 
+
+.sub-information {
+  position: relative;
+}
+
+// あしらい　上の魚
+.sub-information::before {
+  position: absolute;
+  left: calc(50% - min(46vw, 38.7rem));
+  content: "";
+  background-image: url(../images/common/fish-right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: rem(120);
+  width: 100%;
+  height: rem(55);
+  z-index: 1;
+  top: rem(-93);
+  @include mq("md") {
+    top: rem(-72);
+    max-width: rem(301);
+    height: rem(138);
+    z-index: 0;
+  }
+}
+
 .sub-information__tab {
   display: flex;
+  grid-column-gap: rem(20);
+  // grid-column-gap: 20px;
   flex-wrap: wrap;
 }
+
 .sub-information__tab-label {
-  color: $white;
-  // background: LightGray;
+  color: $green-accent;
   background: #DDF0F1;
-  margin-right: 5px;
-  padding: 3px 12px;
+  padding: rem(10) rem(16);
   order: -1;
+  text-align: center;
+  font-size: rem(14);
+  font-weight: $regular;
+  box-shadow: rem(2) rem(2) rem(4) 0px rgba(0, 0, 0, 0.25);
+  @include mq("md") {
+    font-size: rem(24);
+  }
 }
 .sub-information__tab-content {
   width: 100%;
   display: none;
+  margin-top: rem(15);
 }
+
 /* アクティブなタブ */
 .sub-information__tab-switch:checked + .sub-information__tab-label {
-  // background: DeepSkyBlue;
   background: $green-accent;
+  color: $white;
 }
+
 .sub-information__tab-switch:checked + .sub-information__tab-label + .sub-information__tab-content {
   display: block;
 }
+
 /* ラジオボタン非表示 */
 .sub-information__tab-switch {
   display: none;
 }
 
-
-
 .sub-information__inner {
   max-width: rem(600);
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
 .sub-information__box {
-  margin-top: rem(27);
+  // margin-top: rem(27);
+  border: 1px solid $green-accent;
+  padding: rem(16) rem(24);
   @include mq("md") {
     display: flex;
-    margin-top: rem(40);
+    // margin-top: rem(40);
     gap: 4.5%;
     align-items: flex-start;
   }
@@ -47,6 +88,7 @@
 
 .sub-information__img {
   position: relative;
+  margin-top: rem(8);
   @include mq("md") {
     width: 50%;
   }
@@ -69,16 +111,17 @@
 }
 
 .sub-information__body {
-  margin-top: rem(22);
+  // margin-top: rem(22);
   @include mq("md") {
     width: 45.5%;
-    margin-top: rem(54);
+    // margin-top: rem(54);
   }
 }
 
 .sub-information__title {
-  font-size: rem(20);
+  font-size: rem(24);
   font-weight: $bold;
+  line-height: 1.6;
   border-bottom: 1px solid $green-accent;
   @include mq("md") {
     padding-bottom: rem(2);
