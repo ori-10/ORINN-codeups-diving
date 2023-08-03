@@ -2,7 +2,8 @@
 
 .sub-information__tab {
   display: flex;
-  gap: rem(15) rem(20);
+  // gap: rem(15) rem(20);
+  gap: rem(15) 5.66%;
   flex-wrap: wrap;
   @include mq("md") {
     gap: rem(25) 8.3%;
@@ -12,22 +13,23 @@
 .sub-information__tab-label {
   color: $green-accent;
   background: #ddf0f1;
-  padding: rem(10) rem(16);
+  padding: rem(10) 0;
   text-align: center;
   font-size: 0;
   font-weight: $regular;
   box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
   z-index: 1;
   order: -1;
+  width: 29.56%;
   @include mq("md") {
-    padding: rem(29) 0 rem(24) 0;
-    position: relative;
+    padding: rem(13) 0 rem(13) 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 27.8%;
   }
 }
+
 
 .sub-information__tab-label span {
   font-size: rem(14);
@@ -37,52 +39,37 @@
   }
 }
 
-.sub-information__tab-label::before {
+.sub-information__tab-label span:first-child {
+  position: relative;
+  height: rem(64);
+  width: rem(64);
+  margin-right: rem(8);
+}
+
+.sub-information__tab-label span:first-child::before {
   @include mq("md") {
     content: "";
-    width: 25%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     background-image: url(../images/common/sub-info-btn1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    top: 50%;
-    left: 21%;
-    transform: translate(-50%, -50%);
+    top: 0;
+left: 0;
+right: 0;
   }
 }
 
-.sub-information__tab-label--1 {
+.sub-information__tab-label--2 span:first-child::before {
   @include mq("md") {
-    padding-right: rem(30);
-    padding-left: rem(100);
-  }
-}
-
-.sub-information__tab-label--2 {
-  @include mq("md") {
-    padding-right: rem(18);
-    padding-left: rem(90);
-  }
-}
-
-.sub-information__tab-label--2::before {
-  @include mq("md") {
-    left: 17%;
     background-image: url(../images/common/sub-info-btn2.png);
   }
 }
 
-.sub-information__tab-label--3 {
+.sub-information__tab-label--3 span:first-child::before {
   @include mq("md") {
-    padding-right: rem(28);
-    padding-left: rem(103);
-  }
-}
-.sub-information__tab-label--3::before {
-  @include mq("md") {
-    left: 21%;
     background-image: url(../images/common/sub-info-btn3.png);
   }
 }
@@ -101,7 +88,7 @@
   z-index: 1;
 }
 
-.sub-information__tab-switch:checked + .sub-information__tab-label::before {
+.sub-information__tab-switch:checked + .sub-information__tab-label span::before {
   filter: brightness(1000%);
 }
 
@@ -122,8 +109,8 @@
 
 .sub-information__inner {
   max-width: rem(600);
-  padding-right: 14px;
-  padding-left: 14px;
+  // padding-right: 14px;
+  // padding-left: 14px;
 }
 
 .sub-information__box {
