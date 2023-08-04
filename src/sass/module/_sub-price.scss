@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.sub-price__inner {
+  @include mq("md") {
+    max-width: rem(700);
+  }
+}

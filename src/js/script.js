@@ -134,7 +134,7 @@ jQuery(function ($) {
 
   ////////////
   // campaignスライダー
-  ////////////
+  ///////////
 
   let mySwiper = new Swiper(".js-campaign-swiper", {
     // オプション設定
@@ -165,57 +165,97 @@ jQuery(function ($) {
     },
   });
 
-  let prevButton = document.querySelector(".swiper-button-prev");
-  let nextButton = document.querySelector(".swiper-button-next");
+  document.addEventListener("DOMContentLoaded", function () {
+    var prevButton = document.querySelector(".swiper-button-prev");
+    var nextButton = document.querySelector(".swiper-button-next");
 
-  // prevボタンのクリックイベントを監視します
-  prevButton.addEventListener("click", function () {
-    // 自動再生を再開します
-    mySwiper.autoplay.start();
-  });
-  // nextボタンのクリックイベントを監視します
-  nextButton.addEventListener("click", function () {
-    // 自動再生を再開します
-    mySwiper.autoplay.start();
+    // prevボタンのクリックイベントを監視します
+    prevButton.addEventListener("click", function () {
+      // 自動再生を再開します
+      mySwiper.autoplay.start();
+    });
+    // nextボタンのクリックイベントを監視します
+    nextButton.addEventListener("click", function () {
+      // 自動再生を再開します
+      mySwiper.autoplay.start();
+    });
   });
 
   /////////////
   // 画像出現アニメーション
   ////////////
 
-  $(window).on("scroll", function () {
-    let windowPosition = $(window).scrollTop() + $(window).height();
+  document.addEventListener("DOMContentLoaded", function () {
+    $(window).on("scroll", function () {
+      let windowPosition = $(window).scrollTop() + $(window).height();
 
-    let boxPosition = $(".information__img").offset().top;
-    if (windowPosition >= boxPosition) {
-      $(".information__img").addClass("is-active");
-    }
+      let boxPosition = $(".information__img").offset().top;
+      if (windowPosition >= boxPosition) {
+        $(".information__img").addClass("is-active");
+      }
 
-    let voicePosition = $(".voice-card__img--1").offset().top;
-    if (windowPosition >= voicePosition) {
-      $(".voice-card__img--1").addClass("is-active");
-    }
+      let voicePosition = $(".voice-card__img--1").offset().top;
+      if (windowPosition >= voicePosition) {
+        $(".voice-card__img--1").addClass("is-active");
+      }
 
-    let voicePosition2 = $(".voice-card__img--2").offset().top;
-    if (windowPosition >= voicePosition2) {
-      $(".voice-card__img--2").addClass("is-active");
-    }
+      let voicePosition2 = $(".voice-card__img--2").offset().top;
+      if (windowPosition >= voicePosition2) {
+        $(".voice-card__img--2").addClass("is-active");
+      }
 
-    let pricePosition = $(".price__img").offset().top;
-    if (windowPosition >= pricePosition) {
-      $(".price__img").addClass("is-active");
-    }
-  });
-
-  $(function () {
-    $(".js-pagination").paginathing({
-      //親要素のclassを記述
-      perPage: 5, //1ページあたりの表示件数
-      prevText: '<i class="fas fa-angle-left"></i>', //1つ前のページへ移動するボタンのテキスト
-      nextText: '<i class="fas fa-angle-right"></i>', //1つ次のページへ移動するボタンのテキスト
-      activeClass: "navi-active", //現在のページ番号に任意のclassを付与できます
-      firstText: '<i class="fas fa-angle-double-left"></i>', // "最初ページ"に移動するボタンのテキスト
-      lastText: '<i class="fas fa-angle-double-right"></i>', // "最後のページ"に移動するボタンのテキスト
+      let pricePosition = $(".price__img").offset().top;
+      if (windowPosition >= pricePosition) {
+        $(".price__img").addClass("is-active");
+      }
     });
   });
+
+  // ページネーション
+  // $(function () {
+  //   $(".js-pagination").paginathing({
+  //     //親要素のclassを記述
+  //     perPage: 5, //1ページあたりの表示件数
+  //     prevText: '<i class="fas fa-angle-left"></i>', //1つ前のページへ移動するボタンのテキスト
+  //     nextText: '<i class="fas fa-angle-right"></i>', //1つ次のページへ移動するボタンのテキスト
+  //     activeClass: "navi-active", //現在のページ番号に任意のclassを付与できます
+  //     firstText: '<i class="fas fa-angle-double-left"></i>', // "最初ページ"に移動するボタンのテキスト
+  //     lastText: '<i class="fas fa-angle-double-right"></i>', // "最後のページ"に移動するボタンのテキスト
+  //   });
+  // });
+
+  ("use strict"); /* 厳格にエラーをチェック */
+  // 要素の取得
+  const tabItem = document.querySelectorAll(".tab-item");
+  const tabContent = document.querySelectorAll(".tab-content");
+
+  // tabItemに対してクリックイベントを追加
+  // クリックした時にtabToggle関数を発火
+  for (let i = 0; i < tabItem.length; i++) {
+    tabItem[i].addEventListener("click", tabToggle);
+  }
+
+  function tabToggle() {
+    // tabItemとtabContentの.activeを削除する
+    for (let i = 0; i < tabItem.length; i++) {
+      tabItem[i].classList.remove("active");
+    }
+    for (let i = 0; i < tabContent.length; i++) {
+      tabContent[i].classList.remove("active");
+    }
+
+    // クリックしたtabItemに.activeを追加
+    this.classList.add("active");
+
+    // tabItemを配列にする
+    // [<li class="tab-item active">About</li>, <li class="tab-item">Works</li>, <li class="tab-item">Contact</li>]
+    const aryTabs = Array.prototype.slice.call(tabItem);
+
+    // 配列に格納したキーワードと最初一致したインデックスを格納
+    // <li class="tab-item active">About</li>の場合は「0」が返ってくる
+    const index = aryTabs.indexOf(this);
+
+    // インデックスに対応したtabContentに.activeを追加
+    tabContent[index].classList.add("active");
+  }
 }); // 消さない

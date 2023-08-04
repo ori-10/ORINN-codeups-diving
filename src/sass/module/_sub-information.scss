@@ -29,7 +29,6 @@
   }
 }
 
-
 .sub-information__tab-label span {
   font-size: rem(14);
   @include mq("md") {
@@ -56,8 +55,8 @@
     background-position: center;
     background-size: contain;
     top: 0;
-left: 0;
-right: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -87,7 +86,9 @@ right: 0;
   z-index: 1;
 }
 
-.sub-information__tab-switch:checked + .sub-information__tab-label span::before {
+.sub-information__tab-switch:checked
+  + .sub-information__tab-label
+  span::before {
   filter: brightness(1000%);
 }
 

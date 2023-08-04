@@ -5,8 +5,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: url(../images/common/sub-mv-sp.jpg);
   @include mq("md") {
     height: rem(548);
+    background-image: url(../images/common/sub-mv.jpg);
   }
 }
 
@@ -28,6 +30,20 @@
   background-image: url(../images/common/sub-blog-mv-sp.jpg);
   @include mq("md") {
   background-image: url(../images/common/sub-blog-mv.jpg);
+  }
+}
+
+.sub-mv--voice {
+  background-image: url(../images/common/sub-voice-mv-sp.jpg);
+  @include mq("md") {
+  background-image: url(../images/common/sub-voice-mv.jpg);
+  }
+}
+
+.sub-mv--price {
+  background-image: url(../images/common/sub-price-mv-sp.jpg);
+  @include mq("md") {
+  background-image: url(../images/common/sub-price-mv.jpg);
   }
 }
 

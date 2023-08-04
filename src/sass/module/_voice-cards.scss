@@ -13,3 +13,10 @@
 .voice-cards__item {
   width: 100%;
 }
+
+// 下層ページ
+.voice-cards.tab__content-cards {
+  @include mq("md") {
+    gap: rem(80) rem(40);
+  }
+}

@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.sub-voice article > * + * {
+  margin-top: 0;
+}
+

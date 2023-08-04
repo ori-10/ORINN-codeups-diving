@@ -19,7 +19,7 @@
 .sub-blog__main {
   width: 100%;
   @include mq("md") {
-  width: 65.37%;
+    width: 65.37%;
   }
 }
 
@@ -34,16 +34,21 @@
 
 .sub-blog__pagination {
   margin-top: rem(80);
-  display: flex;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  width: auto;
+  @include mq("md") {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
-.sub-blog__pagination {
-  margin-left: calc(50% - 50vw);
-margin-right: calc(50% - 50vw);
-width: auto;
-text-align: center;
-padding-left: 15px;
-padding-right: 15px;
+.sub-blog__pagination-inner {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sub-blog__btn {
