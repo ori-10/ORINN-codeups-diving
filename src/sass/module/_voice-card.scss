@@ -5,16 +5,11 @@
   box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
   display: inline-block;
   padding: rem(15) rem(16) rem(24);
-  transition: .3s all;
   position: relative;
   background-color: $white;
   @include mq("md") {
     padding: rem(24);
   }
-}
-
-.voice-card:hover {
-  opacity: .7;
 }
 
 .voice-card__head {
@@ -88,11 +83,6 @@
   top: 0;
   left:0;
   transform: translate(0);
-  @include mq("md") {
-    top: 0;
-    left:0;
-    transform: translate(0);
-  }
   }
 
   .voice-card__title {

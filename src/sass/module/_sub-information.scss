@@ -2,7 +2,6 @@
 
 .sub-information__tab {
   display: flex;
-  // gap: rem(15) rem(20);
   gap: rem(15) 5.66%;
   flex-wrap: wrap;
   @include mq("md") {

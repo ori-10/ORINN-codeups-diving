@@ -35,3 +35,31 @@
     margin-top: rem(38);
   }
 }
+
+// 下層ページ
+.blog-cards__item--sub {
+  @include mq("md") {
+    width: calc(50% - rem(40) * 1 / 2);
+  }
+}
+
+.blog-cards__item--sub + .blog-cards__item--sub {
+  margin-top: rem(38);
+
+  @include mq("md") {
+    margin-top: 0;
+    margin-left: rem(40);
+  }
+}
+
+.blog-cards__item--sub:nth-child(2n + 1) {
+  @include mq("md") {
+    margin-left: 0;
+  }
+}
+
+.blog-cards__item--sub:nth-child(n + 3) {
+  @include mq("md") {
+    margin-top: rem(78);
+  }
+}

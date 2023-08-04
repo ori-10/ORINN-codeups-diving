@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.aside__content:not(:first-child) {
+  margin-top: rem(80);
+}
+
+.aside__title {
+  position: relative;
+  padding: rem(7.5) 0;
+}
+
+.aside__title::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: rem(8);
+  height: rem(50);
+  top: 0;
+  left: 0;
+  background-color: $green-accent;
+}
+
+.aside__title h2 {
+  display: flex;
+  font-size: rem(24);
+  position: relative;
+    padding-left: rem(82);
+}
+
+.aside__title h2::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: url(../images/common/title-icon.png) no-repeat;
+  background-size: contain;
+  background-position: top left;
+  height: rem(50);
+  width: rem(50);
+  top: rem(-9);
+  left: rem(23);
+}
+
+.aside__voice-item {
+  margin-top: rem(24);
+}
+
+.aside__campaign-items {
+  margin-top: rem(24);
+}
+
+.aside__campaign-item + .aside__campaign-item {
+  margin-top: rem(40);
+}
+
+.aside__btn {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+// サイドバー　アーカイブ
+.aside__archive {
+  color: $green-accent;
+  font-size: rem(24);
+  margin-top: rem(24);
+}

@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.aside-archive__inner {
+  padding-left: 2px;
+}
+
+// デフォルト削除
+.aside-archive__items summary {
+  list-style: none;
+}
+
+.aside-archive__items summary::-webkit-details-marker {
+  display: none;
+}
+
+.aside-archive__items summary::before {
+  content: "▶︎";
+}
+
+.aside-archive__items[open] summary::before {
+  content: "▼";
+}
+
+.aside-archive__items + .aside-archive__items {
+  margin-top: rem(2);
+}
+
+.aside-archive__item {
+  padding-left: rem(25);
+}
+
+.aside-archive__item li {
+  padding: rem(1.2) 0;
+}
