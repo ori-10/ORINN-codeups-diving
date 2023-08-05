@@ -258,4 +258,13 @@ jQuery(function ($) {
     // インデックスに対応したtabContentに.activeを追加
     tabContent[index].classList.add("active");
   }
+
+  // アコーディオン
+  document.querySelectorAll('.js-accordion').forEach(function(elem){
+    elem.querySelector('p').addEventListener('click',function(){  
+        elem.classList.toggle('open')
+    })
+})
+
+  
 }); // 消さない

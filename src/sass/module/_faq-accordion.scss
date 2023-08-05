@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.faq-accordion p {
+  border: 1px solid $green-accent;
+  margin-bottom: -1px;
+}
+
+.faq-accordion__title {
+  padding: rem(16);
+  background: $green-accent;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  @include mq("md") {
+    font-size: rem(20);
+    padding: rem(24) rem(40);
+  }
+}
+
+.faq-accordion__title span:nth-child(2) {
+  position: relative;
+  display: inline-block;
+  height: 1px;
+  max-width: rem(28);
+  width: 100%;
+}
+
+.faq-accordion__title span:nth-child(2):after {
+  position: absolute;
+  content: "";
+  background-color: $white;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  @include mq("md") {
+    width: rem(32);
+  }
+}
+
+.faq-accordion__text {
+  padding: rem(16);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+// 開いた時
+.open.faq-accordion {
+  margin-bottom: rem(40);
+  @include mq("md") {
+    margin-bottom: rem(38);
+  }
+}
+
+.open .faq-accordion__text {
+  padding: rem(22) rem(16);
+  line-height: 1.45;
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+  @include mq("md") {
+    margin-top: rem(16);
+    padding: rem(40);
+  }
+}
+
