@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.thanks-page__inner {
+  text-align: center;
+}
+
+.thanks-page__sub-text {
+  margin-top: rem(36);
+  line-height: 1.45;
+}

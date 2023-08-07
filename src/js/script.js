@@ -259,12 +259,19 @@ jQuery(function ($) {
     tabContent[index].classList.add("active");
   }
 
-  // アコーディオン
+  // FAQ アコーディオン
   document.querySelectorAll('.js-accordion').forEach(function(elem){
     elem.querySelector('p').addEventListener('click',function(){  
         elem.classList.toggle('open')
     })
 })
 
+  // about　モーダル
+  MicroModal.init({
+    disableScroll: true,
+    awaitOpenAnimation: true,
+    awaitCloseAnimation: true
+  });
+  
   
 }); // 消さない

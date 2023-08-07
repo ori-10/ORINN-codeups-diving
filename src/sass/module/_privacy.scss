@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.privacy {
+  line-height: 2;
+}
+
+.privacy__inner {
+  @include mq("md") {
+    max-width: rem(850);
+  }
+}
+
+.privacy__title {
+  font-weight: $medium;
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
+
+.privacy__top-text {
+  margin-top: rem(35);
+  margin-bottom: rem(30);
+  @include mq("md") {
+    margin-top: rem(30);
+    margin-bottom: rem(32);
+  }
+}
+
+.privacy__list-items {
+  padding-left: rem(24);
+  list-style-type: decimal;
+}
+
+.privacy__text {
+  margin-top: rem(33);
+}
+
+.privacy__bottom-text {
+  margin-top: rem(30);
+}

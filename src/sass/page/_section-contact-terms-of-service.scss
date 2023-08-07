@@ -1,7 +1,7 @@
 @use "global" as *;
 
-.section-sub-contact {
-  margin-top: rem(105);
+.section-contact-terms-of-service {
+  margin-top: rem(44);
   @include mq("md") {
     margin-top: rem(140);
   }

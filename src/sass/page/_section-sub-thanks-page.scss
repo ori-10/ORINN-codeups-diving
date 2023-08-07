@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.section-sub-thanks-page {
+  margin-top: rem(48);
+  @include mq("md") {
+    margin-top: rem(146);
+  }
+}
