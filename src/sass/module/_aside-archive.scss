@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .aside-archive__inner {
-  padding-left: 2px;
+  padding-left: rem(2);
 }
 
 // デフォルト削除
@@ -15,6 +15,7 @@
 
 .aside-archive__items summary::before {
   content: "▶︎";
+  padding-right: rem(6);
 }
 
 .aside-archive__items[open] summary::before {

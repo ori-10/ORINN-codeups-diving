@@ -50,7 +50,8 @@
       </div>
     </div>
 
-    <header id="header" class="header js-header">
+    <div class="not-found-wrapper">
+    <header id="header" class="header  js-header">
       <div class="header__inner">
         <h1 class="header__logo logo">
           <a href="#" class="logo__img">
@@ -188,9 +189,9 @@
         </nav>
       </div>
     </header>
-
+  
     <!-- パンくず -->
-    <div id="breadcrumb" class="breadcrumb section-breadcrumb">
+    <div id="breadcrumb" class="breadcrumb section-breadcrumb breadcrumb--not-found">
       <div class="breadcrumb__inner inner">
         <ol
           class="breadcrumb__items"
@@ -224,60 +225,26 @@
     </div>
 
     <main>
-      <div id="not-found" class="not-found section-not-found">
+      <section id="not-found" class="not-found section-not-found">
         <div class="not-found__inner inner">
-        
-        </div>
-      </div>
+        <div class="not-found__body">
 
-      <section id="contact" class="contact section-sub-contact">
-        <div class="contact__inner inner">
-          <div class="contact__box">
-            <div class="contact__body">
-              <div class="contact__logo">
-                <div class="contact__img">
-                  <img src="assets/images/common/CodeUps-green.svg" alt="" />
-                </div>
-              </div>
-              <div class="contact__info">
-                <ul class="contact__address">
-                  <li>沖縄県那覇市1-1</li>
-                  <li>TEL:0120-000-0000</li>
-                  <li>営業時間:8:30-19:00</li>
-                  <li>定休日:毎週火曜日</li>
-                </ul>
-                <div class="contact__map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d208684.70750180862!2d129.0336616!3d35.1890651!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35688d5c0efe075f%3A0x9963b1d5c163ac98!2sHaeundae%20Beach!5e0!3m2!1sja!2sjp!4v1689970799196!5m2!1sja!2sjp"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
+          <h2 class="not-found__title">404</h2>
+          <p class="not-found__text">申し訳ありません。<br>
+            お探しのページが見つかりません。</p>
+            <div class="not-found__btn">
+              <a href="#" class="btn btn--green">
+                Page TOP
+                <span class="btn__arrow"></span>
+              </a>
             </div>
 
-            <div class="contact__link">
-              <div
-                class="contact__section-title section-title section-title--large"
-              >
-                <p class="section-title__en">contact</p>
-                <h2 class="section-title__ja">お問い合わせ</h2>
-              </div>
-
-              <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-
-              <div class="contact__btn">
-                <a href="#" class="btn">
-                  Contact us
-                  <span class="btn__arrow"></span>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
+
+      
 
       <div id="page-top" class="page-top js-page-top">
         <a href="#">
@@ -286,7 +253,7 @@
       </div>
       <!-- /.page-top -->
     </main>
-    <footer id="footer" class="footer section-footer">
+    <footer id="footer" class="footer section-footer section-footer--not-found">
       <div class="footer__inner inner">
         <div class="footer__head">
           <div class="footer__logo">
@@ -375,6 +342,7 @@
         <p>Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</p>
       </div>
     </footer>
+  </div>
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

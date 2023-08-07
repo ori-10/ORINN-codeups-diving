@@ -185,7 +185,7 @@ jQuery(function ($) {
   // 画像出現アニメーション
   ////////////
 
-  document.addEventListener("DOMContentLoaded", function () {
+  // document.addEventListener("DOMContentLoaded", function () {
     $(window).on("scroll", function () {
       let windowPosition = $(window).scrollTop() + $(window).height();
 
@@ -209,7 +209,7 @@ jQuery(function ($) {
         $(".price__img").addClass("is-active");
       }
     });
-  });
+  // });
 
   // ページネーション
   // $(function () {

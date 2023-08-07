@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.not-found-wrapper {
+  background: $green-accent;
+  color: $white;
+}
+
+.breadcrumb--not-found {
+  margin-top: 0;
+  padding-top: rem(88);
+  @include mq("md") {
+    padding-top: rem(98);
+  }
+}
+
+.breadcrumb--not-found .breadcrumb__item:after {
+  border-right: 1px solid $white;
+  border-top: 1px solid $white;
+}
+
+.section-footer--not-found {
+  margin-top: 0;
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.not-found {
+  position: relative;
+  padding-top: rem(60);
+  padding-bottom: rem(43);
+  font-family: $third-font-family;
+  @include mq("md") {
+    padding-top: rem(135);
+    padding-bottom: rem(150);
+  }
+}
+
+.not-found::before {
+  position: absolute;
+  content: "";
+  height: rem(345);
+  width: rem(345);
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/common/not-found-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include mq("md") {
+    transform: translateX(0);
+    left: calc(50% - min(37.5vw, 33.87rem));
+    left: calc(50% - 33.87rem);
+    height: rem(698);
+    width: rem(698);
+  }
+}
+
+.not-found__body {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.not-found__title {
+  font-size: rem(80);
+  letter-spacing: 0.5em;
+  line-height: 1;
+  text-indent: 0.5em;
+  @include mq("md") {
+    font-size: rem(160);
+    letter-spacing: 0.5em;
+  }
+}
+
+.not-found__text {
+  margin-top: rem(3);
+  line-height: 1.5;
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.not-found__btn {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.not-found__btn .btn {
+  background-color: $white;
+  border: 1px solid $white;
+  color: $green-accent;
+}
+
+.not-found__btn .btn::before {
+  border: 1px solid $white;
+}
+
+.not-found__btn .btn__arrow::before {
+  background-image: url(../images/common/btn-arrow.svg);
+}
+
+.not-found__btn .btn:hover {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.not-found__btn .btn:hover .btn__arrow::before {
+  @include mq("md") {
+    background-image: url(../images/common/btn-arrow--white.svg);
+  }
+}
+
+.not-found__btn .btn:hover::after {
+  @include mq("md") {
+    background: $green-accent;
+  }
+}
