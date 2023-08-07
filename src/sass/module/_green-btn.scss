@@ -1,0 +1,104 @@
+@use "global" as *;
+
+.green-btn {
+  display: inline-flex;
+  position: relative;
+  padding: rem(16) 0;
+  background: $white;//初めの色
+  border: 1px solid $white;
+  color: $green-accent;
+  font-family: $second-font-family;
+  font-size: rem(14);
+  max-width: rem(202);
+  width: 100%;
+  z-index: 0;
+  cursor: pointer;
+  justify-content: center;
+  // transition: opacity 0.4s;
+  @include mq("md") {
+    // transition: color 0.2s opacity none;
+  }
+}
+
+.green-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid $white;
+  transform: translate(rem(5), rem(5));
+  z-index: -1;
+}
+
+.green-btn:hover {
+  // opacity: 0.7;
+  @include mq("md") {
+    color: $white;
+    // opacity: 1;
+  }
+}
+
+.green-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background: $white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: all 0.4s cubic-bezier(0.45, 0, 0.55, 1);
+
+
+  // transition: scale 2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+
+.green-btn:hover::after {
+  @include mq("md") {
+    transform: scale(1, 1);
+    background: $green-accent;//ホバー時
+  }
+}
+
+.green-btn:hover .green-btn__arrow::before {
+  @include mq("md") {
+    background-image: url(../images/common/btn-arrow--white.svg);
+  }
+}
+
+.green-btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: rem(8);
+}
+
+// やじるし
+.green-btn__arrow {
+  position: relative;
+  display: inline-block;
+  padding: 0 rem(20);
+  text-decoration: none;
+  outline: none;
+}
+
+.green-btn__arrow::before {
+  content: "";
+  position: absolute;
+  bottom: rem(2);
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/common/btn-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.green-btn:hover .green-btn__arrow::before,
+.green-btn:hover .green-btn__arrow::after {
+  background-color: transparent;
+}

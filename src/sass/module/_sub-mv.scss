@@ -54,6 +54,13 @@
   }
 }
 
+.sub-mv--site-map {
+  background-image: url(../images/common/site-map-mv-sp.jpg);
+  @include mq("md") {
+  background-image: url(../images/common/site-map-mv.jpg);
+  }
+}
+
 .sub-mv__title {
   display: flex;
   justify-content: center;

@@ -1,6 +1,10 @@
 @use "global" as *;
 
-.footer-nav__wrap {
+.site-map__nav {
+  display: flex;
+}
+
+.site-map__wrap {
   width: initial;
   width: 100%;
   @include mq("md") {
@@ -10,7 +14,7 @@
   }
 }
 
-.footer-nav__items {
+.site-map__items {
   height: inherit;
   width: inherit;
   @include mq("md") {
@@ -18,57 +22,61 @@
   }
 }
 
-.footer-nav__item-title {
+.site-map__item-title {
   padding: rem(8) 0;
 }
 
-.footer-nav__item-title > a {
+.site-map__item-title > a {
   display: block;
   width: 100%;
   width: initial;
-  color: $white;
+  color: $black;
   font-weight: $bold;
   padding: rem(12) 0;
   padding-left: rem(22);
-  background-image: url(../images/common/menu-star.png);
+  background-image: url(../images/common/site-map-star.png);
   background-size: rem(18);
   background-repeat: no-repeat;
   background-position: 0 rem(12);
   line-height: 1.125;
   transition: opacity 0.4s;
+  position: relative;
+  z-index: 1;
   @include mq("md") {
     padding-left: rem(22);
     background-position: rem(0) rem(12);
   }
 }
 
-.footer-nav__item-title a:hover {
+.site-map__item-title a:hover {
   opacity: 0.7;
 }
 
-.footer-nav__item li {
+.site-map__item li {
   display: block;
   width: 100%;
   width: initial;
-  color: $white;
+  color: $black;
   padding: rem(12) 0;
   padding-left: rem(22);
   line-height: 1.125;
+  position: relative;
+  z-index: 1;
   @include mq("md") {
     padding-left: rem(22);
   }
 }
 
-.footer-nav__wrap--space > a {
+.site-map__wrap--space > a {
   padding-left: rem(22);
   background-position: 0 rem(12);
 }
 
 // br
-.footer-nav__item-title--br {
+.site-map__item-title--br {
   font-size: 0;
 }
 
-.footer-nav__item-title--br span {
+.site-map__item-title--br span {
   font-size: rem(16);
 }

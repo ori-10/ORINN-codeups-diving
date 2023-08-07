@@ -81,42 +81,10 @@
     margin-top: rem(40);
   }
 }
-
+// ボタン
 .not-found__btn {
   margin-top: rem(40);
   @include mq("md") {
     margin-top: rem(80);
-  }
-}
-
-.not-found__btn .btn {
-  background-color: $white;
-  border: 1px solid $white;
-  color: $green-accent;
-}
-
-.not-found__btn .btn::before {
-  border: 1px solid $white;
-}
-
-.not-found__btn .btn__arrow::before {
-  background-image: url(../images/common/btn-arrow.svg);
-}
-
-.not-found__btn .btn:hover {
-  @include mq("md") {
-    color: $white;
-  }
-}
-
-.not-found__btn .btn:hover .btn__arrow::before {
-  @include mq("md") {
-    background-image: url(../images/common/btn-arrow--white.svg);
-  }
-}
-
-.not-found__btn .btn:hover::after {
-  @include mq("md") {
-    background: $green-accent;
   }
 }
