@@ -45,16 +45,22 @@
   display: block;
 }
 
-  // padding: 0 35px;
 // 下層　キャンペーン
 .tab__sub-campaign {
   display: grid;
   gap: rem(40);
   grid-template-columns: 1fr;
-  // max-width: rem(600);
   @include mq("md") {
-    // max-width: none;
-    gap: rem(40) rem(80);
+    gap: rem(80) rem(40);
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tab__sub-page-inner {
+  padding-left: 33px;
+  padding-right: 33px;
+  @include mq("md") {
+  padding-left: 0;
+  padding-right: 0;
   }
 }

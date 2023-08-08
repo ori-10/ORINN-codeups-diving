@@ -25,12 +25,6 @@
   }
 }
 
-.campaign-card__body--sub-page {
-  @include mq("md") {
-    padding: rem(24) rem(24) rem(40);
-  }
-}
-
 .campaign-card__body-head {
   flex-grow: 1;
 }
@@ -131,9 +125,28 @@
   }
 }
 
-// 下層ページ
+// 下層ページ 
+.campaign-card__body--sub-page {
+  @include mq("md") {
+    padding: rem(24) rem(24) rem(40);
+  }
+}
+
+.campaign-card__title--sub-page {
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+.campaign-card__text--sub-page {
+  @include mq("md") {
+    margin-top: 0;
+    padding-top: rem(28);
+  }
+}
+
 .campaign-card__pc-info {
   @include mq("md") {
-    margin-top: rem(26);
+    margin-top: rem(14);
   }
 }

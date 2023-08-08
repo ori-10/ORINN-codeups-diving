@@ -7,20 +7,18 @@
 
 }
 
-.pc-info__guide:first-child {
-  font-family: $third-font-family;
+.pc-info__guide p:first-child {
+  font-family: $third-font-family;    letter-spacing: .03em;
 
 }
 
-.pc-info__guide:nth-child(2) {
-    margin-top: rem(7);
-
+.pc-info__guide p:nth-child(2) {
+    // margin-top: rem(7);
+font-size: rem(14);
 }
 
 
 .pc-info__btn {
 
-  @include mq("md") {
-    margin-top: rem(16);
-  }
+    margin-top: rem(15);
 }
