@@ -4,7 +4,7 @@
   display: inline-flex;
   position: relative;
   padding: rem(16) 0;
-  background: $white;//初めの色
+  background: $white; //初めの色
   border: 1px solid $white;
   color: $green-accent;
   font-family: $second-font-family;
@@ -14,9 +14,9 @@
   z-index: 0;
   cursor: pointer;
   justify-content: center;
-  // transition: opacity 0.4s;
+  transition: opacity 0.4s;
   @include mq("md") {
-    // transition: color 0.2s opacity none;
+    transition: color 0.4s opacity none;
   }
 }
 
@@ -33,10 +33,10 @@
 }
 
 .green-btn:hover {
-  // opacity: 0.7;
+  opacity: 0.7;
   @include mq("md") {
     color: $white;
-    // opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -47,20 +47,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // background: $white;
   transform: scale(0, 1);
   transform-origin: left top;
   transition: all 0.4s cubic-bezier(0.45, 0, 0.55, 1);
-
-
-  // transition: scale 2s cubic-bezier(0.45, 0, 0.55, 1);
+  background: $green-accent; //ホバー時
   z-index: -1;
 }
 
 .green-btn:hover::after {
   @include mq("md") {
     transform: scale(1, 1);
-    background: $green-accent;//ホバー時
   }
 }
 

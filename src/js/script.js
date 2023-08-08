@@ -1,3 +1,5 @@
+("use strict"); /* 厳格にエラーをチェック */
+
 // const { compile } = require("sass");
 
 jQuery(function ($) {
@@ -185,31 +187,38 @@ jQuery(function ($) {
   // 画像出現アニメーション
   ////////////
 
-  // document.addEventListener("DOMContentLoaded", function () {
-    $(window).on("scroll", function () {
-      let windowPosition = $(window).scrollTop() + $(window).height();
-
-      let boxPosition = $(".information__img").offset().top;
+  $(window).on("scroll", function () {
+    // .information__imgが存在する場合のみ処理を実行
+    if ($(".information__img").length > 0) {
+      var windowPosition = $(window).scrollTop() + $(window).height();
+      var boxPosition = $(".information__img").offset().top;
       if (windowPosition >= boxPosition) {
         $(".information__img").addClass("is-active");
       }
-
-      let voicePosition = $(".voice-card__img--1").offset().top;
+    }
+    if ($(".voice-card__img--1").length > 0) {
+      var voicePosition = $(".voice-card__img--1").offset().top;
       if (windowPosition >= voicePosition) {
         $(".voice-card__img--1").addClass("is-active");
       }
+    }
 
-      let voicePosition2 = $(".voice-card__img--2").offset().top;
+    // .voice-card__img--2が存在する場合のみ処理を実行
+    if ($(".voice-card__img--2").length > 0) {
+      var voicePosition2 = $(".voice-card__img--2").offset().top;
       if (windowPosition >= voicePosition2) {
         $(".voice-card__img--2").addClass("is-active");
       }
+    }
 
-      let pricePosition = $(".price__img").offset().top;
+    // .price__imgが存在する場合のみ処理を実行
+    if ($(".price__img").length > 0) {
+      var pricePosition = $(".price__img").offset().top;
       if (windowPosition >= pricePosition) {
         $(".price__img").addClass("is-active");
       }
-    });
-  // });
+    }
+  });
 
   // ページネーション
   // $(function () {
@@ -224,10 +233,9 @@ jQuery(function ($) {
   //   });
   // });
 
-  ("use strict"); /* 厳格にエラーをチェック */
   // 要素の取得
-  const tabItem = document.querySelectorAll(".tab-item");
-  const tabContent = document.querySelectorAll(".tab-content");
+  const tabItem = document.querySelectorAll(".tab__item");
+  const tabContent = document.querySelectorAll(".tab__content");
 
   // tabItemに対してクリックイベントを追加
   // クリックした時にtabToggle関数を発火
@@ -260,18 +268,29 @@ jQuery(function ($) {
   }
 
   // FAQ アコーディオン
-  document.querySelectorAll('.js-accordion').forEach(function(elem){
-    elem.querySelector('p').addEventListener('click',function(){  
-        elem.classList.toggle('open')
-    })
-})
+  document.querySelectorAll(".js-accordion").forEach(function (elem) {
+    elem.querySelector("p").addEventListener("click", function () {
+      elem.classList.toggle("open");
+    });
+  });
 
   // about　モーダル
-  MicroModal.init({
-    disableScroll: true,
-    awaitOpenAnimation: true,
-    awaitCloseAnimation: true
-  });
+    // コース画像モーダル表示イベント
+    $(".js-modal").click(function () {
+      // まず、クリックした画像の HTML(<img>タグ全体)を#frayDisplay内にコピー
+      $(".js-background").html($(this).prop("outerHTML"));
+      //そして、fadeInで表示する。
+      $(".js-background").fadeIn(200);
+      return false;
+    });
   
-  
+    // コース画像モーダル非表示イベント
+    // モーダル画像背景 または 拡大画像そのものをクリックで発火
+    $(".js-background").click(function () {
+      // 非表示にする
+      $(".js-background").fadeOut(200);
+      return false;
+    });
+
+
 }); // 消さない

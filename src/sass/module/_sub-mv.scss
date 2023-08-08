@@ -12,6 +12,13 @@
   }
 }
 
+.sub-mv--campaign {
+  background-image: url(../images/common/sub-campaign-mv-sp.jpg);
+@include mq("md") {
+background-image: url(../images/common/sub-campaign-mv.jpg);
+}
+}
+
 .sub-mv--about {
     background-image: url(../images/common/sub-about-mv-sp.jpg);
   @include mq("md") {

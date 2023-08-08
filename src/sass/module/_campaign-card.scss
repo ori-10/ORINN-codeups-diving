@@ -25,6 +25,12 @@
   }
 }
 
+.campaign-card__body--sub-page {
+  @include mq("md") {
+    padding: rem(24) rem(24) rem(40);
+  }
+}
+
 .campaign-card__body-head {
   flex-grow: 1;
 }
@@ -122,5 +128,12 @@
   color: $green-accent;
   @include mq("md") {
     font-size: min(3vw, rem(40));
+  }
+}
+
+// 下層ページ
+.campaign-card__pc-info {
+  @include mq("md") {
+    margin-top: rem(26);
   }
 }

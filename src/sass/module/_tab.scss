@@ -5,9 +5,9 @@
   gap: rem(18) rem(22);
   grid-template-columns: 1fr 1fr;
   @include mq("md") {
-      gap: rem(32);
-      display: flex;
-    }
+    gap: rem(32);
+    display: flex;
+  }
 }
 
 .tab__item {
@@ -45,3 +45,16 @@
   display: block;
 }
 
+  // padding: 0 35px;
+// 下層　キャンペーン
+.tab__sub-campaign {
+  display: grid;
+  gap: rem(40);
+  grid-template-columns: 1fr;
+  // max-width: rem(600);
+  @include mq("md") {
+    // max-width: none;
+    gap: rem(40) rem(80);
+    grid-template-columns: 1fr 1fr;
+  }
+}

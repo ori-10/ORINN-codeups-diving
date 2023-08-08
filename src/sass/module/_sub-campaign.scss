@@ -1,0 +1,5 @@
+@use "global" as *;
+
+.sub-campaign article > * + * {
+  margin-top: 0;
+}
