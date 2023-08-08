@@ -43,14 +43,14 @@
   border-left: solid 1px $green-accent;
   position: absolute;
   height: rem(12);
-    width: rem(12);
-    left: 45%;
-    top: 30%;
-    transform: rotate(45deg);
+  width: rem(12);
+  left: 45%;
+  top: 30%;
+  transform: rotate(45deg);
 }
 
 .pagination:not(:first-child) {
-    margin-left: rem(40);
+  margin-left: rem(40);
 }
 
 .pagination__arrow-next a {
@@ -63,9 +63,8 @@
   border-bottom: solid 1px $green-accent;
   border-left: solid 1px $green-accent;
   height: rem(12);
-    width: rem(12);
-    left: 25%;
-    top: 30%;
-    transform: rotate(-135deg);
+  width: rem(12);
+  left: 25%;
+  top: 30%;
+  transform: rotate(-135deg);
 }
-

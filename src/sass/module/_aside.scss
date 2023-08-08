@@ -9,7 +9,7 @@
 }
 
 .aside__content:not(:first-child) {
-  margin-top: rem(80);
+  margin-top: rem(83);
 }
 
 .aside__title {
@@ -75,18 +75,4 @@
   color: $green-accent;
   font-size: rem(24);
   margin-top: rem(24);
-}
-
-.aside-voice__btn {
-  margin-top: rem(45);
-  text-align: center;
-}
-
-.aside-campaign__btn {
-  margin-top: rem(40);
-  text-align: center;
-}
-
-.section-sub-contact {
-  margin-top: 107px;
 }

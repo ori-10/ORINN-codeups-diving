@@ -21,9 +21,6 @@
 .aside-voice__img {
   position: relative;
   width: 100%;
-  // @include mq("md") {
-  //   margin-top: 0;
-  // }
 }
 
 .aside-voice__img::before {
@@ -43,6 +40,7 @@
   transform: translate(0);
 }
 
-// .aside-voice__btn {
-//   margin-top: rem(45);
-// }
+.aside-voice__btn {
+  margin-top: rem(45);
+  text-align: center;
+}
