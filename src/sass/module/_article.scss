@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.article__body {
+  line-height: 1;
+}
+
+.article__day {
+  font-size: rem(14);
+  position: relative;
+  z-index: 1;
+}
+
+.article__title {
+  font-size: rem(24);
+  margin-top: rem(16);
+  padding-bottom: rem(10);
+  border-bottom: 1px solid $green-accent;
+  @include mq("md") {
+    font-size: rem(32);
+    margin-top: rem(19);
+    padding-bottom: rem(7);
+  }
+}
+
+.article__img {
+  margin-top: rem(24);
+  aspect-ratio: 345 / 231;
+  @include mq("md") {
+    margin-top: rem(40);
+    aspect-ratio: 520 / 347;
+  }
+  }
+  
+  .article__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+
+  .article__text {
+    margin-top: rem(24);
+    line-height: 1.5;
+    @include mq("md") {
+      margin-top: rem(40);
+    }
+  }
+
+  .article__list {
+    margin-top: rem(20);
+    @include mq("md") {
+      margin-top: rem(38);
+    }
+  }
+
+  .article__list li {
+  padding: rem(6) 0;
+  padding-left: rem(27);
+  background-image: url(../images/common/star-green.png);
+  background-size: rem(18);
+  background-repeat: no-repeat;
+  background-position: 0 rem(5);
+  display: block;
+  line-height: 1;
+}
+
+.article__pagination {
+  margin-top: rem(39);
+  @include mq("md") {
+    margin-top: rem(79);
+  }
+}
+
+.article__pagination .pagination {
+  gap: rem(80);
+}
+
+// 下層ページ
+.section-sub-blog {
+  @include mq("md") {
+    margin-top: rem(147);
+  }
+}
+

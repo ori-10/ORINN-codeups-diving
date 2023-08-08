@@ -2,7 +2,7 @@
 
 .tab__items {
   display: grid;
-  gap: rem(18) rem(22);
+  gap: rem(16) rem(22);
   grid-template-columns: 1fr 1fr;
   @include mq("md") {
     gap: rem(32);

@@ -1,5 +1,13 @@
 @use "global" as *;
 
+
+.aside__inner {
+  padding: 0 rem(24);
+  @include mq("md") {
+    padding: 0;
+  }
+}
+
 .aside__content:not(:first-child) {
   margin-top: rem(80);
 }
@@ -36,16 +44,24 @@
   background-position: top left;
   height: rem(50);
   width: rem(50);
-  top: rem(-9);
-  left: rem(23);
+  top: rem(-8);
+  left: rem(25);
 }
 
-// サイドバー　ボイス
+// サイド　ブログ
+.aside__blog-item {
+  margin-top: rem(25);
+  @include mq("md") {
+    margin-top: rem(26);
+  }
+}
+
+// サイド　ボイス
 .aside__voice-item {
-  margin-top: rem(24);
+  margin-top: rem(22);
 }
 
-// サイドバー　キャンペーン
+// サイド　キャンペーン
 .aside__campaign-items {
   margin-top: rem(22);
 }
@@ -54,14 +70,23 @@
   margin-top: rem(40);
 }
 
-.aside__btn {
-  margin-top: rem(40);
-  text-align: center;
-}
-
-// サイドバー　アーカイブ
+// サイド　アーカイブ
 .aside__archive {
   color: $green-accent;
   font-size: rem(24);
   margin-top: rem(24);
+}
+
+.aside-voice__btn {
+  margin-top: rem(45);
+  text-align: center;
+}
+
+.aside-campaign__btn {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.section-sub-contact {
+  margin-top: 107px;
 }
