@@ -221,50 +221,36 @@ jQuery(function ($) {
   });
 
   // ページネーション
-  
-  // ▼▼▼ htmlに出力する項目を配列に追加
-  var nums = [{
-    num: "01"
-  },
-  {
-    num: "02"
-  }, {
-    num: "03"
-  }, {
-    num: "04"
-  }, {
-    num: "05"
-  }, {
-    num: "06"
-  }
-  ]
-
-  // ▼▼▼ paginathingのオプション
   $(function () {
-    $('#contents').paginathing({
+    $("#contents").paginathing({
       limitPagination: 6,
       pageNumbers: true,
-    // 表示件数
-      perPage: 5,
+      // 表示件数
+      perPage: 10,
+      firstLast: false,
+      pageNumbers: false,
       // prevText: '<',
-      prevText: '&lt;',
+      prevText: "",
       // nextText: '>',
-      nextText: '&gt;',
-      activeClass: 'active',
+      nextText: "",
+      activeClass: "active",
     });
   });
 
-  // ▼▼▼ map()関数でループ、htmlに出力
-  const setNums = () => {
-    return nums.map((data) => {
-      return '<div class="contentsWrap"><div><p class="num">' + data.num + '</p></div></div>';
+  $(function () {
+    $("#single-contents").paginathing({
+      perPage: 1,
+      firstLast: false,
+      prevText: "",
+      nextText: "",
+      
+      // ページ番号非表示
+      pageNumbers: false,
+      showPageNumbers: false,
+      hidePageNumbers: true,
+      activeClass: "active",
     });
-  };
-
-// ▼▼▼ htmlに出力
-$('#contents').html(setNums());
-
-  
+  });
 
   // information 要素の取得
   const tabItem = document.querySelectorAll(".tab__item");
@@ -308,22 +294,20 @@ $('#contents').html(setNums());
   });
 
   // about　モーダル
-    // コース画像モーダル表示イベント
-    $(".js-modal").click(function () {
-      // まず、クリックした画像の HTML(<img>タグ全体)を#frayDisplay内にコピー
-      $(".js-background").html($(this).prop("outerHTML"));
-      //そして、fadeInで表示する。
-      $(".js-background").fadeIn(200);
-      return false;
-    });
-  
-    // コース画像モーダル非表示イベント
-    // モーダル画像背景 または 拡大画像そのものをクリックで発火
-    $(".js-background").click(function () {
-      // 非表示にする
-      $(".js-background").fadeOut(200);
-      return false;
-    });
+  // コース画像モーダル表示イベント
+  $(".js-modal").click(function () {
+    // まず、クリックした画像の HTML(<img>タグ全体)を#frayDisplay内にコピー
+    $(".js-background").html($(this).prop("outerHTML"));
+    //そして、fadeInで表示する。
+    $(".js-background").fadeIn(200);
+    return false;
+  });
 
-
+  // コース画像モーダル非表示イベント
+  // モーダル画像背景 または 拡大画像そのものをクリックで発火
+  $(".js-background").click(function () {
+    // 非表示にする
+    $(".js-background").fadeOut(200);
+    return false;
+  });
 }); // 消さない

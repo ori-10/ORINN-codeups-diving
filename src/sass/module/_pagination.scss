@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.pagination-container {
+    margin-top: rem(80);
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -18,46 +22,60 @@
   border: 1px solid $green-accent;
   border-radius: 1px;
   color: $green-accent;
+  background: $white;
   font-family: $third-font-family;
   font-weight: $bold;
 }
 
-.pagination a:not(:hover) {
-  text-decoration: none;
-}
-
-.pagination .current a {
-  background-color: $green-accent;
+.pagination .active a {
+  background: $green-accent;
   color: $white;
-  pointer-events: none;
 }
 
-.pagination__arrow-prev a {
-  position: relative;
+.pagination li:nth-child(6),
+.pagination li:nth-child(7) {
+  display: none;
+  @include mq("md") {
+    display: inline-block;
+  }
 }
 
-.pagination__arrow-prev a::after {
+.prev {
+  margin-right: rem(28);
+}
+
+.prev a::after {
   position: absolute;
   content: "";
   border-bottom: solid 1px $green-accent;
   border-left: solid 1px $green-accent;
-  position: absolute;
   height: rem(12);
   width: rem(12);
   left: 45%;
   top: 30%;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 
-.pagination:not(:first-child) {
-  margin-left: rem(40);
-}
-
-.pagination__arrow-next a {
+.prev a {
   position: relative;
+  transition: all .4s;
 }
 
-.pagination__arrow-next a::after {
+.prev a:hover {
+  background: $green-accent;
+}
+
+.prev a:hover::after {
+  border-bottom: solid 1px $white;
+  border-left: solid 1px $white;
+}
+
+.next {
+  margin-left: rem(28);
+}
+
+.next a::after {
   position: absolute;
   content: "";
   border-bottom: solid 1px $green-accent;
@@ -67,13 +85,20 @@
   left: 25%;
   top: 30%;
   transform: rotate(-135deg);
+  cursor: pointer;
 }
 
-// HPより
-.active {
-  background-color: $green-accent;
+.next a {
+  position: relative;
+  transition: all .4s;
 }
 
-.pagination .active a {
-  color: $white;
+.next a:hover {
+  background: $green-accent;
 }
+
+.next a:hover::after {
+  border-bottom: solid 1px $white;
+  border-left: solid 1px $white;
+}
+

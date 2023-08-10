@@ -2,9 +2,11 @@
 
 
 .aside__inner {
-  padding: 0 rem(24);
+  // padding: 0 rem(24);
+  padding: 0 rem(20);//ブログ一覧sp
   @include mq("md") {
     padding: 0;
+    // padding: 0 rem(24);
   }
 }
 
@@ -75,4 +77,9 @@
   color: $green-accent;
   font-size: rem(24);
   margin-top: rem(24);
+}
+
+.aside__btn {
+  text-align: center;
+  margin-top: rem(40);
 }

@@ -66,3 +66,16 @@
     gap: 8%;
   }
 }
+
+// ページネーション
+.sub-blog__inner--article .pagination-container {
+  margin-top: rem(40);
+}
+
+.sub-blog__inner--article .page {
+  display: none;
+}
+
+.sub-blog__inner--article .pagination {
+  gap: 0 rem(26);
+}
