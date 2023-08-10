@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.sub-contact__inner {
+  @include mq("md") {
+    max-width: rem(750);
+    width: 100%;
+  }
+}

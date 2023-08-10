@@ -31,7 +31,7 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body class="not-found-wrapper">
+  <body>
     <div id="loading" class="loading">
       <div class="loading__inner">
         <div class="loading__title mv-title fadeUp">
@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <header id="header" class="header  js-header">
+    <header id="header" class="header js-header">
       <div class="header__inner">
         <h1 class="header__logo logo">
           <a href="#" class="logo__img">
@@ -188,9 +188,18 @@
         </nav>
       </div>
     </header>
-  
+
+    <!-- 下層ページのメインビュー -->
+    <div class="sub-mv js-mv-height sub-mv--thanks-page">
+      <div class="sub-mv__inner">
+        <div class="sub-mv__title">
+          <h2>Contact</h2>
+        </div>
+      </div>
+    </div>
+
     <!-- パンくず -->
-    <div id="breadcrumb" class="breadcrumb section-breadcrumb breadcrumb--not-found">
+    <div id="breadcrumb" class="breadcrumb section-breadcrumb">
       <div class="breadcrumb__inner inner">
         <ol
           class="breadcrumb__items"
@@ -215,32 +224,105 @@
             itemtype="https://schema.org/ListItem"
           >
             <a itemprop="item" href="#">
-              <span itemprop="name">404</span>
+              <span itemprop="name">お問い合わせ</span>
             </a>
             <meta itemprop="position" content="2" />
-          </li>
+          </li> 
         </ol>
       </div>
     </div>
 
     <main>
-      <section id="not-found" class="not-found section-not-found">
-        <div class="not-found__inner inner">
-        <div class="not-found__body">
+      <div id="sub-contact" class="sub-contact section-sub-contact">
+        <div class="sub-contact__inner inner">
+        
+          <form action="" method="post" id="" class="sub-contact__form form">
+            <dl>
+              <dt>
+                お名前
+                <span class="form__label">必須</span>
+              </dt>
+              <dd>
+                <input type="text" name="company" value="" />
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                メールアドレス
+                <span class="form__label">必須</span>
+              </dt>
+              <dd>
+                <input type="email" name="mail_address" value="" class="validate[]" />
+              </dd>
+            </dl>
+            <!-- <dl> -->
+              <dl>
+                <dt>
+                  電話番号
+                  <span class="form__label">必須</span>
+                </dt>
+                <dd>
+                  <input type="text" name="tel" value="" />
+                </dd>
+              </dl>
+            <dl class="form__checkbox">
+              <dt>
+                お問合せ項目
+                <span class="form__label">必須</span>
+              </dt>
+              <dd>
+                <label><input type="checkbox" name="inquiry[]" value="ダイビング講習について" checked/><span>ダイビング講習について</span></label>
+                <label><input type="checkbox" name="inquiry[]" value="ファンデイビングについて"/><span>ファンデイビングについて</span></label>
+                <label><input type="checkbox" name="inquiry[]" value="体験ダイビングについて"/><span>体験ダイビングについて</span></label>
+              </dd>
+            </dl>
+            <dl class="form__select">
+            
+              <dt>
+                キャンペーン
+              </dt>
+              <dd>
+                <select name="inquiry[]" class="form__select">
+                  <option value="">キャンペーン内容を選択</option>
+                  <option value="ライセンス取得">ライセンス取得</option>
+                  <option value="貸切体験ダイビング">貸切体験ダイビング</option>
+                  <option value="ナイトダイビング">ナイトダイビング</option>
+                  <option value="貸切ファンダイビング">貸切ファンダイビング</option>
+                </select>
+              </dd>
+            </dl>
+            <dl class="form__textarea">
+              <dt>
+                お問合せ内容
+                <span class="form__label">必須</span>
+              </dt>
+              <dd>
+                <textarea name="contents"></textarea>
+              </dd>
+            </dl>
+            <div class="form__personal-info">
+              <div class="form__personal-info-inner">
 
-          <h2 class="not-found__title">404</h2>
-          <p class="not-found__text">申し訳ありません。<br>
-            お探しのページが見つかりません。</p>
-            <div class="not-found__btn">
-              <a href="#" class="green-btn">
-                Page TOP
-                <span class="green-btn__arrow"></span>
-              </a>
+                <label><input type="checkbox" name="inquiry[]" value="個人情報について" checked/><span>個人情報の取り扱いについて同意のうえ<br class="u-mobile">
+                  送信します。</span></label>
+                  
+                </div>
+            </div>
+            <div class="form__btn">
+
+              <div class="btn-submit">
+                <input type="submit" class="btn-submit__body" value="" />
+                <span class="btn-submit__text">Send</span>
+              </div>
+
             </div>
 
-          </div>
+
+          </form>
+
         </div>
-      </section>
+      </div>
+
 
       <div id="page-top" class="page-top js-page-top">
         <a href="#">
@@ -249,7 +331,7 @@
       </div>
       <!-- /.page-top -->
     </main>
-    <footer id="footer" class="footer section-footer section-footer--not-found">
+    <footer id="footer" class="footer section-footer-contact">
       <div class="footer__inner inner">
         <div class="footer__head">
           <div class="footer__logo">

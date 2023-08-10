@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.btn-submit {
+  position: relative;
+  width: 100%;
+  max-width: rem(202);
+  display: inline-flex;
+  border: 1px solid $green-accent;
+}
+
+.btn-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid $green-accent;
+  transform: translate(rem(5), rem(5));
+  z-index: -1;
+}
+
+.btn-submit__body[type="submit"] {
+  border: 1px solid $green-accent;
+  background-color: $green-accent;
+  color: $white;
+  font-family: $second-font-family;
+  width: 100%;
+  max-width: rem(202);
+  padding: rem(16) 0;
+  font-size: rem(14);
+  justify-content: center;
+  transition: opacity 0.4s;
+  z-index: 0;
+  cursor: pointer;
+  @include mq("md") {
+    transition: color 0.2s opacity none;
+  }
+}
+
+.btn-submit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: all 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: 1;
+}
+
+.btn-submit:hover::after {
+  @include mq("md") {
+    transform: scale(1, 1);
+  }
+}
+
+.btn-submit__text {
+  position: absolute;
+  display: inline-block;
+  top: 28%;
+  left: 28%;
+  font-family: $third-font-family;
+  color: $white;
+  z-index: 2;
+}
+
+.btn-submit:hover .btn-submit__text {
+  color: $green-accent;
+}
+
+.btn-submit__text::after {
+  content: "";
+  position: absolute;
+  max-width: rem(40);
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: rem(50);
+  top: rem(-1);
+  background-image: url(../images/common/btn-arrow--white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.btn-submit:hover .btn-submit__text::after {
+  @include mq("md") {
+    background-image: url(../images/common/btn-arrow.svg);
+  }
+}
+
+.btn-submit:hover .btn-submit__arrow::before,
+.btn-submit:hover .btn-submit__arrow::after {
+  background-color: transparent;
+}

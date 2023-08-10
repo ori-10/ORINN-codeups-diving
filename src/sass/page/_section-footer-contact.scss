@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.section-footer-contact {@include mq("md") {
+  margin-top: rem(158);
+}
+}

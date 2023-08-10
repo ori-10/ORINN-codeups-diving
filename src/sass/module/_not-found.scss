@@ -6,10 +6,9 @@
 }
 
 .breadcrumb--not-found {
-  margin-top: 0;
-  padding-top: rem(88);
+  margin-top: rem(88);
   @include mq("md") {
-    padding-top: rem(98);
+    margin-top: rem(97);
   }
 }
 
