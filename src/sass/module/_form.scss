@@ -206,6 +206,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
+::placeholder {
+  color: #DDF0F1;
+}
+
 // 必須　ラベル
 .form__label {
   display: inline-block;
@@ -340,6 +344,7 @@ textarea {
     }
   }
 
+// チェックマーク
   &:checked + span {
     &::after {
       border-bottom: rem(3) solid #c94800;
@@ -352,7 +357,7 @@ textarea {
       margin-top: -0.063em;
       opacity: 1;
       position: absolute;
-      top: 14%;
+      top: 25%;
       transform: rotate(-34deg);
       width: rem(17);
     }

@@ -68,3 +68,12 @@
   top: 30%;
   transform: rotate(-135deg);
 }
+
+// HPより
+.active {
+  background-color: $green-accent;
+}
+
+.pagination .active a {
+  color: $white;
+}

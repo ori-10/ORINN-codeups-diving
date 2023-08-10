@@ -221,19 +221,52 @@ jQuery(function ($) {
   });
 
   // ページネーション
-  // $(function () {
-  //   $(".js-pagination").paginathing({
-  //     //親要素のclassを記述
-  //     perPage: 5, //1ページあたりの表示件数
-  //     prevText: '<i class="fas fa-angle-left"></i>', //1つ前のページへ移動するボタンのテキスト
-  //     nextText: '<i class="fas fa-angle-right"></i>', //1つ次のページへ移動するボタンのテキスト
-  //     activeClass: "navi-active", //現在のページ番号に任意のclassを付与できます
-  //     firstText: '<i class="fas fa-angle-double-left"></i>', // "最初ページ"に移動するボタンのテキスト
-  //     lastText: '<i class="fas fa-angle-double-right"></i>', // "最後のページ"に移動するボタンのテキスト
-  //   });
-  // });
+  
+  // ▼▼▼ htmlに出力する項目を配列に追加
+  var nums = [{
+    num: "01"
+  },
+  {
+    num: "02"
+  }, {
+    num: "03"
+  }, {
+    num: "04"
+  }, {
+    num: "05"
+  }, {
+    num: "06"
+  }
+  ]
 
-  // 要素の取得
+  // ▼▼▼ paginathingのオプション
+  $(function () {
+    $('#contents').paginathing({
+      limitPagination: 6,
+      pageNumbers: true,
+    // 表示件数
+      perPage: 5,
+      // prevText: '<',
+      prevText: '&lt;',
+      // nextText: '>',
+      nextText: '&gt;',
+      activeClass: 'active',
+    });
+  });
+
+  // ▼▼▼ map()関数でループ、htmlに出力
+  const setNums = () => {
+    return nums.map((data) => {
+      return '<div class="contentsWrap"><div><p class="num">' + data.num + '</p></div></div>';
+    });
+  };
+
+// ▼▼▼ htmlに出力
+$('#contents').html(setNums());
+
+  
+
+  // information 要素の取得
   const tabItem = document.querySelectorAll(".tab__item");
   const tabContent = document.querySelectorAll(".tab__content");
 
