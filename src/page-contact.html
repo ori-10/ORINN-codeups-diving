@@ -243,7 +243,7 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <input type="text" name="company" value=""  placeholder="沖縄&nbsp;&nbsp;太郎" />
+                <input type="text" name="company" value=""  placeholder="沖縄&nbsp;&nbsp;太郎" required/>
               </dd>
             </dl>
             <dl>
@@ -252,17 +252,16 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <input type="email" name="mail_address" value="" class="validate[]" placeholder="aaa000@ggmail.com" />
+                <input type="email" name="mail_address" value="" class="validate[]" placeholder="aaa000@ggmail.com" required/>
               </dd>
             </dl>
-            <!-- <dl> -->
               <dl>
                 <dt>
                   電話番号
                   <span class="form__label">必須</span>
                 </dt>
                 <dd>
-                  <input type="text" name="tel" value="" placeholder="000-0000-0000"/>
+                  <input type="text" name="tel" value="" placeholder="000-0000-0000" required/>
                 </dd>
               </dl>
             <dl class="form__checkbox">
@@ -271,9 +270,9 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <label><input type="checkbox" name="inquiry[]" value="ダイビング講習について" checked/><span>ダイビング講習について</span></label>
-                <label><input type="checkbox" name="inquiry[]" value="ファンデイビングについて"/><span>ファンデイビングについて</span></label>
-                <label><input type="checkbox" name="inquiry[]" value="体験ダイビングについて"/><span>体験ダイビングについて</span></label>
+                <label><input type="checkbox" name="inquiry[]" value="ダイビング講習について" checked required/><span>ダイビング講習について</span></label>
+                <label><input type="checkbox" name="inquiry[]" value="ファンデイビングについて" required/><span>ファンデイビングについて</span></label>
+                <label><input type="checkbox" name="inquiry[]" value="体験ダイビングについて" required/><span>体験ダイビングについて</span></label>
               </dd>
             </dl>
             <dl class="form__select">
@@ -297,13 +296,13 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <textarea name="contents"></textarea>
+                <textarea name="contents" required></textarea>
               </dd>
             </dl>
             <div class="form__personal-info">
               <div class="form__personal-info-inner">
 
-                <label><input type="checkbox" name="inquiry[]" value="個人情報について"/><span>個人情報の取り扱いについて同意のうえ<br class="u-mobile">
+                <label><input type="checkbox" name="inquiry[]" value="個人情報について" required/><span>個人情報の取り扱いについて同意のうえ<br class="u-mobile">
                   送信します。</span></label>
                   
                 </div>

@@ -32,24 +32,24 @@
   }
 }
 
-.sub-blog__pagination {
-  margin-top: rem(80);
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
-  width: auto;
-  @include mq("md") {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
+// .sub-blog__pagination {
+//   margin-top: rem(80);
+//   margin-right: calc(50% - 50vw);
+//   margin-left: calc(50% - 50vw);
+//   width: auto;
+//   @include mq("md") {
+//     margin-right: auto;
+//     margin-left: auto;
+//   }
+// }
 
-.sub-blog__pagination-inner {
-  padding-left: 15px;
-  padding-right: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .sub-blog__pagination-inner {
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 .sub-blog__btn {
   margin-top: rem(40);
@@ -67,7 +67,7 @@
   }
 }
 
-// ページネーション
+// ブログ記事ページのページネーション
 .sub-blog__inner--article .pagination-container {
   margin-top: rem(40);
 }

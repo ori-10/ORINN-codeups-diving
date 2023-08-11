@@ -175,11 +175,33 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .form dl:not(:first-child) {
   margin-top: rem(24);
   padding-top: rem(22);
-  border-top: dotted 1px $green-accent;
+  // border-top: dotted 1px $green-accent;
   @include mq("md") {
     margin-top: rem(40);
     padding-top: rem(38);
   }
+}
+// 線
+.form dl:not(:first-child) {
+  background-image: linear-gradient(
+    to right,
+    $green-accent 3px,
+    transparent 3px
+  );
+  background-size: 4px 1px;
+  background-repeat: repeat-x;
+  background-position: left top;
+}
+
+.form__personal-info {
+  background-image: linear-gradient(
+    to right,
+    $green-accent 3px,
+    transparent 3px
+  );
+  background-size: 4px 1px;
+  background-repeat: repeat-x;
+  background-position: left top;
 }
 
 // ↑スニペット　↓追加
@@ -195,6 +217,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .form dt {
   position: relative;
   z-index: 1;
+  font-weight: $bold;
   @include mq("md") {
     width: 31.43%;
   }
@@ -207,7 +230,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 ::placeholder {
-  color: #DDF0F1;
+  color: #ddf0f1;
 }
 
 // 必須　ラベル
@@ -292,7 +315,7 @@ textarea {
 .form__personal-info {
   margin-top: rem(18);
   padding-top: rem(40);
-  border-top: dotted 1px $green-accent;
+  // border-top: dashed 1px $green-accent;
   @include mq("md") {
     margin-top: rem(33);
     padding-top: rem(78);
@@ -344,7 +367,7 @@ textarea {
     }
   }
 
-// チェックマーク
+  // チェックマーク
   &:checked + span {
     &::after {
       border-bottom: rem(3) solid #c94800;

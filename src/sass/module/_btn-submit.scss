@@ -18,6 +18,7 @@
   border: 1px solid $green-accent;
   transform: translate(rem(5), rem(5));
   z-index: -1;
+  pointer-events: none;
 }
 
 .btn-submit__body[type="submit"] {
@@ -50,11 +51,13 @@
   transform-origin: left top;
   transition: all 0.2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: 1;
+  pointer-events: none;
 }
 
 .btn-submit:hover::after {
   @include mq("md") {
     transform: scale(1, 1);
+    pointer-events: none;
   }
 }
 
@@ -70,6 +73,7 @@
 
 .btn-submit:hover .btn-submit__text {
   color: $green-accent;
+  pointer-events: none;
 }
 
 .btn-submit__text::after {
@@ -85,15 +89,18 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  pointer-events: none;
 }
 
 .btn-submit:hover .btn-submit__text::after {
   @include mq("md") {
     background-image: url(../images/common/btn-arrow.svg);
+    pointer-events: none;
   }
 }
 
 .btn-submit:hover .btn-submit__arrow::before,
 .btn-submit:hover .btn-submit__arrow::after {
   background-color: transparent;
+  pointer-events: none;
 }

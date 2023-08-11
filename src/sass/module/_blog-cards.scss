@@ -1,65 +1,30 @@
 @use "global" as *;
 
 .blog-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
   @include mq("md") {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.blog-cards--archive {
+  @include mq("md") {
+    grid-template-columns: 1fr 1fr;
+    gap: rem(80) rem(40);
+  }
+}
+
+.blog__inner article > * + * {
+  margin-top: 0;
+}
+
+.sub-blog__inner article > * + * {
+  margin-top: 0;
 }
 
 .blog-cards__item {
   width: 100%;
   background-color: $white;
-  @include mq("md") {
-    width: calc(33.3333% - rem(40) * 2 / 3);
-  }
-}
-
-.blog-cards__item + .blog-cards__item {
-  margin-top: rem(38);
-
-  @include mq("md") {
-    margin-top: 0;
-    margin-left: rem(40);
-  }
-}
-
-.blog-cards__item:nth-child(3n + 1) {
-  @include mq("md") {
-    margin-left: 0;
-  }
-}
-
-.blog-cards__item:nth-child(n + 4) {
-  @include mq("md") {
-    margin-top: rem(38);
-  }
-}
-
-// 下層ページ
-.blog-cards__item--sub {
-  @include mq("md") {
-    width: calc(50% - rem(40) * 1 / 2);
-  }
-}
-
-.blog-cards__item--sub + .blog-cards__item--sub {
-  margin-top: rem(38);
-
-  @include mq("md") {
-    margin-top: 0;
-    margin-left: rem(40);
-  }
-}
-
-.blog-cards__item--sub:nth-child(2n + 1) {
-  @include mq("md") {
-    margin-left: 0;
-  }
-}
-
-.blog-cards__item--sub:nth-child(n + 3) {
-  @include mq("md") {
-    margin-top: rem(78);
-  }
 }
