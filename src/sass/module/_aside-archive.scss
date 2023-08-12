@@ -4,32 +4,33 @@
   padding-left: rem(2);
 }
 
-// デフォルト削除
-.aside-archive__items summary {
-  list-style: none;
+.aside-archive__items p {
+  position: relative;
+  padding-left: rem(30);
 }
 
-.aside-archive__items summary::-webkit-details-marker {
-  display: none;
-}
-
-.aside-archive__items summary::before {
+.aside-archive__items p::before {
+  position: absolute;
   content: "▶︎";
-  padding-right: rem(6);
+  top:  0;
+  left: 0;
+  transition: .3s all;
 }
 
-.aside-archive__items[open] summary::before {
-  content: "▼";
+.close.aside-archive__items p::before {
+  transform: rotate(90deg);
 }
 
 .aside-archive__items + .aside-archive__items {
-  margin-top: rem(2);
+  margin-top: rem(1);
 }
 
 .aside-archive__item {
+  display: none;
   padding-left: rem(25);
 }
 
 .aside-archive__item li {
-  padding: rem(1.2) 0;
+  line-height: 1.6;
 }
+

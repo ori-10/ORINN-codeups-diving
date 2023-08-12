@@ -220,7 +220,9 @@ jQuery(function ($) {
     }
   });
 
+  //////////
   // ページネーション
+  //////////
   $(function () {
     // ページネーション（contents）
     if ($("#contents").length > 0) {
@@ -253,8 +255,9 @@ jQuery(function ($) {
     // ここに他の処理を追加する（必要に応じて）
   });
 
-
-  // information 要素の取得
+///////////
+// information 要素の取得
+///////////
   const tabItem = document.querySelectorAll(".tab__item");
   const tabContent = document.querySelectorAll(".tab__content");
 
@@ -287,12 +290,38 @@ jQuery(function ($) {
     // インデックスに対応したtabContentに.activeを追加
     tabContent[index].classList.add("active");
   }
+
 ///////////
 // FAQ アコーディオン
 ///////////
 document.querySelectorAll(".js-accordion").forEach(function (elem) {
   elem.addEventListener("click", function () {
     elem.classList.toggle("open");
+  });
+});
+  
+  
+///////////
+// サイドバー アコーディオン
+///////////
+function toggleAccordion(accordionElement) {
+  var findElm = accordionElement.closest('.aside-archive__items').find('.aside-archive__item');
+  $(findElm).slideToggle();
+  
+  if (accordionElement.hasClass('close')) {
+    accordionElement.removeClass('close');
+  } else {
+    accordionElement.addClass('close');
+  }
+}
+
+$(document).ready(function() {
+  $('.js-archive-accordion.open').each(function() {
+    toggleAccordion($(this));
+  });
+
+  $('.js-archive-accordion').on('click', function() {
+    toggleAccordion($(this));
   });
 });
 
@@ -305,6 +334,7 @@ document.querySelectorAll(".js-accordion").forEach(function (elem) {
     $(".js-background").html($(this).prop("outerHTML"));
     //そして、fadeInで表示する。
     $(".js-background").fadeIn(200);
+    $("body").addClass("active");
     return false;
   });
 
@@ -313,6 +343,7 @@ document.querySelectorAll(".js-accordion").forEach(function (elem) {
   $(".js-background").click(function () {
     // 非表示にする
     $(".js-background").fadeOut(200);
+    $("body").removeClass("active");
     return false;
   });
 

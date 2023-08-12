@@ -59,10 +59,14 @@
   }
 }
 
+.gallery__item::marker {
+  display: none;
+}
+
 .gallery__item img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* 1個目(6n + 1)と6個目(6n)、7個目と12個目、18個目に適用するスタイルを指定 */
@@ -91,6 +95,7 @@
   height: 100vh;
   background: rgba(32, 32, 32, 0.80);
   z-index: 2;
+  cursor: pointer;
 }
 
 .gallery__modal-background .js-modal {
