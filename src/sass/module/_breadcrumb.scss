@@ -6,25 +6,29 @@
 }
 
 .breadcrumb__item {
-  margin-left: rem(10);
+  margin-left: rem(20);
 }
 
 .breadcrumb__item:first-child {
   margin-left: 0;
 }
 
-.breadcrumb__item:after {
+
+.breadcrumb__item:not(:first-child) {
+  position: relative;
+}
+
+.breadcrumb__item:not(:first-child)::before {
+  position: absolute;
+  top: rem(8);
+  left: rem(-14);
   content: "";
-  width: rem(8);
-  height: rem(8);
+  width: rem(6);
+  height: rem(6);
   border-right: 1px solid $black;
   border-top: 1px solid $black;
   display: inline-block;
   transform: rotate(45deg);
-}
-
-.breadcrumb__item:last-child:after {
-  display: none;
 }
 
 .breadcrumb__item a {
@@ -39,7 +43,7 @@
   position: relative;
 }
 
-// あしらい　上の魚
+// あしらい　魚
 .breadcrumb::before {
   position: absolute;
   left: calc(50% - min(46vw, 38.7rem));
@@ -61,6 +65,7 @@
   }
 }
 
+// 下層ページ　contactの未入力表示
 .breadcrumb__error-item {
   display: none;
 }
