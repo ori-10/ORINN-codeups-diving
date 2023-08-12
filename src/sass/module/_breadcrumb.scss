@@ -60,3 +60,11 @@
     z-index: 0;
   }
 }
+
+.breadcrumb__error-item {
+  display: none;
+}
+
+.active.breadcrumb__error-item {
+  display: block;
+}

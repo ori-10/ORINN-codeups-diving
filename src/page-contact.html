@@ -76,8 +76,12 @@
                   <a href="archive-campaign.html">キャンペーン</a>
                   <ul class="sp-nav__item">
                     <li><a href="archive-campaign.html">ライセンス取得</a></li>
-                    <li><a href="archive-campaign.html">貸切体験ダイビング</a></li>
-                    <li><a href="archive-campaign.html">ナイトダイビング</a></li>
+                    <li>
+                      <a href="archive-campaign.html">貸切体験ダイビング</a>
+                    </li>
+                    <li>
+                      <a href="archive-campaign.html">ナイトダイビング</a>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -90,7 +94,9 @@
                   <ul class="sp-nav__item">
                     <li><a href="page-information.html">ライセンス講習</a></li>
                     <li><a href="page-information.html">体験ダイビング</a></li>
-                    <li><a href="page-information.html">ファンダイビング</a></li>
+                    <li>
+                      <a href="page-information.html">ファンダイビング</a>
+                    </li>
                   </ul>
                 </li>
                 <li class="sp-nav__item-title">
@@ -215,7 +221,7 @@
             itemscope
             itemtype="https://schema.org/ListItem"
           >
-            <a itemprop="item" href="./">
+            <a itemprop="item" href="index.html">
               <span itemprop="name">TOP</span>
             </a>
             <meta itemprop="position" content="1" />
@@ -230,7 +236,18 @@
               <span itemprop="name">お問い合わせ</span>
             </a>
             <meta itemprop="position" content="2" />
-          </li> 
+          </li>
+          <li
+            class="breadcrumb__error-item"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
+            <a itemprop="item" href="#">
+              <span itemprop="name">お問い合わせエラー</span>
+            </a>
+            <meta itemprop="position" content="3" />
+          </li>
         </ol>
       </div>
     </div>
@@ -238,15 +255,28 @@
     <main>
       <div id="sub-contact" class="sub-contact section-sub-contact">
         <div class="sub-contact__inner inner">
-        
-          <form action="process_form.php" method="post" class="sub-contact__form form">
+          <div class="sub-contact__error">
+            <p>※必須項目が入力されていません。<br class="u-mobile">入力してください。</p>
+          </div>
+
+          <form id="form"
+            action="process_form.php"
+            method="post"
+            class="sub-contact__form form"
+          >
             <dl>
               <dt>
                 お名前
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <input type="text" name="company" value=""  placeholder="沖縄&nbsp;&nbsp;太郎" required/>
+                <input
+                  type="text"
+                  name="company"
+                  value=""
+                  placeholder="沖縄&nbsp;&nbsp;太郎"
+                  required
+                />
               </dd>
             </dl>
             <dl>
@@ -255,41 +285,75 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <input type="email" name="mail_address" value="" class="validate[]" placeholder="aaa000@ggmail.com" required/>
+                <input
+                  type="email"
+                  name="mail_address"
+                  value=""
+                  class="validate[]"
+                  placeholder="aaa000@ggmail.com"
+                  required
+                />
               </dd>
             </dl>
-              <dl>
-                <dt>
-                  電話番号
-                  <span class="form__label">必須</span>
-                </dt>
-                <dd>
-                  <input type="text" name="tel" value="" placeholder="000-0000-0000" required/>
-                </dd>
-              </dl>
+            <dl>
+              <dt>
+                電話番号
+                <span class="form__label">必須</span>
+              </dt>
+              <dd>
+                <input
+                  type="text"
+                  name="tel"
+                  value=""
+                  placeholder="000-0000-0000"
+                  required
+                />
+              </dd>
+            </dl>
             <dl class="form__checkbox">
               <dt>
                 お問合せ項目
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <label><input type="checkbox" name="inquiry[]" value="ダイビング講習について" checked required/><span>ダイビング講習について</span></label>
-                <label><input type="checkbox" name="inquiry[]" value="ファンデイビングについて" required/><span>ファンデイビングについて</span></label>
-                <label><input type="checkbox" name="inquiry[]" value="体験ダイビングについて" required/><span>体験ダイビングについて</span></label>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="inquiry[]"
+                    value="ダイビング講習について"
+                    checked
+                    required
+                  /><span>ダイビング講習について</span></label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="inquiry[]"
+                    value="ファンデイビングについて"
+                    required
+                  /><span>ファンデイビングについて</span></label
+                >
+                <label
+                  ><input
+                    type="checkbox"
+                    name="inquiry[]"
+                    value="体験ダイビングについて"
+                    required
+                  /><span>体験ダイビングについて</span></label
+                >
               </dd>
             </dl>
             <dl class="form__select">
-            
-              <dt>
-                キャンペーン
-              </dt>
+              <dt>キャンペーン</dt>
               <dd>
                 <select name="inquiry[]">
                   <option value="">キャンペーン内容を選択</option>
                   <option value="ライセンス取得">ライセンス取得</option>
                   <option value="貸切体験ダイビング">貸切体験ダイビング</option>
                   <option value="ナイトダイビング">ナイトダイビング</option>
-                  <option value="貸切ファンダイビング">貸切ファンダイビング</option>
+                  <option value="貸切ファンダイビング">
+                    貸切ファンダイビング
+                  </option>
                 </select>
               </dd>
             </dl>
@@ -299,32 +363,33 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <textarea name="contents" required></textarea>
+                <textarea name="contents" class="textarea" required></textarea>
               </dd>
             </dl>
             <div class="form__personal-info">
               <div class="form__personal-info-inner">
-
-                <label><input type="checkbox" name="inquiry[]" value="個人情報について" required/><span>個人情報の取り扱いについて同意のうえ<br class="u-mobile">
-                  送信します。</span></label>
-                  
-                </div>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="inquiry[]"
+                    value="個人情報について"
+                    required
+                  /><span
+                    >個人情報の取り扱いについて同意のうえ<br class="u-mobile" />
+                    送信します。</span
+                  ></label
+                >
+              </div>
             </div>
             <div class="form__btn">
-
               <div class="btn-submit">
-                <input type="submit" class="btn-submit__body" value="" />
+                <input type="submit" class="btn-submit__body js-submit" value="" />
                 <span class="btn-submit__text">Send</span>
               </div>
-
             </div>
-
-
           </form>
-
         </div>
       </div>
-
 
       <div id="page-top" class="page-top js-page-top">
         <a href="#">
@@ -360,7 +425,9 @@
                 <a href="archive-campaign.html">キャンペーン</a>
                 <ul class="sp-nav__item">
                   <li><a href="archive-campaign.html">ライセンス取得</a></li>
-                  <li><a href="archive-campaign.html">貸切体験ダイビング</a></li>
+                  <li>
+                    <a href="archive-campaign.html">貸切体験ダイビング</a>
+                  </li>
                   <li><a href="archive-campaign.html">ナイトダイビング</a></li>
                 </ul>
               </li>
@@ -388,15 +455,15 @@
             <ul class="footer-nav__items">
               <li class="footer-nav__item-title">
                 <a href="archive-voice.html">お客様の声</a>
-                </li>
-                <li class="sp-nav__item-title">
-                  <a href="page-price.html">料金一覧</a>
-                  <ul class="sp-nav__item">
-                    <li><a href="page-price.html">ライセンス講習</a></li>
-                    <li><a href="page-price.html">体験ダイビング</a></li>
-                    <li><a href="page-price.html">ファンダイビング</a></li>
-                  </ul>
-                </li>
+              </li>
+              <li class="sp-nav__item-title">
+                <a href="page-price.html">料金一覧</a>
+                <ul class="sp-nav__item">
+                  <li><a href="page-price.html">ライセンス講習</a></li>
+                  <li><a href="page-price.html">体験ダイビング</a></li>
+                  <li><a href="page-price.html">ファンダイビング</a></li>
+                </ul>
+              </li>
             </ul>
             <ul class="footer-nav__items">
               <li class="footer-nav__item-title">

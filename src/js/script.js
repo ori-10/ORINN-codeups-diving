@@ -222,35 +222,37 @@ jQuery(function ($) {
 
   // ページネーション
   $(function () {
-    $("#contents").paginathing({
-      limitPagination: 6,
-      pageNumbers: true,
-      // 表示件数
-      perPage: 10,
-      firstLast: false,
-      pageNumbers: false,
-      // prevText: '<',
-      prevText: "",
-      // nextText: '>',
-      nextText: "",
-      activeClass: "active",
-    });
+    // ページネーション（contents）
+    if ($("#contents").length > 0) {
+      $("#contents").paginathing({
+        limitPagination: 6,
+        pageNumbers: true,
+        perPage: 10,
+        firstLast: false,
+        pageNumbers: false,
+        prevText: "",
+        nextText: "",
+        activeClass: "active",
+      });
+    }
+  
+    // ページネーション（single-contents）
+    if ($("#single-contents").length > 0) {
+      $("#single-contents").paginathing({
+        perPage: 1,
+        firstLast: false,
+        prevText: "",
+        nextText: "",
+        pageNumbers: false,
+        showPageNumbers: false,
+        hidePageNumbers: true,
+        activeClass: "active",
+      });
+    }
+  
+    // ここに他の処理を追加する（必要に応じて）
   });
 
-  $(function () {
-    $("#single-contents").paginathing({
-      perPage: 1,
-      firstLast: false,
-      prevText: "",
-      nextText: "",
-      
-      // ページ番号非表示
-      pageNumbers: false,
-      showPageNumbers: false,
-      hidePageNumbers: true,
-      activeClass: "active",
-    });
-  });
 
   // information 要素の取得
   const tabItem = document.querySelectorAll(".tab__item");
@@ -285,15 +287,18 @@ jQuery(function ($) {
     // インデックスに対応したtabContentに.activeを追加
     tabContent[index].classList.add("active");
   }
-
-  // FAQ アコーディオン
-  document.querySelectorAll(".js-accordion").forEach(function (elem) {
-    elem.querySelector("p").addEventListener("click", function () {
-      elem.classList.toggle("open");
-    });
+///////////
+// FAQ アコーディオン
+///////////
+document.querySelectorAll(".js-accordion").forEach(function (elem) {
+  elem.addEventListener("click", function () {
+    elem.classList.toggle("open");
   });
+});
 
-  // about　モーダル
+////////////
+// about　モーダル
+////////////
   // コース画像モーダル表示イベント
   $(".js-modal").click(function () {
     // まず、クリックした画像の HTML(<img>タグ全体)を#frayDisplay内にコピー
@@ -311,38 +316,53 @@ jQuery(function ($) {
     return false;
   });
 
-// コンタクト
-$(function() {
-  //始めにjQueryで送信ボタンを無効化する
-  $('.btn-submit__body').prop("disabled", true);
+
+
+
+
+// コンタクト 送信エラー
+$(".js-submit").on("click", function(event) {
+  var form = document.getElementById("form");
+  var inquiryCheckboxes = form.querySelectorAll('input[name="inquiry[]"]');
+  var campaignSelect = form.querySelector('select[name="inquiry[]"]');
+  var personalInfoCheckbox = form.querySelector('input[name="inquiry[]"][value="個人情報について"]');
   
-  //始めにjQueryで必須欄を加工する
-  $('form input:required').each(function () {
-      $(this).prev("label").addClass("required");
+  var inquiryChecked = false;
+  var campaignSelected = campaignSelect.value !== "";
+  var personalInfoChecked = personalInfoCheckbox.checked;
+
+  // お問い合わせ項目のチェック状態を確認
+  inquiryCheckboxes.forEach(function(checkbox) {
+    if (checkbox.checked) {
+      inquiryChecked = true;
+    }
   });
-  
-  //入力欄の操作時
-  $('form input:required').change(function () {
-      //必須項目が空かどうかフラグ
-      let flag = true;
-      //必須項目をひとつずつチェック
-      $('form input:required').each(function(e) {
-          //もし必須項目が空なら
-          if ($('form input:required').eq(e).val() === "") {
-              flag = false;
-          }
-      });
-      //全て埋まっていたら
-      if (flag) {
-          //送信ボタンを復活
-          $('.btn-submit__body').prop("disabled", false);
-      }
-      else {
-          //送信ボタンを閉じる
-          $('.btn-submit__body').prop("disabled", true);
-      }
+
+  // 必須項目のチェックと選択状態をチェック
+  form.querySelectorAll("[required]").forEach(function(element) {
+    if (element.value.trim() == "") {
+      element.classList.add("required");
+    } else {
+      element.classList.remove("required");
+    }
   });
+
+  // .required クラスが一つでもあれば .sub-contact__error の .active クラスを削除
+  var hasRequired = form.querySelector(".required");
+  $(".sub-contact__error").toggleClass("active", !hasRequired && (!inquiryChecked || !campaignSelected || !personalInfoChecked));
+
+  event.preventDefault(); // ボタンのデフォルトの動作を阻止
 });
+
+
+
+
+
+
+
+
+
+
 
 
 }); // 消さない
