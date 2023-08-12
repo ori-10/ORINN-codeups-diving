@@ -3,3 +3,10 @@
 .sub-campaign article > * + * {
   margin-top: 0;
 }
+
+.sub-campaign__inner {
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: rem(1130);
+  }
+}

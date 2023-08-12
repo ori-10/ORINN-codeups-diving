@@ -224,7 +224,7 @@ jQuery(function ($) {
   // ページネーション
   //////////
   $(function () {
-    // ページネーション（contents）
+    // ページネーション（ブログ一覧）
     if ($("#contents").length > 0) {
       $("#contents").paginathing({
         limitPagination: 6,
@@ -238,7 +238,7 @@ jQuery(function ($) {
       });
     }
   
-    // ページネーション（single-contents）
+    // ページネーション（ブログ記事ページ）
     if ($("#single-contents").length > 0) {
       $("#single-contents").paginathing({
         perPage: 1,
@@ -251,6 +251,22 @@ jQuery(function ($) {
         activeClass: "active",
       });
     }
+
+      // ページネーション（campaign）
+      if ($("#campaign-contents").length > 0) {
+        $("#campaign-contents").paginathing({
+          limitPagination: 6,
+          pageNumbers: true,
+          perPage: 4,
+          firstLast: false,
+          pageNumbers: false,
+          prevText: "",
+          nextText: "",
+          activeClass: "active",
+        });
+      }
+    
+    
   
     // ここに他の処理を追加する（必要に応じて）
   });
@@ -352,40 +368,58 @@ $(document).ready(function() {
 
 
 // コンタクト 送信エラー
-$(".js-submit").on("click", function(event) {
-  var form = document.getElementById("form");
-  var inquiryCheckboxes = form.querySelectorAll('input[name="inquiry[]"]');
-  var campaignSelect = form.querySelector('select[name="inquiry[]"]');
-  var personalInfoCheckbox = form.querySelector('input[name="inquiry[]"][value="個人情報について"]');
+// $(".js-submit").on("click", function(event) {
+//   var form = document.getElementById("form");
+//   var inquiryCheckboxes = form.querySelectorAll('input[name="inquiry[]"]');
+//   var campaignSelect = form.querySelector('select[name="inquiry[]"]');
+//   var personalInfoCheckbox = form.querySelector('input[name="inquiry[]"][value="個人情報について"]');
   
-  var inquiryChecked = false;
-  var campaignSelected = campaignSelect.value !== "";
-  var personalInfoChecked = personalInfoCheckbox.checked;
+//   var inquiryChecked = false;
+//   var campaignSelected = campaignSelect.value !== "";
+//   var personalInfoChecked = personalInfoCheckbox.checked;
 
-  // お問い合わせ項目のチェック状態を確認
-  inquiryCheckboxes.forEach(function(checkbox) {
-    if (checkbox.checked) {
-      inquiryChecked = true;
-    }
-  });
+//   // お問い合わせ項目のチェック状態を確認
+//   inquiryCheckboxes.forEach(function(checkbox) {
+//     if (checkbox.checked) {
+//       inquiryChecked = true;
+//     }
+//   });
 
-  // 必須項目のチェックと選択状態をチェック
-  form.querySelectorAll("[required]").forEach(function(element) {
-    if (element.value.trim() == "") {
-      element.classList.add("required");
-    } else {
-      element.classList.remove("required");
-    }
-  });
+//   // 必須項目のチェックと選択状態をチェック
+//   form.querySelectorAll("[required]").forEach(function(element) {
+//     if (element.value.trim() == "") {
+//       element.classList.add("required");
+//     } else {
+//       element.classList.remove("required");
+//     }
+//   });
 
-  // .required クラスが一つでもあれば .sub-contact__error の .active クラスを削除
-  var hasRequired = form.querySelector(".required");
-  $(".sub-contact__error").toggleClass("active", !hasRequired && (!inquiryChecked || !campaignSelected || !personalInfoChecked));
+//   // .required クラスが一つでもあれば .sub-contact__error の .active クラスを削除
+//   var hasRequired = form.querySelector(".required");
+//   $(".sub-contact__error").toggleClass("active", !hasRequired && (!inquiryChecked || !campaignSelected || !personalInfoChecked));
 
-  event.preventDefault(); // ボタンのデフォルトの動作を阻止
-});
+//   event.preventDefault(); // ボタンのデフォルトの動作を阻止
+// });
 
+$('#form').on('js-submit', function() {
+  var error; // エラー用の変数を定義
+  $(this).find('.error').remove();
 
+		//必須項目の検証
+		$(this).find('.required').each(function(){
+			if($(this).val() === ""){
+				//値が取得できない場合はエラーを返す
+				error = true;
+				//値が取得できない場合はエラーメッセージを表示
+				$(this).after('<span class="error">未入力です</span>');
+			}
+		});
+
+		//送信ボタンの制御
+		if(error){
+			return false;
+		}
+	});
 
 
 

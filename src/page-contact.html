@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="robots" content="noindex" />
     <!-- meta情報 -->
-    <title>CodeUps</title>
+    <title>Contact/CodeUps</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <!-- ogp -->
@@ -270,7 +270,7 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <input
+                <input class="required"
                   type="text"
                   name="company"
                   value=""
@@ -289,7 +289,7 @@
                   type="email"
                   name="mail_address"
                   value=""
-                  class="validate[]"
+                  class="validate[] required"
                   placeholder="aaa000@ggmail.com"
                   required
                 />
@@ -301,7 +301,7 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <input
+                <input class="required" 
                   type="text"
                   name="tel"
                   value=""
@@ -317,28 +317,25 @@
               </dt>
               <dd>
                 <label
-                  ><input
+                  ><input class="required" 
                     type="checkbox"
                     name="inquiry[]"
                     value="ダイビング講習について"
                     checked
-                    required
                   /><span>ダイビング講習について</span></label
                 >
                 <label
-                  ><input
+                  ><input class="required" 
                     type="checkbox"
                     name="inquiry[]"
                     value="ファンデイビングについて"
-                    required
                   /><span>ファンデイビングについて</span></label
                 >
                 <label
-                  ><input
+                  ><input class="required"
                     type="checkbox"
                     name="inquiry[]"
                     value="体験ダイビングについて"
-                    required
                   /><span>体験ダイビングについて</span></label
                 >
               </dd>
@@ -363,13 +360,13 @@
                 <span class="form__label">必須</span>
               </dt>
               <dd>
-                <textarea name="contents" class="textarea" required></textarea>
+                <textarea name="contents" class="textarea required" required></textarea>
               </dd>
             </dl>
             <div class="form__personal-info">
               <div class="form__personal-info-inner">
                 <label
-                  ><input
+                  ><input class="required" 
                     type="checkbox"
                     name="inquiry[]"
                     value="個人情報について"
