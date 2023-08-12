@@ -420,16 +420,20 @@ textarea {
   display: block;
 }
 
-// .required[type="text"],
-// .required[type="tel"],
-// .required[type="email"],
-// .required[type="date"],
-// .required[type="checkbox"] + span::before,
-// .required.textarea {
-//   background: rgba(201, 72, 0, 0.20);
-//   border: 1px solid $red;
-// }
+.btn-submit__body[disabled] {
+  cursor: not-allowed;
+}
 
-// .required::placeholder {
-//   color: $white;
-// }
+.required[type="text"],
+.required[type="tel"],
+.required[type="email"],
+.required[type="date"],
+textarea.required, 
+.required[type="checkbox"] + span::before {
+  background: rgba(201, 72, 0, 0.20);
+  border: 1px solid $red;
+}
+
+.required::placeholder {
+  color: $white;
+}

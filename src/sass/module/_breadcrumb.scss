@@ -66,10 +66,10 @@
 }
 
 // 下層ページ　contactの未入力表示
-.breadcrumb__error-item {
+.breadcrumb__item--error {
   display: none;
 }
 
-.active.breadcrumb__error-item {
+.active.breadcrumb__item--error {
   display: block;
 }
