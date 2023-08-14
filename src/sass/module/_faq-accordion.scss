@@ -15,10 +15,15 @@
   justify-content: space-between;
   cursor: pointer;
   z-index: 1;
+  transition: .4s opacity;
   @include mq("md") {
     font-size: rem(20);
     padding: rem(24) rem(40);
   }
+}
+
+.faq-accordion__title:hover {
+  opacity: .8;
 }
 
 .faq-accordion__icon,
@@ -27,12 +32,14 @@
   transition: all 0.4s;
   box-sizing: border-box;
 }
+
 .faq-accordion__icon {
   position: relative;
   height: 1px;
   max-width: rem(30);
   width: 100%;
 }
+
 .faq-accordion__icon span {
   background-color: $white;
   border-radius: 0.1875rem;

@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.pagination-container {
-    margin-top: rem(80);
-}
-
 .pagination {
   display: flex;
   justify-content: center;
@@ -40,65 +36,4 @@
   }
 }
 
-.prev {
-  margin-right: rem(28);
-}
-
-.prev a::after {
-  position: absolute;
-  content: "";
-  border-bottom: solid 1px $green-accent;
-  border-left: solid 1px $green-accent;
-  height: rem(12);
-  width: rem(12);
-  left: 45%;
-  top: 30%;
-  transform: rotate(45deg);
-  cursor: pointer;
-}
-
-.prev a {
-  position: relative;
-  transition: all .4s;
-}
-
-.prev a:hover {
-  background: $green-accent;
-}
-
-.prev a:hover::after {
-  border-bottom: solid 1px $white;
-  border-left: solid 1px $white;
-}
-
-.next {
-  margin-left: rem(28);
-}
-
-.next a::after {
-  position: absolute;
-  content: "";
-  border-bottom: solid 1px $green-accent;
-  border-left: solid 1px $green-accent;
-  height: rem(12);
-  width: rem(12);
-  left: 25%;
-  top: 30%;
-  transform: rotate(-135deg);
-  cursor: pointer;
-}
-
-.next a {
-  position: relative;
-  transition: all .4s;
-}
-
-.next a:hover {
-  background: $green-accent;
-}
-
-.next a:hover::after {
-  border-bottom: solid 1px $white;
-  border-left: solid 1px $white;
-}
 

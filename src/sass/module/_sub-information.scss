@@ -5,7 +5,7 @@
   gap: rem(15) 5.66%;
   flex-wrap: wrap;
   @include mq("md") {
-    gap: rem(25) 8.3%;
+    gap: rem(23) 8.3%;
   }
 }
 
@@ -109,8 +109,6 @@
 
 .sub-information__inner {
   max-width: rem(600);
-  // padding-right: 14px;
-  // padding-left: 14px;
 }
 
 .sub-information__box {
@@ -118,7 +116,7 @@
   padding: rem(16) rem(24) rem(20);
   @include mq("md") {
     border: 2px solid $green-accent;
-    padding: rem(24);
+    padding: rem(22);
     display: flex;
     gap: 4.66%;
     align-items: center;

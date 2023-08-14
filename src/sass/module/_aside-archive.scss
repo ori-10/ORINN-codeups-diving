@@ -7,6 +7,12 @@
 .aside-archive__items p {
   position: relative;
   padding-left: rem(30);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.aside-archive__items p:hover {
+  opacity: .8;
 }
 
 .aside-archive__items p::before {
@@ -31,6 +37,12 @@
 }
 
 .aside-archive__item li {
-  line-height: 1.6;
+  line-height: 1.65;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.aside-archive__item li:hover {
+  opacity: .8;
 }
 

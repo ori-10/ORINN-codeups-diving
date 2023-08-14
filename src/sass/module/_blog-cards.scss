@@ -9,7 +9,7 @@
   }
 }
 
-.blog-cards--archive {
+.blog-cards--sub-page {
   @include mq("md") {
     grid-template-columns: 1fr 1fr;
     gap: rem(80) rem(40);

@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.next {
+  margin-left: rem(28);
+}
+
+.next a::after {
+  position: absolute;
+  content: "";
+  border-bottom: solid 1px $green-accent;
+  border-left: solid 1px $green-accent;
+  height: rem(12);
+  width: rem(12);
+  left: 25%;
+  top: 30%;
+  transform: rotate(-135deg);
+  cursor: pointer;
+}
+
+.next a {
+  position: relative;
+  transition: all .4s;
+}
+
+.next a:hover {
+  background: $green-accent;
+}
+
+.next a:hover::after {
+  border-bottom: solid 1px $white;
+  border-left: solid 1px $white;
+}

@@ -30,6 +30,9 @@
 .section-title--large h2 {
   font-size: rem(12);
   margin-top: rem(2);
+  @include mq("md") {
+    margin-top: 0;
+  }
 }
 
 .section-title--white h2,

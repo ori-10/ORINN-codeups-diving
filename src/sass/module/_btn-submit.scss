@@ -113,3 +113,7 @@
   background-color: transparent;
   pointer-events: none;
 }
+
+.btn-submit__body[disabled] {
+  cursor: not-allowed;
+}

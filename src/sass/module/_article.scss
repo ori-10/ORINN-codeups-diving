@@ -74,10 +74,4 @@
   gap: rem(80);
 }
 
-// 下層ページ
-.section-sub-blog {
-  @include mq("md") {
-    margin-top: rem(147);
-  }
-}
 

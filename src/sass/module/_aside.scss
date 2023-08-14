@@ -2,16 +2,21 @@
 
 
 .aside__inner {
-  // padding: 0 rem(24);
-  padding: 0 rem(20);//ブログ一覧sp
+  padding: 0 rem(20);
   @include mq("md") {
     padding: 0;
-    // padding: 0 rem(24);
+  }
+}
+
+.aside__single-inner {
+  padding: 0 rem(24);
+  @include mq("md") {
+    padding: 0;
   }
 }
 
 .aside__content:not(:first-child) {
-  margin-top: rem(83);
+  margin-top: rem(80);
 }
 
 .aside__title {

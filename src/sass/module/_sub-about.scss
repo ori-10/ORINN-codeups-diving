@@ -28,7 +28,7 @@
 .sub-about__right-img::before {
   content: "";
   display: block;
-  padding-top: 66.192%;
+  padding-top: 66%;
 }
 
 .sub-about__right-img img {
@@ -70,7 +70,7 @@
 .sub-about__left-img::before {
   content: "";
   display: block;
-  padding-top: 151.6%;
+  padding-top: 151%;
 }
 
 .sub-about__left-img img {
@@ -127,7 +127,8 @@
   line-height: 1.5;
 }
 
-.sub-about__text--pc {
+.sub-about__pc-text {
+  line-height: 1.5;
   display: none;
   @include mq("md") {
     display: block;
@@ -135,7 +136,8 @@
   }
 }
 
-.sub-about__text--sp {
+.sub-about__sp-text {
+  line-height: 1.5;
   display: block;
   margin-top: rem(40);
   @include mq("md") {

@@ -45,8 +45,6 @@
   padding-left: rem(22);
   padding-right: rem(22);
   @include mq("md") {
-  // padding-left: rem(21);
-  // padding-right: rem(21);
   max-width: rem(1124);
   }
 }
