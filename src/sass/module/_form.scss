@@ -60,7 +60,7 @@ textarea {
   border: 1px solid $border-cr-default;
   /*↓↓選択されているときの色*/
   &:focus {
-    border: 1px solid $border-cr;
+    border: 1px solid #408f95;
   }
   @include mq("md") {
     margin-top: 0;
@@ -161,7 +161,7 @@ select {
 [type="date"] {
   position: relative;
   &:focus {
-    border-color: 1px solid $border-cr;
+    border: 1px solid $border-cr;
   }
 }
 
@@ -184,10 +184,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .form dl:not(:first-child) {
   background-image: linear-gradient(
     to right,
-    $green-accent 3px,
-    transparent 3px
+    $green-accent rem(3),
+    transparent rem(3)
   );
-  background-size: 4px 1px;
+  background-size: rem(4) rem(1);
   background-repeat: repeat-x;
   background-position: left top;
 }
@@ -195,10 +195,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .form__personal-info {
   background-image: linear-gradient(
     to right,
-    $green-accent 3px,
-    transparent 3px
+    $green-accent rem(3),
+    transparent rem(3)
   );
-  background-size: 4px 1px;
+  background-size: rem(4) rem(1);
   background-repeat: repeat-x;
   background-position: left top;
 }

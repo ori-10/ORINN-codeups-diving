@@ -16,7 +16,8 @@
   justify-content: center;
   transition: opacity 0.4s;
   @include mq("md") {
-    transition: color 0.4s opacity none;
+    transition: color 0.4s;
+    opacity: 1;
   }
 }
 

@@ -274,40 +274,61 @@ jQuery(function ($) {
 
 
   ///////////
-  // information 要素の取得
+  // campaign タブ
   ///////////
-  const tabItem = document.querySelectorAll(".tab__item");
-  const tabContent = document.querySelectorAll(".tab__content");
 
-  // tabItemに対してクリックイベントを追加
-  // クリックした時にtabToggle関数を発火
-  for (let i = 0; i < tabItem.length; i++) {
-    tabItem[i].addEventListener("click", tabToggle);
-  }
+  // const tabItem = document.querySelectorAll(".tab__item");
+  // const tabContent = document.querySelectorAll(".tab__content");
 
-  function tabToggle() {
-    // tabItemとtabContentの.activeを削除する
-    for (let i = 0; i < tabItem.length; i++) {
-      tabItem[i].classList.remove("active");
-    }
-    for (let i = 0; i < tabContent.length; i++) {
-      tabContent[i].classList.remove("active");
-    }
+  // // tabItemに対してクリックイベントを追加
+  // // クリックした時にtabToggle関数を発火
+  // for (let i = 0; i < tabItem.length; i++) {
+  //   tabItem[i].addEventListener("click", tabToggle);
+  // }
 
-    // クリックしたtabItemに.activeを追加
-    this.classList.add("active");
+  // function tabToggle() {
+  //   // tabItemとtabContentの.activeを削除する
+  //   for (let i = 0; i < tabItem.length; i++) {
+  //     tabItem[i].classList.remove("active");
+  //   }
+  //   for (let i = 0; i < tabContent.length; i++) {
+  //     tabContent[i].classList.remove("active");
+  //   }
 
-    // tabItemを配列にする
-    // [<li class="tab-item active">About</li>, <li class="tab-item">Works</li>, <li class="tab-item">Contact</li>]
-    const aryTabs = Array.prototype.slice.call(tabItem);
+  //   // クリックしたtabItemに.activeを追加
+  //   this.classList.add("active");
 
-    // 配列に格納したキーワードと最初一致したインデックスを格納
-    // <li class="tab-item active">About</li>の場合は「0」が返ってくる
-    const index = aryTabs.indexOf(this);
+  //   // tabItemを配列にする
+  //   // [<li class="tab-item active">About</li>, <li class="tab-item">Works</li>, <li class="tab-item">Contact</li>]
+  //   const aryTabs = Array.prototype.slice.call(tabItem);
 
-    // インデックスに対応したtabContentに.activeを追加
-    tabContent[index].classList.add("active");
-  }
+  //   // 配列に格納したキーワードと最初一致したインデックスを格納
+  //   // <li class="tab-item active">About</li>の場合は「0」が返ってくる
+  //   const index = aryTabs.indexOf(this);
+
+  //   // インデックスに対応したtabContentに.activeを追加
+  //   tabContent[index].classList.add("active");
+  // }
+
+
+  ///////////
+  // リンク先　タブ開く
+  /////////
+  // $(function(){
+  //   $('.tab__items li').click(function() {
+  //   //押されたのがリストの何番目か調べる
+  //   var index = $('.tab__items li').index(this);
+  //   //表示領域を全部非表示にする
+  //   $('.tab__container div').hide();
+  //   //押されたのと同じ番目のを表示する
+  //   $('.tab__container div').eq(index).fadeIn();
+  //   //.activeがついてるのを外す
+  //   $('.tab__items li').removeClass('active');
+  //   //押したやつにactiveを付与してる
+  //   $(this).addClass('active');
+  //   });
+  //   });
+
 
 
   ///////////
@@ -439,6 +460,7 @@ jQuery(function ($) {
       }
     });
   });
+
 
 
 

@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .sub-faq__inner {
+  max-width: rem(600);
   @include mq("md") {
   max-width: rem(750);
   }
