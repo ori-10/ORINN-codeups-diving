@@ -183,7 +183,6 @@ jQuery(function ($) {
     });
   });
 
-
   /////////////
   // 画像出現アニメーション
   ////////////
@@ -221,7 +220,6 @@ jQuery(function ($) {
       }
     }
   });
-
 
   //////////
   // ページネーション
@@ -272,64 +270,88 @@ jQuery(function ($) {
     // ここに他の処理を追加する（必要に応じて）
   });
 
-
+  
   ///////////
-  // campaign タブ
+  // campaign・voice
+  // 他ページから遷移時、該当タブが選択されている状態
   ///////////
 
-  // const tabItem = document.querySelectorAll(".tab__item");
-  // const tabContent = document.querySelectorAll(".tab__content");
-
-  // // tabItemに対してクリックイベントを追加
-  // // クリックした時にtabToggle関数を発火
-  // for (let i = 0; i < tabItem.length; i++) {
-  //   tabItem[i].addEventListener("click", tabToggle);
-  // }
-
-  // function tabToggle() {
-  //   // tabItemとtabContentの.activeを削除する
-  //   for (let i = 0; i < tabItem.length; i++) {
-  //     tabItem[i].classList.remove("active");
-  //   }
-  //   for (let i = 0; i < tabContent.length; i++) {
-  //     tabContent[i].classList.remove("active");
-  //   }
-
-  //   // クリックしたtabItemに.activeを追加
-  //   this.classList.add("active");
-
-  //   // tabItemを配列にする
-  //   // [<li class="tab-item active">About</li>, <li class="tab-item">Works</li>, <li class="tab-item">Contact</li>]
-  //   const aryTabs = Array.prototype.slice.call(tabItem);
-
-  //   // 配列に格納したキーワードと最初一致したインデックスを格納
-  //   // <li class="tab-item active">About</li>の場合は「0」が返ってくる
-  //   const index = aryTabs.indexOf(this);
-
-  //   // インデックスに対応したtabContentに.activeを追加
-  //   tabContent[index].classList.add("active");
-  // }
-
-
+  $(function() {
+    $('.js-tab-btn li').click(function() {
+      let index = $(this).index();
+  
+      // すべてのコンテンツを非表示にする
+      $('.tab__content').hide();
+      
+      // クリックされたタブに対応するコンテンツを表示する
+      $('.tab__content').eq(index).fadeIn();
+  
+      // すべてのタブから .active クラスを削除し、クリックされたタブに追加する
+      $('.js-tab-btn li').removeClass('active');
+      $(this).addClass('active');
+    });
+  
+    // URLの、＃部分を取得
+    let hash = location.hash;
+    // もし＃の部分があり、#tabと同じなら
+    if (hash.length && hash.match(/#tab/)) {
+  
+      // 内容は隠す
+      $('.tab__content').hide();
+      // ボタンから.activeを外す
+      $('.js-tab-btn li').removeClass('active');
+      //#tab の文字を除き、−１する
+      let tabName = hash.slice(4);
+      tabName = tabName - 1;
+      // インデックス番号に対応する要素を選択して表示する
+      $('.tab__content').eq(tabName).fadeIn();
+      $('.js-tab-btn li').eq(tabName).addClass('active');
+  
+      // ＃がないなら
+    } else {
+      // ページ開いた時　初めの状態
+      $('.js-tab-btn li').eq(0).addClass('active');
+      $('.tab__content').hide();
+      $('.tab__content').eq(0).fadeIn();
+    }
+  });
+  
   ///////////
-  // リンク先　タブ開く
-  /////////
-  // $(function(){
-  //   $('.tab__items li').click(function() {
-  //   //押されたのがリストの何番目か調べる
-  //   var index = $('.tab__items li').index(this);
-  //   //表示領域を全部非表示にする
-  //   $('.tab__container div').hide();
-  //   //押されたのと同じ番目のを表示する
-  //   $('.tab__container div').eq(index).fadeIn();
-  //   //.activeがついてるのを外す
-  //   $('.tab__items li').removeClass('active');
-  //   //押したやつにactiveを付与してる
-  //   $(this).addClass('active');
-  //   });
-  //   });
+  // info
+  // 他ページから遷移時、該当タブが選択されている状態
+  ///////////
 
+  $(function() {
+    let hash = location.hash;
+    if (hash.match(/^#tab\d+$/)) {
+        let tabName = parseInt(hash.slice(4)) - 1;
+        $(`#tab${tabName + 1}`).prop('checked', true);
+        $('.sub-information__tab-content').hide().eq(tabName).fadeIn();
+    } else {
+        $('.sub-information__tab-content').eq(0).fadeIn();
+    }
+});
+  
+  
+  ////////////
+  // price　
+  // 他ページから遷移時、リンクを押すと該当箇所にスクロール
+  ////////////
 
+  $(document).ready(function () {
+  var hash = window.location.hash; // 現在のURLのハッシュ部分を取得
+  if (hash) {
+    var targetElement = $(hash); // ハッシュに対応する要素を取得
+    if (targetElement.length > 0) {
+      var targetOffset = targetElement.offset().top; // ハッシュに対応する要素の位置
+
+      // スクロール実行
+      $("html, body").animate({
+        scrollTop: targetOffset - (headerHeight + 10)
+      }, 800);
+    }
+  }
+});
 
   ///////////
   // FAQ アコーディオン
@@ -339,7 +361,6 @@ jQuery(function ($) {
       elem.classList.toggle("open");
     });
   });
-
 
   ///////////
   // サイドバー アコーディオン
@@ -367,7 +388,6 @@ jQuery(function ($) {
     });
   });
 
-
   ////////////
   // about　モーダル
   ////////////
@@ -389,7 +409,6 @@ jQuery(function ($) {
     $("body").removeClass("active");
     return false;
   });
-
 
   ////////////
   // コンタクト 未入力エラー
@@ -460,9 +479,5 @@ jQuery(function ($) {
       }
     });
   });
-
-
-
-
-
-}); // 消さない
+});
+// 消さない
