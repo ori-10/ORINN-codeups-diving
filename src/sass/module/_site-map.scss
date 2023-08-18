@@ -1,5 +1,12 @@
 @use "global" as *;
 
+.site-map__inner {
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: rem(1130);
+  }
+}
+
 .site-map__nav {
   display: flex;
 }

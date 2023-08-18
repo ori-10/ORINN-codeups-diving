@@ -270,88 +270,123 @@ jQuery(function ($) {
     // ここに他の処理を追加する（必要に応じて）
   });
 
-  
   ///////////
-  // campaign・voice
+  // campaign
   // 他ページから遷移時、該当タブが選択されている状態
   ///////////
 
-  $(function() {
-    $('.js-tab-btn li').click(function() {
-      let index = $(this).index();
+  // $(function () {
+  //   // タブ切り替え処理
+  //   function switchTab(tabId) {
+  //     $(".tab__content").hide();
+  //     $("#" + tabId).fadeIn();
+  //     $(".js-campaign-tab li").removeClass("active");
+  //     $(".js-campaign-tab li a[href='#" + tabId + "']")
+  //       .parent()
+  //       .addClass("active");
+  //   }
+
+  //   // タブがクリックされたときの処理
+  //   $(".js-campaign-tab li").click(function () {
+  //     var tabId = $(this).find("a").attr("href").substring(1);
+  //     switchTab(tabId);
+  //   });
+
+  //   // URLのハッシュ部分を取得
+  //   var hash = location.hash;
+  //   // もしハッシュ部分がある場合
+  //   if (hash.length) {
+  //     var tabId = hash.substring(1);
+  //     switchTab(tabId);
+  //   } else {
+  //     // ページ開いた時 初めの状態
+  //     switchTab(
+  //       $(".js-campaign-tab li:first-child a").attr("href").substring(1)
+  //     );
+  //   }
+
+  //   // 同ページのリンククリック処理
+  //   $(".js-link-tab a").click(function () {
+  //     var targetTab = $(this).attr("href").substring(1);
+  //     switchTab(targetTab);
+
+  //     // リンクをクリックしてスクロール
+  //     var scrollAmount = $("#sub-campaign").offset().top - 100;
+  //     $("html, body").animate(
+  //       {
+  //         scrollTop: scrollAmount,
+  //       },
+  //       800
+  //     );
+  //     return false; // リンクのデフォルト動作をキャンセル
+  //   });
+  // });
+
+  $(function () {
+    // タブ切り替え処理
+    function switchTab(tabId) {
+      $(".tab__content").hide();
+      $("#" + tabId).fadeIn();
+      $(".js-campaign-tab li").removeClass("active");
+      $(".js-campaign-tab li a[href='#" + tabId + "']").parent().addClass("active");
+    }
   
-      // すべてのコンテンツを非表示にする
-      $('.tab__content').hide();
-      
-      // クリックされたタブに対応するコンテンツを表示する
-      $('.tab__content').eq(index).fadeIn();
-  
-      // すべてのタブから .active クラスを削除し、クリックされたタブに追加する
-      $('.js-tab-btn li').removeClass('active');
-      $(this).addClass('active');
+    // タブがクリックされたときの処理
+    $(".js-campaign-tab li").click(function () {
+      var tabId = $(this).find("a").attr("href").substring(1);
+      switchTab(tabId);
     });
   
-    // URLの、＃部分を取得
-    let hash = location.hash;
-    // もし＃の部分があり、#tabと同じなら
-    if (hash.length && hash.match(/#tab/)) {
-  
-      // 内容は隠す
-      $('.tab__content').hide();
-      // ボタンから.activeを外す
-      $('.js-tab-btn li').removeClass('active');
-      //#tab の文字を除き、−１する
-      let tabName = hash.slice(4);
-      tabName = tabName - 1;
-      // インデックス番号に対応する要素を選択して表示する
-      $('.tab__content').eq(tabName).fadeIn();
-      $('.js-tab-btn li').eq(tabName).addClass('active');
-  
-      // ＃がないなら
+    // URLのハッシュ部分を取得
+    var hash = location.hash;
+    // もしハッシュ部分がある場合
+    if (hash.length) {
+      var tabId = hash.substring(1);
+      switchTab(tabId);
     } else {
-      // ページ開いた時　初めの状態
-      $('.js-tab-btn li').eq(0).addClass('active');
-      $('.tab__content').hide();
-      $('.tab__content').eq(0).fadeIn();
+      // ページ開いた時 初めの状態
+      var firstTabLink = $(".js-campaign-tab li:first-child a");
+      if (firstTabLink.length > 0) {
+        switchTab(firstTabLink.attr("href").substring(1));
+      }
     }
+  
+    // 同ページのリンククリック処理
+    $(".js-link-tab a").click(function () {
+      var targetTab = $(this).attr("href").substring(1);
+      switchTab(targetTab);
+  
+      // リンクをクリックしてスクロール
+      var scrollAmount = $("#sub-campaign").offset().top - 100;
+      $("html, body").animate({
+        scrollTop: scrollAmount
+      }, 800);
+      return false; // リンクのデフォルト動作をキャンセル
+    });
   });
-  
-  ///////////
-  // info
-  // 他ページから遷移時、該当タブが選択されている状態
-  ///////////
 
-  $(function() {
-    let hash = location.hash;
-    if (hash.match(/^#tab\d+$/)) {
-        let tabName = parseInt(hash.slice(4)) - 1;
-        $(`#tab${tabName + 1}`).prop('checked', true);
-        $('.sub-information__tab-content').hide().eq(tabName).fadeIn();
-    } else {
-        $('.sub-information__tab-content').eq(0).fadeIn();
-    }
-});
-  
-  
   ////////////
-  // price　
+  // price
   // 他ページから遷移時、リンクを押すと該当箇所にスクロール
   ////////////
 
   $(document).ready(function () {
-  var hash = window.location.hash; // 現在のURLのハッシュ部分を取得
-  if (hash) {
-    var targetElement = $(hash); // ハッシュに対応する要素を取得
-    if (targetElement.length > 0) {
-      var targetOffset = targetElement.offset().top; // ハッシュに対応する要素の位置
+    var hash = window.location.hash; // 現在のURLのハッシュ部分を取得
+    if (hash) {
+      var targetElement = $(hash); // ハッシュに対応する要素を取得
+      if (targetElement.length > 0) {
+        var targetOffset = targetElement.offset().top; // ハッシュに対応する要素の位置
 
-      // スクロール実行
-      $("html, body").animate({
-        scrollTop: targetOffset - (headerHeight + 10)
-      }, 800);
+        // スクロール実行
+        $("html, body").animate(
+          {
+            scrollTop: targetOffset - (headerHeight + 10),
+          },
+          800
+        );
+      }
     }
-  }
-});
+  });
 
   ///////////
   // FAQ アコーディオン
@@ -397,7 +432,7 @@ jQuery(function ($) {
     $(".js-background").html($(this).prop("outerHTML"));
     //そして、fadeInで表示する。
     $(".js-background").fadeIn(200);
-    $("body").addClass("active");
+    $("body").addClass("loading__no-scroll");
     return false;
   });
 
@@ -406,7 +441,7 @@ jQuery(function ($) {
   $(".js-background").click(function () {
     // 非表示にする
     $(".js-background").fadeOut(200);
-    $("body").removeClass("active");
+    $("body").removeClass("loading__no-scroll");
     return false;
   });
 

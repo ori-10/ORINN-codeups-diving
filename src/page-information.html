@@ -75,9 +75,13 @@
                 <li class="sp-nav__item-title">
                   <a href="archive-campaign.html">キャンペーン</a>
                   <ul class="sp-nav__item">
-                    <li><a href="archive-campaign.html">ライセンス取得</a></li>
-                    <li><a href="archive-campaign.html">貸切体験ダイビング</a></li>
-                    <li><a href="archive-campaign.html">ナイトダイビング</a></li>
+                    <li><a href="archive-campaign.html#tab2">ライセンス取得</a></li>
+                    <li>
+                      <a href="archive-campaign.html#tab3">ファンダイビング</a>
+                    </li>
+                    <li>
+                      <a href="archive-campaign.html#tab4">体験ダイビング</a>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -88,9 +92,11 @@
                 <li class="sp-nav__item-title">
                   <a href="page-information.html">ダイビング情報</a>
                   <ul class="sp-nav__item">
-                    <li><a href="page-information.html">ライセンス講習</a></li>
-                    <li><a href="page-information.html">体験ダイビング</a></li>
-                    <li><a href="page-information.html">ファンダイビング</a></li>
+                    <li><a class="tab-link" href="#sub-information" data-tab="info1">ライセンス講習</a></li>
+                    <li><a class="tab-link" href="#sub-information" data-tab="info2">ファンダイビング</a></li>
+                    <li>
+                      <a class="tab-link" href="#sub-information" data-tab="info3">体験ダイビング</a>
+                    </li>
                   </ul>
                 </li>
                 <li class="sp-nav__item-title">
@@ -107,9 +113,9 @@
                 <li class="sp-nav__item-title">
                   <a href="page-price.html">料金一覧</a>
                   <ul class="sp-nav__item">
-                    <li><a href="page-price.html">ライセンス講習</a></li>
-                    <li><a href="page-price.html">体験ダイビング</a></li>
-                    <li><a href="page-price.html">ファンダイビング</a></li>
+                    <li><a href="page-price.html#price1">ライセンス講習</a></li>
+                    <li><a href="page-price.html#price2">体験ダイビング</a></li>
+                    <li><a href="page-price.html#price3">ファンダイビング</a></li>
                   </ul>
                 </li>
               </ul>
@@ -234,8 +240,8 @@
       <div class="sub-information__inner inner">
         <div class="sub-information__tab">
 <!-- ループ -->
-          <input id="tab1" type="radio" name="TAB" class="sub-information__tab-switch" checked="checked" />
-          <label class="sub-information__tab-label" for="tab1">
+          <input id="info1" type="radio" name="TAB" class="sub-information__tab-switch" checked="checked" />
+          <label class="sub-information__tab-label" for="info1">
             <span class="u-desktop"></span>
             <span>ライセンス</span><br class="u-mobile">
             <span>講習</span>
@@ -253,8 +259,8 @@
           </div>
         </div>
           </div>
-          <input id="tab2" type="radio" name="TAB" class="sub-information__tab-switch" />
-          <label class="sub-information__tab-label sub-information__tab-label--2" for="tab2">
+          <input id="info2" type="radio" name="TAB" class="sub-information__tab-switch" />
+          <label class="sub-information__tab-label sub-information__tab-label--2" for="info2">
             <span class="u-desktop"></span>
             <span>ファン</span><br class="u-mobile">
             <span>ダイビング</span>
@@ -272,8 +278,8 @@
               </div>
             </div>
           </div>
-          <input id="tab3" type="radio" name="TAB" class="sub-information__tab-switch" />
-          <label class="sub-information__tab-label sub-information__tab-label--3" for="tab3">
+          <input id="info3" type="radio" name="TAB" class="sub-information__tab-switch" />
+          <label class="sub-information__tab-label sub-information__tab-label--3" for="info3">
             <span class="u-desktop"></span>
             <span>体験</span><br class="u-mobile">
             <span>ダイビング</span>
@@ -377,9 +383,15 @@
               <li class="footer-nav__item-title">
                 <a href="archive-campaign.html">キャンペーン</a>
                 <ul class="footer-nav__item">
-                  <li><a href="archive-campaign.html">ライセンス取得</a></li>
-                  <li><a href="archive-campaign.html">貸切体験ダイビング</a></li>
-                  <li><a href="archive-campaign.html">ナイトダイビング</a></li>
+                  <li>
+                    <a href="archive-campaign.html#tab2">ライセンス講習</a>
+                  </li>
+                  <li>
+                    <a href="archive-campaign.html#tab3">ファンダイビング</a>
+                  </li>
+                  <li>
+                    <a href="archive-campaign.html#tab4">体験ダイビング</a>
+                  </li>
                 </ul>
               </li>
 
@@ -391,9 +403,11 @@
               <li class="footer-nav__item-title">
                 <a href="page-information.html">ダイビング情報</a>
                 <ul class="footer-nav__item">
-                  <li><a href="page-information.html">ライセンス講習</a></li>
-                  <li><a href="page-information.html">体験ダイビング</a></li>
-                  <li><a href="page-information.html">ファンダイビング</a></li>
+                  <li><a class="tab-link" href="#sub-information" data-tab="info1">ライセンス講習</a></li>
+                  <li><a class="tab-link" href="#sub-information" data-tab="info2">ファンダイビング</a></li>
+                  <li>
+                    <a class="tab-link" href="#sub-information" data-tab="info3">体験ダイビング</a>
+                  </li>
                 </ul>
               </li>
               <li class="footer-nav__item-title">
@@ -406,15 +420,15 @@
             <ul class="footer-nav__items">
               <li class="footer-nav__item-title">
                 <a href="archive-voice.html">お客様の声</a>
-                </li>
-                <li class="footer-nav__item-title">
-                  <a href="page-price.html">料金一覧</a>
-                  <ul class="footer-nav__item">
-                    <li><a href="page-price.html">ライセンス講習</a></li>
-                    <li><a href="page-price.html">体験ダイビング</a></li>
-                    <li><a href="page-price.html">ファンダイビング</a></li>
-                  </ul>
-                </li>
+              </li>
+              <li class="footer-nav__item-title">
+                <a href="page-price.html">料金一覧</a>
+                <ul class="footer-nav__item">
+                  <li><a href="page-price.html#price1">ライセンス講習</a></li>
+                  <li><a href="page-price.html#price2">体験ダイビング</a></li>
+                  <li><a href="page-price.html#price3">ファンダイビング</a></li>
+                </ul>
+              </li>
             </ul>
             <ul class="footer-nav__items">
               <li class="footer-nav__item-title">

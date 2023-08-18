@@ -71,16 +71,18 @@
         <nav class="header__sp-nav sp-nav">
           <div class="sp-nav__box">
             <div class="sp-nav__wrap">
-              <ul class="sp-nav__items">
+              <ul class="sp-nav__items js-link-tab">
                 <li class="sp-nav__item-title">
-                  <a href="archive-campaign.html">キャンペーン</a>
+                  <a href="#tab1">キャンペーン</a>
                   <ul class="sp-nav__item">
-                    <li><a href="archive-campaign.html">ライセンス取得</a></li>
                     <li>
-                      <a href="archive-campaign.html">貸切体験ダイビング</a>
+                      <a href="#tab2">ライセンス講習</a>
                     </li>
                     <li>
-                      <a href="archive-campaign.html">ナイトダイビング</a>
+                      <a href="#tab3">ファンダイビング</a>
+                    </li>
+                    <li>
+                      <a href="#tab4">体験ダイビング</a>
                     </li>
                   </ul>
                 </li>
@@ -92,10 +94,10 @@
                 <li class="sp-nav__item-title">
                   <a href="page-information.html">ダイビング情報</a>
                   <ul class="sp-nav__item">
-                    <li><a href="page-information.html">ライセンス講習</a></li>
-                    <li><a href="page-information.html">体験ダイビング</a></li>
+                    <li><a href="page-information.html#info1">ライセンス講習</a></li>
+                    <li><a href="page-information.html#info2">ファンダイビング</a></li>
                     <li>
-                      <a href="page-information.html">ファンダイビング</a>
+                      <a href="page-information.html#info3">体験ダイビング</a>
                     </li>
                   </ul>
                 </li>
@@ -244,15 +246,15 @@
     <main>
       <div id="sub-campaign" class="sub-campaign section-sub-campaign">
         <div class="sub-campaign__inner inner">
-          <div class="sub-campaign__tab tab">
-            <ul class="tab__items js-tab-btn">
-              <li class="tab__item"><a href="#tab1">ALL</a></li>
+          <div class="sub-campaign__tab tab js-link-tab">
+            <ul class="tab__items js-campaign-tab">
+              <li class="tab__item active"><a href="#tab1">ALL</a></li>
               <li class="tab__item"><a href="#tab2">ライセンス講習</a></li>
               <li class="tab__item"><a href="#tab3">ファンダイビング</a></li>
               <li class="tab__item"><a href="#tab4">体験ダイビング</a></li>
             </ul>
             <ul id="tab__container" class="tab__container">
-              <li class="tab__content">
+              <li class="tab__content" id="tab1">
                 <div class="tab__sub-page-inner">
                   <article class="tab__sub-campaign" id="campaign-contents">
                     <!-- ループ -->
@@ -456,9 +458,9 @@
                   </article>
                 </div>
               </li>
-              <li class="tab__content">ライセンス講習</li>
-              <li class="tab__content">ファンダイビング</li>
-              <li class="tab__content">体験ダイビング</li>
+              <li class="tab__content" id="tab2">ライセンス講習</li>
+              <li class="tab__content" id="tab3">ファンダイビング</li>
+              <li class="tab__content" id="tab4">体験ダイビング</li>
             </ul>
           </div>
         </div>
@@ -542,18 +544,18 @@
 
         <nav class="footer__nav-block footer-nav">
           <div class="footer-nav__wrap">
-            <ul class="footer-nav__items">
+            <ul class="footer-nav__items js-link-tab">
               <li class="footer-nav__item-title">
-                <a href="archive-campaign.html#tab1">キャンペーン</a>
+                <a href="#tab1">キャンペーン</a>
                 <ul class="footer-nav__item">
                   <li>
-                    <a href="archive-campaign.html#tab2">ライセンス講習</a>
+                    <a href="#tab2">ライセンス講習</a>
                   </li>
                   <li>
-                    <a href="archive-campaign.html#tab3">ファンダイビング</a>
+                    <a href="#tab3">ファンダイビング</a>
                   </li>
                   <li>
-                    <a href="archive-campaign.html#tab4">体験ダイビング</a>
+                    <a href="#tab4">体験ダイビング</a>
                   </li>
                 </ul>
               </li>
@@ -566,9 +568,9 @@
               <li class="footer-nav__item-title">
                 <a href="page-information.html">ダイビング情報</a>
                 <ul class="footer-nav__item">
-                  <li><a href="page-information.html">ライセンス講習</a></li>
-                  <li><a href="page-information.html">ファンダイビング</a></li>
-                  <li><a href="page-information.html">体験ダイビング</a></li>
+                  <li><a href="page-information.html#info1">ライセンス講習</a></li>
+                  <li><a href="page-information.html#info2">ファンダイビング</a></li>
+                  <li><a href="page-information.html#info3">体験ダイビング</a></li>
                 </ul>
               </li>
               <li class="footer-nav__item-title">
