@@ -2,10 +2,10 @@
 
 .sub-information__tab {
   display: flex;
-  gap: rem(15) 5.66%;
+  gap: 5.66%;
   flex-wrap: wrap;
   @include mq("md") {
-    gap: rem(23) 8.3%;
+    gap: 8.3%;
   }
 }
 
@@ -76,6 +76,10 @@
 .sub-information__tab-content {
   width: 100%;
   display: none;
+  margin-top: rem(15);
+  @include mq("md") {
+    margin-top: rem(23);
+  }
 }
 
 /* アクティブなタブ */

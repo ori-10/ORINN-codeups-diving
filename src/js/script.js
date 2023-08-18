@@ -270,57 +270,62 @@ jQuery(function ($) {
     // ここに他の処理を追加する（必要に応じて）
   });
 
+  //////////
+  // info
+  /////////
+  $(function () {
+    const tabContents = $(".tab__content");
+    const hash = location.hash;
+
+    if (hash && hash.match(/#info/)) {
+      const tabName = parseInt(hash.slice(5)) - 1;
+      $(`#info${tabName + 1}`).prop("checked", true); // ラジオボタンを選択状態にする
+      tabContents.hide().eq(tabName).fadeIn();
+    } else {
+      tabContents.hide().eq(0).fadeIn();
+    }
+  });
+  $(function () {
+    const tabLinks = $(".tab-link"); // ボタンに対する共通のクラス
+
+    const tabContents = $(".sub-information__tab-content"); // タブコンテンツに対するクラス
+
+    tabLinks.click(function (e) {
+      e.preventDefault(); // リンクのデフォルトの挙動を無効化
+
+      const targetTab = $(this).data("tab"); // ボタンのdata-tab属性から対応するラジオボタンのIDを取得
+      $(`#${targetTab}`).prop("checked", true); // 対応するラジオボタンを選択状態にする
+
+      tabContents.removeClass("active"); // すべてのタブコンテンツからactiveクラスを削除
+      $(`#${targetTab}-content`).addClass("active"); // 対応するタブコンテンツにactiveクラスを追加
+    });
+
+    // 初期表示の設定など（省略）
+  });
+
+
+  ///////////
+  // voice タブが選択されている状態
+  ///////////
+  $(document).ready(function() {
+    // タブがクリックされたときの処理
+    $('.voice-tab__item').click(function() {
+      // クリックされたタブのインデックスを取得
+      var tabIndex = $(this).index();
+  
+      // クリックされたタブに.activeを付ける
+      $(this).addClass('active').siblings().removeClass('active');
+  
+      // クリックされたタブに対応するコンテンツを表示し、他のコンテンツを非表示にする
+      $('.voice-tab__content').eq(tabIndex).addClass('active').siblings().removeClass('active');
+    });
+  });
+
+
   ///////////
   // campaign
   // 他ページから遷移時、該当タブが選択されている状態
   ///////////
-
-  // $(function () {
-  //   // タブ切り替え処理
-  //   function switchTab(tabId) {
-  //     $(".tab__content").hide();
-  //     $("#" + tabId).fadeIn();
-  //     $(".js-campaign-tab li").removeClass("active");
-  //     $(".js-campaign-tab li a[href='#" + tabId + "']")
-  //       .parent()
-  //       .addClass("active");
-  //   }
-
-  //   // タブがクリックされたときの処理
-  //   $(".js-campaign-tab li").click(function () {
-  //     var tabId = $(this).find("a").attr("href").substring(1);
-  //     switchTab(tabId);
-  //   });
-
-  //   // URLのハッシュ部分を取得
-  //   var hash = location.hash;
-  //   // もしハッシュ部分がある場合
-  //   if (hash.length) {
-  //     var tabId = hash.substring(1);
-  //     switchTab(tabId);
-  //   } else {
-  //     // ページ開いた時 初めの状態
-  //     switchTab(
-  //       $(".js-campaign-tab li:first-child a").attr("href").substring(1)
-  //     );
-  //   }
-
-  //   // 同ページのリンククリック処理
-  //   $(".js-link-tab a").click(function () {
-  //     var targetTab = $(this).attr("href").substring(1);
-  //     switchTab(targetTab);
-
-  //     // リンクをクリックしてスクロール
-  //     var scrollAmount = $("#sub-campaign").offset().top - 100;
-  //     $("html, body").animate(
-  //       {
-  //         scrollTop: scrollAmount,
-  //       },
-  //       800
-  //     );
-  //     return false; // リンクのデフォルト動作をキャンセル
-  //   });
-  // });
 
   $(function () {
     // タブ切り替え処理
@@ -328,15 +333,17 @@ jQuery(function ($) {
       $(".tab__content").hide();
       $("#" + tabId).fadeIn();
       $(".js-campaign-tab li").removeClass("active");
-      $(".js-campaign-tab li a[href='#" + tabId + "']").parent().addClass("active");
+      $(".js-campaign-tab li a[href='#" + tabId + "']")
+        .parent()
+        .addClass("active");
     }
-  
+
     // タブがクリックされたときの処理
     $(".js-campaign-tab li").click(function () {
       var tabId = $(this).find("a").attr("href").substring(1);
       switchTab(tabId);
     });
-  
+
     // URLのハッシュ部分を取得
     var hash = location.hash;
     // もしハッシュ部分がある場合
@@ -350,17 +357,20 @@ jQuery(function ($) {
         switchTab(firstTabLink.attr("href").substring(1));
       }
     }
-  
+
     // 同ページのリンククリック処理
     $(".js-link-tab a").click(function () {
       var targetTab = $(this).attr("href").substring(1);
       switchTab(targetTab);
-  
+
       // リンクをクリックしてスクロール
       var scrollAmount = $("#sub-campaign").offset().top - 100;
-      $("html, body").animate({
-        scrollTop: scrollAmount
-      }, 800);
+      $("html, body").animate(
+        {
+          scrollTop: scrollAmount,
+        },
+        800
+      );
       return false; // リンクのデフォルト動作をキャンセル
     });
   });
