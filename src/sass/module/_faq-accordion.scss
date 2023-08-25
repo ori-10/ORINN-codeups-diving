@@ -15,15 +15,10 @@
   justify-content: space-between;
   cursor: pointer;
   z-index: 1;
-  transition: .4s opacity;
   @include mq("md") {
     font-size: rem(20);
     padding: rem(24) rem(40);
   }
-}
-
-.faq-accordion__title:hover {
-  opacity: .8;
 }
 
 .faq-accordion__icon,
@@ -64,7 +59,6 @@
 }
 
 .faq-accordion__text {
-  padding: rem(16);
   height: 0;
   visibility: hidden;
   overflow: hidden;
@@ -72,12 +66,8 @@
   transition: all 0.4s;
 }
 
-// 開いた時
-.open.faq-accordion {
-  margin-bottom: rem(40);
-  @include mq("md") {
-    margin-bottom: rem(38);
-  }
+.open .faq-accordion__text {
+  padding: rem(16);
 }
 
 .open .faq-accordion__text {

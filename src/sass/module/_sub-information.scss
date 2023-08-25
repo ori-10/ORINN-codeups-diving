@@ -1,15 +1,24 @@
 @use "global" as *;
 
 .sub-information__tab {
-  display: flex;
+  display: grid;
   gap: 5.66%;
+  grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
   @include mq("md") {
     gap: 8.3%;
   }
 }
 
-.sub-information__tab-label {
+.sub-information__tab-cards {
+  margin-top: rem(16);
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.sub-information__tab-label a {
+  display: inline-block;
   color: $green-accent;
   background: #ddf0f1;
   padding: rem(10) 0;
@@ -17,15 +26,14 @@
   font-size: 0;
   font-weight: $regular;
   box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
+  position: relative;
   z-index: 1;
-  order: -1;
-  width: 29.56%;
+  width: 100%;
   @include mq("md") {
     padding: rem(13) 0 rem(13) 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 27.8%;
   }
 }
 
@@ -73,9 +81,8 @@
 }
 
 // 内容
-.sub-information__tab-content {
+.sub-information__tab-cards a {
   width: 100%;
-  display: none;
   margin-top: rem(15);
   @include mq("md") {
     margin-top: rem(23);
@@ -83,39 +90,20 @@
 }
 
 /* アクティブなタブ */
-.sub-information__tab-switch:checked + .sub-information__tab-label {
-  position: relative;
+.sub-information__tab-label.active a {
   background: $green-accent;
   color: $white;
-  z-index: 1;
 }
 
-.sub-information__tab-switch:checked
-  + .sub-information__tab-label
-  span::before {
+.sub-information__tab-label.active a span::before {
   filter: brightness(1000%);
-}
-
-.sub-information__tab-switch:checked
-  + .sub-information__tab-label
-  + .sub-information__tab-content {
-  display: block;
-}
-
-/* ラジオボタン非表示 */
-.sub-information__tab-switch {
-  display: none;
-}
-
-.sub-information__tab-inner input[type="radio"] {
-  margin: 0;
 }
 
 .sub-information__inner {
   max-width: rem(600);
 }
 
-.sub-information__box {
+.sub-information__card {
   border: 1px solid $green-accent;
   padding: rem(16) rem(24) rem(20);
   @include mq("md") {

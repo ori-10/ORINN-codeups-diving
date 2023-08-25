@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.chart {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.price__chart {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
+  @include mq("md") {
+    gap: rem(80);
+  }
+}
+
+.chart__title {
+  padding: rem(6) 0;
+  color: $white;
+  font-weight: bold;
+  background: $green-accent;
+  border: 1px solid $green-accent;
+  font-size: rem(16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(8);
+  @include mq("md") {
+    flex-direction: column;
+    width: 28%;
+  }
+}
+
+.chart__title span {
+  white-space: nowrap;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.chart__item {
+  @include mq("md") {
+    width: 72%;
+  }
+}
+
+.chart__item div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $green-accent;
+  border-top: none;
+  @include mq("md") {
+    justify-content: start;
+  }
+}
+
+.chart__item div:first-child {
+  border-top: 1px solid $green-accent;
+}
+
+.chart__item dt,
+.chart__item dd {
+  display: flex;
+  align-items: center;
+  height: rem(60);
+  font-weight: $regular;
+  background: $white;
+  padding: 0;
+  @include mq("md") {
+    height: rem(58);
+  }
+}
+
+.chart__item dt {
+  width: 69.56%;
+
+  border-right: 1px solid $green-accent;
+  justify-content: center;
+  @include mq("md") {
+    width: 68%;
+    justify-content: start;
+    padding: 0 rem(16);
+  }
+}
+
+.chart__item dd {
+  width: 30.44%;
+  padding-right: rem(16);
+  justify-content: end;
+  @include mq("md") {
+    width: 32%;
+  }
+}
+
+.chart__img {
+  display: inline-block;
+  height: auto;
+  max-width: rem(24);
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(64);
+    order: 1;
+    margin-top: rem(8);
+  }
+}

@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .sub-mv {
+  position: relative;
   height: rem(460);
   background-repeat: no-repeat;
   background-position: center;
@@ -14,64 +15,64 @@
 
 .sub-mv--campaign {
   background-image: url(../images/common/sub-campaign-mv-sp.jpg);
-@include mq("md") {
-background-image: url(../images/common/sub-campaign-mv.jpg);
-}
+  @include mq("md") {
+    background-image: url(../images/common/sub-campaign-mv.jpg);
+  }
 }
 
 .sub-mv--about {
-    background-image: url(../images/common/sub-about-mv-sp.jpg);
+  background-image: url(../images/common/sub-about-mv-sp.jpg);
   @include mq("md") {
-  background-image: url(../images/common/sub-about-mv.jpg);
+    background-image: url(../images/common/sub-about-mv.jpg);
   }
 }
 
 .sub-mv--information {
   background-image: url(../images/common/sub-info-mv-sp.jpg);
   @include mq("md") {
-  background-image: url(../images/common/sub-info-mv.jpg);
+    background-image: url(../images/common/sub-info-mv.jpg);
   }
 }
 
 .sub-mv--blog {
   background-image: url(../images/common/sub-blog-mv-sp.jpg);
   @include mq("md") {
-  background-image: url(../images/common/sub-blog-mv.jpg);
+    background-image: url(../images/common/sub-blog-mv.jpg);
   }
 }
 
 .sub-mv--voice {
   background-image: url(../images/common/sub-voice-mv-sp.jpg);
   @include mq("md") {
-  background-image: url(../images/common/sub-voice-mv.jpg);
+    background-image: url(../images/common/sub-voice-mv.jpg);
   }
 }
 
 .sub-mv--price {
   background-image: url(../images/common/sub-price-mv-sp.jpg);
   @include mq("md") {
-  background-image: url(../images/common/sub-price-mv.jpg);
+    background-image: url(../images/common/sub-price-mv.jpg);
   }
 }
 
 .sub-mv--faq {
   background-image: url(../images/common/sub-faq-mv-sp.jpg);
   @include mq("md") {
-  background-image: url(../images/common/sub-faq-mv.jpg);
+    background-image: url(../images/common/sub-faq-mv.jpg);
   }
 }
 
 .sub-mv--site-map {
   background-image: url(../images/common/site-map-mv-sp.jpg);
   @include mq("md") {
-  background-image: url(../images/common/site-map-mv.jpg);
+    background-image: url(../images/common/site-map-mv.jpg);
   }
 }
 
 .sub-mv--thanks-page {
   background-image: url(../images/common/sub-contact-mv-sp.jpg);
   @include mq("md") {
-  background-image: url(../images/common/sub-contact-mv.jpg);
+    background-image: url(../images/common/sub-contact-mv.jpg);
   }
 }
 
@@ -79,10 +80,15 @@ background-image: url(../images/common/sub-campaign-mv.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: rem(200);
-  letter-spacing: .03em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // padding-top: rem(200);
+  letter-spacing: 0.03em;
   @include mq("md") {
-    padding-top: rem(265);
+    top: 59%;
+    // padding-top: rem(265);
   }
 }
 

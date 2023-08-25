@@ -1,7 +1,7 @@
 @use "global" as *;
 
 // 下層　キャンペーン
-.tab__items {
+.tab {
   display: grid;
   gap: rem(16) rem(22);
   grid-template-columns: 1fr 1fr;

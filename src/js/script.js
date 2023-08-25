@@ -273,107 +273,99 @@ jQuery(function ($) {
   //////////
   // info
   /////////
-  $(function () {
-    const tabContents = $(".tab__content");
-    const hash = location.hash;
 
-    if (hash && hash.match(/#info/)) {
-      const tabName = parseInt(hash.slice(5)) - 1;
-      $(`#info${tabName + 1}`).prop("checked", true); // ラジオボタンを選択状態にする
-      tabContents.hide().eq(tabName).fadeIn();
-    } else {
-      tabContents.hide().eq(0).fadeIn();
-    }
-  });
-  $(function () {
-    const tabLinks = $(".tab-link"); // ボタンに対する共通のクラス
-
-    const tabContents = $(".sub-information__tab-content"); // タブコンテンツに対するクラス
-
-    tabLinks.click(function (e) {
-      e.preventDefault(); // リンクのデフォルトの挙動を無効化
-
-      const targetTab = $(this).data("tab"); // ボタンのdata-tab属性から対応するラジオボタンのIDを取得
-      $(`#${targetTab}`).prop("checked", true); // 対応するラジオボタンを選択状態にする
-
-      tabContents.removeClass("active"); // すべてのタブコンテンツからactiveクラスを削除
-      $(`#${targetTab}-content`).addClass("active"); // 対応するタブコンテンツにactiveクラスを追加
+// 同ページリンク sp
+$(function(){
+    $('.js-tab-link a').click(function() {
+    //押されたのが.リストの何番目か調べる
+    var number = $('.js-tab-link a').index(this);
+    //表示領域を全部非表示にする
+    $('.sub-information__tab-cards li').hide();
+    //押されたのと同じ番目のを表示する
+    $('.sub-information__tab-cards li').eq(number).fadeIn();
+    //.activeがついてるのを外す
+    $('.js-tab-link a').removeClass('active');
+    $('.js-tab-info li').removeClass('active');
+    //押activeを付与してる      
+    $('.js-tab-info li').eq(number).addClass('active');
     });
-
-    // 初期表示の設定など（省略）
   });
-
-
-  ///////////
-  // voice タブが選択されている状態
-  ///////////
-  $(document).ready(function() {
-    // タブがクリックされたときの処理
-    $('.voice-tab__item').click(function() {
-      // クリックされたタブのインデックスを取得
-      var tabIndex = $(this).index();
   
-      // クリックされたタブに.activeを付ける
-      $(this).addClass('active').siblings().removeClass('active');
-  
-      // クリックされたタブに対応するコンテンツを表示し、他のコンテンツを非表示にする
-      $('.voice-tab__content').eq(tabIndex).addClass('active').siblings().removeClass('active');
+  // 同ページリンク footer
+  $(function(){
+    $('.js-tab-link-footer a').click(function() {
+    //押されたのが.リストの何番目か調べる
+    var number = $('.js-tab-link-footer a').index(this);
+    //表示領域を全部非表示にする
+    $('.sub-information__tab-cards li').hide();
+    //押されたのと同じ番目のを表示する
+    $('.sub-information__tab-cards li').eq(number).fadeIn();
+    //.activeがついてるのを外す
+    $('.js-tab-link-footer a').removeClass('active');
+    $('.js-tab-info li').removeClass('active');
+    //押activeを付与してる      
+    $('.js-tab-info li').eq(number).addClass('active');
     });
   });
 
-
-  ///////////
-  // campaign
-  // 他ページから遷移時、該当タブが選択されている状態
-  ///////////
-
-  $(function () {
-    // タブ切り替え処理
-    function switchTab(tabId) {
-      $(".tab__content").hide();
-      $("#" + tabId).fadeIn();
-      $(".js-campaign-tab li").removeClass("active");
-      $(".js-campaign-tab li a[href='#" + tabId + "']")
-        .parent()
-        .addClass("active");
-    }
-
-    // タブがクリックされたときの処理
-    $(".js-campaign-tab li").click(function () {
-      var tabId = $(this).find("a").attr("href").substring(1);
-      switchTab(tabId);
+  // タブ
+  $(function(){
+    $('.js-tab-info li').click(function() {
+    //押されたのがリストの何番目か調べる
+    var index = $('.js-tab-info li').index(this);
+    //表示領域を全部非表示にする
+    $('.sub-information__tab-cards li').hide();
+    //押されたのと同じ番目のを表示する
+    $('.sub-information__tab-cards li').eq(index).fadeIn();
+    //.activeがついてるのを外す
+    $('.js-tab-info li').removeClass('active');
+    //押したやつにactiveを付与してる
+    $(this).addClass('active');
     });
+  });
 
-    // URLのハッシュ部分を取得
+  // 他ぺージ
+  $(function(){
+    //ハッシュタグ読み込み
     var hash = location.hash;
-    // もしハッシュ部分がある場合
-    if (hash.length) {
-      var tabId = hash.substring(1);
-      switchTab(tabId);
-    } else {
-      // ページ開いた時 初めの状態
-      var firstTabLink = $(".js-campaign-tab li:first-child a");
-      if (firstTabLink.length > 0) {
-        switchTab(firstTabLink.attr("href").substring(1));
-      }
+    if(hash.length){
+    //ハッシュがあったら
+    if(hash.match(/#info/)){
+    //ハッシュタグが「#tab◯」ってなってたら
+    //表示領域を全部非表示にする
+    $('.sub-information__tab-cards li').hide();
+    //メニューに付いてる「class="active"」を削除
+    $('.js-tab-info li').removeClass('active');
+    //「#tab◯」を「◯」だけにする
+    var tabname = hash.slice(5.1);
+    //「n番目を表示する」ってのをやりたいんだけど、
+    //順番は0から始まるので「#tab1」は「0」、「#tab2」は「1」になる
+    //なのでそのままだといっこ多くなっちゃうから1を引く
+    tabname = tabname - 1;
+    //n番目の内容を表示する
+    $('.sub-information__tab-cards li').eq(tabname).fadeIn();
+    //n番目のメニューに「class="active"」を付与する
+    $('.js-tab-info li').eq(tabname).addClass('active');
+    }else{
+    //ハッシュタグが「#tab◯」じゃなかったら
+    //1番目のメニューに「class="active"」を付与する
+    $('.js-tab-info li').eq(0).addClass('active');
+    //内容部分を全部非表示にする
+    $('.sub-information__tab-cards li').hide();
+    //1番目の内容を表示する
+    $('.sub-information__tab-cards li').eq(0).fadeIn();
     }
-
-    // 同ページのリンククリック処理
-    $(".js-link-tab a").click(function () {
-      var targetTab = $(this).attr("href").substring(1);
-      switchTab(targetTab);
-
-      // リンクをクリックしてスクロール
-      var scrollAmount = $("#sub-campaign").offset().top - 100;
-      $("html, body").animate(
-        {
-          scrollTop: scrollAmount,
-        },
-        800
-      );
-      return false; // リンクのデフォルト動作をキャンセル
-    });
+    }else{
+    //ハッシュがなかったら（普通にページ開いたときとか）
+    //1番目のメニューに「class="active"」を付与する
+    $('.js-tab-info li').eq(0).addClass('active');
+    //内容部分を全部非表示にする
+    $('.sub-information__tab-cards li').hide();
+    //1番目の表示内容を表示する
+    $('.sub-information__tab-cards li').eq(0).fadeIn();
+    }
   });
+  
 
   ////////////
   // price
@@ -443,6 +435,8 @@ jQuery(function ($) {
     //そして、fadeInで表示する。
     $(".js-background").fadeIn(200);
     $("body").addClass("loading__no-scroll");
+    $(".gallery__item").addClass("active");
+
     return false;
   });
 
@@ -452,6 +446,8 @@ jQuery(function ($) {
     // 非表示にする
     $(".js-background").fadeOut(200);
     $("body").removeClass("loading__no-scroll");
+    $(".gallery__item").removeClass("active");
+    
     return false;
   });
 
@@ -524,5 +520,8 @@ jQuery(function ($) {
       }
     });
   });
+
+
+  
 });
 // 消さない

@@ -43,9 +43,9 @@
 .sub-blog__inner--article {
   padding-left: rem(15);
   padding-right: rem(15);
-  @include mq("md") {
-    gap: 8%;
-  }
+  // @include mq("md") {
+  //   gap: 8%;
+  // }
 }
 
 // ブログ記事ページのページネーション
