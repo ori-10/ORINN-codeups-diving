@@ -8,13 +8,6 @@
   }
 }
 
-// .aside__single-inner {
-//   padding: 0 rem(24);
-//   @include mq("md") {
-//     padding: 0;
-//   }
-// }
-
 .aside__content:not(:first-child) {
   margin-top: rem(80);
 }

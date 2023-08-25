@@ -36,12 +36,12 @@
   cursor: pointer;
   @include mq("md") {
     transition: color 0.2s;
-opacity: 1;
+    opacity: 1;
   }
 }
 
 .btn-submit__body[type="submit"]:hover {
-  opacity: .8;
+  opacity: 0.8;
   @include mq("md") {
     opacity: 1;
   }
@@ -82,7 +82,7 @@ opacity: 1;
 .btn-submit:hover .btn-submit__text {
   pointer-events: none;
   @include mq("md") {
-  color: $green-accent;
+    color: $green-accent;
   }
 }
 
